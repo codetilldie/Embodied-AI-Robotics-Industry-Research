@@ -14,15 +14,13 @@
 
 当前交付包包含：
 
-- 200 个 Markdown 报告和公司深度章节
-- 7 个结构化数据表
-- 209 个静态 HTML 页面
+- 44 个 Markdown 报告
+- 6 个结构化数据表
+- 50 个静态 HTML 页面
 - 51 家中国公司样本
 - 20 家海外对照公司样本
 - 36 条公开落地案例
 - 8 个核心场景成熟度条目
-- 651 条公司深度来源记录
-- 10 家核心中国企业 10 万字级深度分析，41 家其他中国企业 5000 字级结构化分析
 
 完整目录请查看 [index.md](index.md)，网页目录请打开 [index.html](index.html)。
 
@@ -31,8 +29,6 @@
 - 管理层入口：[管理层学习指南](reports/management_learning_guide.md)
 - 全部 Markdown 与网页索引：[index.md](index.md)
 - 本地静态网页目录：[index.html](index.html)
-- 中国公司深度库：[中国公司深度库总目录](reports/competition/china_company_deep_index.md)
-- 公司深度来源库：[data/company_deep_sources.csv](data/company_deep_sources.csv)
 - 中国公司库：[data/domestic_companies.csv](data/domestic_companies.csv)
 - 落地案例库：[data/deployment_cases.csv](data/deployment_cases.csv)
 - 来源索引：[sources/source_index.md](sources/source_index.md)
@@ -46,9 +42,8 @@
 1. [管理层学习指南](reports/management_learning_guide.md)
 2. [管理层简报](reports/executive/01_board_briefing.md)
 3. [战略决策地图](reports/executive/02_decision_map.md)
-4. [中国公司深度库](reports/competition/china_company_deep_index.md)
-5. [成熟度模型](reports/decision_tools/01_maturity_model.md)
-6. [90 天试点打法](reports/decision_tools/03_90_day_pilot_playbook.md)
+4. [成熟度模型](reports/decision_tools/01_maturity_model.md)
+5. [90 天试点打法](reports/decision_tools/03_90_day_pilot_playbook.md)
 
 ### 半天专题学习
 
@@ -71,7 +66,6 @@
 ## 目录说明
 
 - `reports/`：核心研究报告，覆盖管理层总览、行业基础、公司与竞品、场景商业化、战略决策工具。
-- `reports/company_profiles/china_deep_dive/`：中国公司深度库，核心企业按章节拆分，其他企业按结构化单篇分析。
 - `data/`：结构化数据表，包括公司库、产品库、落地案例库、融资事件库和场景成熟度库。
 - `sources/`：来源索引与证据线索，用于回溯关键判断的公开依据。
 - `docs/`：项目规划、研究范围、术语口径和来源引用规则。

@@ -31,8 +31,7 @@
 1. 完成 2 小时速读路径。
 2. 阅读 [什么是具身智能](basics/01_what_is_embodied_ai.md)、[机器人形态](basics/02_robot_forms.md)、[VLA 与数据飞轮](basics/03_vla_and_data_flywheel.md)。
 3. 阅读 [中国竞争格局](competition/01_china_competition_overview.md)、[海外标杆对照](competition/02_overseas_benchmark.md)。
-4. 阅读 [中国公司深度库总目录](competition/china_company_deep_index.md)，按供应商类型选读 3-5 家公司深度分析。
-5. 按本公司业务选读 2-3 个场景报告。
+4. 按本公司业务选读 2-3 个场景报告。
 
 ### 2.3 一周深读
 
@@ -62,7 +61,6 @@
 
 ### 公司与竞品
 
-- [中国公司深度库总目录](competition/china_company_deep_index.md)
 - [中国竞争格局](competition/01_china_competition_overview.md)
 - [海外标杆对照](competition/02_overseas_benchmark.md)
 - [公司分层矩阵](competition/03_company_tier_matrix.md)
@@ -106,7 +104,6 @@
 ## 5. 关联数据文件
 
 - 公司库：[../data/domestic_companies.csv](../data/domestic_companies.csv)、[../data/overseas_companies.csv](../data/overseas_companies.csv)
-- 公司深度来源库：[../data/company_deep_sources.csv](../data/company_deep_sources.csv)
 - 产品库：[../data/products.csv](../data/products.csv)
 - 落地案例库：[../data/deployment_cases.csv](../data/deployment_cases.csv)
 - 融资事件库：[../data/financing_events.csv](../data/financing_events.csv)

@@ -1,0 +1,9 @@
+scenario,technical_maturity,commercial_maturity,customer_payment_maturity,deployment_replicability,strategic_priority,current_level,recommended_action,representative_companies,last_checked,notes
+仓储物流,5,5,5,5,P0,L3,立即筛选试点,Amazon Robotics; Geekplus; Quicktron; Agility; Covariant,2026-05-26,AMR和仓储自动化成熟；人形搬运处于早期补位
+能源电力化工巡检,4,4,4,4,P0,L2-L3,高风险岗位优先验证,ANYbotics; Deep Robotics; Youibot; Unitree,2026-05-26,四足和AMR更适配；人形不是必要形态
+酒店餐饮商用服务,4,4,4,4,P1,L2-L3,优先配送清洁和夜间值守,Pudu; Keenon; Gaussian,2026-05-26,服务机器人已成熟；人形多为体验升级
+制造业汽车产线,3,3,3,3,P1,L1-L2,低节拍辅助任务试点,UBTECH; Figure; Apptronik; AgiBot; Mech-Mind,2026-05-26,工业人形仍需验证生产节拍和安全
+零售门店,3,3,3,3,P1,L1-L3,先做盘点再做操作,Simbe; Galbot; Pudu; Keenon,2026-05-26,货架盘点成熟；补货取货仍早期
+医疗康养,3,2,2,2,P2,L1-L2,从院内物流和康复辅助开始,Fourier; UBTECH; CloudMinds,2026-05-26,安全和责任边界要求高
+园区安防公共空间,4,3,3,4,P2,L2,优先巡检清洁和导览,Deep Robotics; Youibot; Pudu; Keenon,2026-05-26,任务边界清晰时可试点
+家庭服务,2,1,1,1,P3,L0-L1,观察为主,1X; NEURA; Astribot; Ecovacs,2026-05-26,长期空间大但短期商业闭环弱

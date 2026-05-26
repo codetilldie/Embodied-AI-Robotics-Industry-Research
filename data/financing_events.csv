@@ -1,0 +1,8 @@
+company_name,event_date,round_or_event,amount,valuation,investors,source_level,source_type,source_url,last_checked,confidence,notes
+银河通用,2025-06-09,融资披露,超12亿元,unknown,多家机构,C,媒体报道,https://cn.chinadaily.com.cn/a/202506/09/WS6846952da3102053770372d4.html,2026-05-26,中,媒体报道需后续补官方来源
+逐际动力,2026-02-02,B轮融资,unknown,unknown,unknown,B,官网新闻,https://www.limxdynamics.com/en,2026-05-26,中,官网披露融资节点但金额需核验
+Skild AI,2024-07-09,融资,3亿美元,unknown,Jeff Bezos等,C,媒体报道,https://siliconangle.com/2024/07/09/skild-ai-raises-300m-build-general-purpose-ai-powered-brain-robot/,2026-05-26,中,海外模型层标杆融资
+FieldAI,2025,融资,4.05亿美元,unknown,unknown,B,官网/媒体,https://www.fieldai.com/technology,2026-05-26,中,金额需以最新官方新闻补充
+Physical Intelligence,2024-2025,多轮融资,unknown,unknown,unknown,B,官网,https://www.pi.website/,2026-05-26,中,模型层核心公司；融资细节需补
+智元机器人,2025,多轮融资,unknown,unknown,unknown,B,官网/媒体,https://www.agibot.com.cn/,2026-05-26,中,应补融资轮次和投资方
+宇树科技,2025-2026,上市/融资动态,unknown,unknown,unknown,B,官网/媒体,https://www.unitree.com/en/about/,2026-05-26,低,上市相关信息需以监管文件为准

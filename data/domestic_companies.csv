@@ -1,0 +1,21 @@
+company_name,country_or_region,category,main_products,target_scenarios,technology_route,financing_or_listing_status,disclosed_customers,deployment_status,source_level,source_type,source_url,source_date,last_checked,confidence,notes
+智元机器人,中国,本体厂商,远征A系列；灵犀X系列；精灵G系列,工业制造；服务；科研；家庭,通用具身机器人；机器人数据系统；多形态本体,未上市；多轮融资,公开客户有限；黄晓明工作室为公开交付案例,L2小批量交付/公司披露规模量产,B,官网新闻,https://www.agibot.com.cn/article/188/detail/101.html,2025-12-12,2026-05-26,中,公司披露5000台下线；付费客户结构需继续核验
+宇树科技,中国,本体厂商,G1；H1；R1；Go2；B2,科研教育；开发者；娱乐；工业巡检,低成本四足/人形本体；运动控制；SDK生态,未上市；公开报道IPO预期需核验,科研教育客户；公开零售用户,L2公开销售平台,B,官网介绍,https://www.unitree.com/en/about/,unknown,2026-05-26,高,产品和公开销售明确；商业场景深度需补充客户证据
+优必选,中国/香港,上市公司,Walker S；Walker S1；Walker S2,汽车制造；3C；物流搬运；质检,工业人形；群体协作；BrainNet/ROSA,港股上市,客户名称部分未披露,L2小批量合同/工业试点,A,中期报告,https://owebsite-cdn.ubtrobot.com/resources/file/2025/09/16/720367161532485.pdf,2025-09-16,2026-05-26,高,2025中报披露Walker系列进入工业场景且签署小批量采购合同
+银河通用,中国,本体厂商,Galbot G1；TrackVLA；GroceryVLA,零售；药店；制造；文旅,轮式双臂人形；端到端导航与货架抓取VLA,未上市；披露超12亿元融资,零售业态合作伙伴未完全披露,L1试点验证/公司计划扩张,C,媒体报道,https://cn.chinadaily.com.cn/a/202506/09/WS6846952da3102053770372d4.html,2025-06-09,2026-05-26,中,零售能力展示和融资信息来自媒体报道；需补充客户合同证据
+逐际动力,中国,本体厂商/平台,LimX Oli；TRON1；FluxVLA；COSA,科研教育；导览；工业巡检；开发者平台,双足/轮足本体；强化学习平台；具身操作算法,未上市；2026披露B轮融资,博物馆导览等创新案例,L1试点/平台销售,B,官网,https://www.limxdynamics.com/en,2026-02-02,2026-05-26,中,官网披露产品矩阵和融资新闻；客户规模需核验
+傅利叶智能,中国,本体厂商,GR-1；GR-2,康复医疗；科研；工业；服务,人形机器人；康复机器人积累；运动控制,未上市；多轮融资,康复医疗客户；机器人客户未完整披露,L2产品量产/公司自述,B,官方新闻稿,https://www.prnewswire.com/news-releases/fourier-unveils-the-next-generation-humanoid-robot-gr-2-302262068.html,2024-09-30,2026-05-26,中,GR系列量产和客户落地需补充一手证据
+星尘智能/Astribot,中国,本体厂商,Astribot S1,服务；家庭；科研；商业展示,轮式双臂人形；DFAI软硬件一体,未上市,未披露,L0概念演示/产品展示,B,官网产品页,https://www.astribot.com/en/product/,unknown,2026-05-26,中,产品参数明确；真实客户部署未核验
+众擎机器人/EngineAI,中国,本体厂商,SA01；SE01；PM01；T800,科研教育；商用展示；工业探索,人形本体；自然步态；开放平台,未上市,未披露,L1产品发布/早期销售,B,官网产品页,https://en.engineai.com.cn/about-process-sa01.html,unknown,2026-05-26,中,官网披露产品线；商业订单需核验
+乐聚机器人,中国,本体厂商,KUAVO 4Pro；KUAVO 5；ROBAN,科研；商业服务；工业制造；训练场,开源人形平台；多场景训练方案,未上市,合肥等地方合作；客户细节需核验,L1试点/科研平台,B,官网,https://www.lejurobot.com/,unknown,2026-05-26,中,官网披露应用方向；规模化交付需核验
+达闼机器人,中国,本体厂商/云平台,XR-4；Cloud Ginger；HARIX OS,服务；政企；康养；教育,云端智能机器人；云脑/边云协同,未上市,政企/服务客户需逐项核验,L1试点/产品销售,B,官网,https://www.cloudminds.com/,unknown,2026-05-26,中,老牌服务机器人企业；需更新近年具身智能进展
+帕西尼感知科技,中国,核心零部件/本体,多维触觉传感器；DexH13灵巧手；TORA-ONE,灵巧操作；工业；科研；服务,触觉传感；灵巧手；多模态感知,未上市,机器人厂商/科研客户未完整披露,L1部件销售/方案验证,B,官网介绍,https://paxini.com/kr/about,unknown,2026-05-26,中,更偏触觉和灵巧操作上游；需要客户证据
+普渡机器人,中国,本体厂商,配送机器人；清洁机器人；PUDU D9；T300,餐饮；酒店；清洁；工业物流,服务机器人；移动机器人；具身AI产品线,未上市,全球服务客户；酒店餐饮客户,L3服务机器人规模商用/B2具身AI早期,B,官网,https://www.pudurobotics.com/,2026-05-20,2026-05-26,高,服务机器人出货规模明确；人形/具身AI仍需单独跟踪
+擎朗智能,中国,本体厂商,DINERBOT；KLEENBOT；XMAN-R1,餐饮；酒店；清洁；服务,服务机器人；VLA服务模型；人形服务机器人,未上市,餐饮酒店客户,L3服务机器人规模商用/B2人形早期,B,官网,https://www.keenon.com/en/index.html,2026-03-26,2026-05-26,高,服务机器人商业化强；XMAN-R1仍需验证真实部署
+云深处科技,中国,本体厂商,绝影X20；绝影X30；行业四足机器人,电力巡检；消防；安防；复杂地形,四足机器人；自主导航；巡检闭环,未上市,华电电科院等,L2/L3工业巡检商用,B,官网,https://www.deeprobotics.cn/en/,2026-03-06,2026-05-26,高,四足巡检商业证据较多；人形产品需另行跟踪
+加速进化/Booster Robotics,中国,本体厂商,Booster T1；Booster K1,科研教育；机器人竞赛；开发者平台,小型人形开发平台；运动控制；开源生态,未上市,清华等竞赛团队,L1科研/竞赛平台,B,官网介绍,https://www.booster.tech/about-us/,2025-07-20,2026-05-26,中,平台属性强；商业落地仍早期
+梅卡曼德机器人,中国,模型/平台/工业视觉,Mech-Eye；Mech-Vision；Mech-Mind软件栈,工业机器人；物流；汽车；3C,3D视觉；AI抓取；工业机器人智能化,未上市,工业客户未逐项列出,L3工业场景商用,B,官网,https://www.mech-mind.com/,2026-03-12,2026-05-26,高,不做人形本体但属于机器人智能化基础层
+优艾智合,中国,本体厂商/AMR,巡检机器人；复合移动机器人；AMR,能源；半导体；公共设施；工业巡检,移动机器人；自主导航；多场景巡检,未上市,能源/工业客户需逐项核验,L2/L3巡检商用,B,官网,https://en.youibot.com/home,unknown,2026-05-26,中,场景清晰但需要客户案例字段化
+节卡机器人,中国,本体厂商/协作机器人,JAKA Zu系列；All-in-one cobot,制造；汽车；3C；教育,协作机械臂；智能制造应用,未上市/上市辅导需核验,制造客户,L3协作机器人商用,B,官网,https://www.jaka.com/,unknown,2026-05-26,高,作为具身操作执行层和产业链参考
+遨博智能,中国,本体厂商/协作机器人,AUBO i系列；协作机器人,制造；教育；医疗；服务,协作机械臂；控制器；末端生态,未上市,制造/教育客户,L3协作机器人商用,B,官网,https://www.aubo-cobot.com/public/,unknown,2026-05-26,高,偏工业协作机器人；用于产业链对比
+斯坦德机器人,中国,本体厂商/AMR,Oasis系列；RoboVerse调度系统,半导体；3C；新能源；智能制造,AMR；柔性物流；调度系统,未上市,环旭电子；珠海天成；Innowave Tech,L3工业AMR商用,C,媒体报道,https://finance.sina.com.cn/wm/2026-05-13/doc-inhxteis9480018.shtml,2026-05-13,2026-05-26,中,半导体AMR客户来自媒体报道；需补充公司官网案例

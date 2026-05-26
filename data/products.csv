@@ -1,0 +1,23 @@
+product_name,company_name,country_or_region,robot_form,height_weight,dof,payload,battery_life,mobility,manipulation,compute_platform,price_or_cost,release_date,production_status,source_level,source_type,source_url,last_checked,confidence,notes
+灵犀X2,智元机器人,中国,小型人形/服务机器人,unknown,unknown,unknown,unknown,双足/移动平台待核验,双臂/交互,unknown,unknown,2025,公司披露量产下线,B,官网新闻,https://www.agibot.com.cn/article/188/detail/101.html,2026-05-26,中,作为5000台下线节点中的产品之一；详细参数待补
+Unitree G1,宇树科技,中国,人形机器人,约127cm/35kg,23-43,unknown,unknown,双足,可选灵巧手/教育科研扩展,unknown,公开零售价格随版本变化,2024,公开销售,B,官网产品页,https://www.unitree.com/g1/,2026-05-26,高,低成本人形平台代表；不同版本参数差异较大
+Walker S2,优必选,中国,工业人形机器人,unknown,52,15kg,支持热插拔换电,双足,工业搬运/分拣/质检,BrainNet 2.0/ROSA v2,unknown,2025,工业试点/小批量合同,A,中期报告,https://owebsite-cdn.ubtrobot.com/resources/file/2025/09/16/720367161532485.pdf,2026-05-26,高,中报披露3分钟自主换电和7x24运营目标
+Galbot G1,银河通用,中国,轮式双臂人形机器人,unknown,unknown,unknown,unknown,轮式移动,货架抓取/零售交付,GroceryVLA/TrackVLA,unknown,2024,零售场景试点,C,媒体报道,https://cn.chinadaily.com.cn/a/202506/09/WS6846952da3102053770372d4.html,2026-05-26,中,零售抓取展示明确；商业部署规模需核验
+TRON 1,逐际动力,中国,多模态双足机器人,unknown,unknown,unknown,unknown,双足/轮足/足式模块,科研开发平台,RL训练平台/SDK,15000美元起,2024-10-17,开放预订/销售,B,官网新闻,https://www.limxdynamics.com/en/news/BK000040,2026-05-26,高,定位人形RL研究入口平台
+GR-2,傅利叶智能,中国,全尺寸人形机器人,约175cm/63kg,53,unknown,unknown,双足,双臂/灵巧操作,unknown,unknown,2024-09-30,公司披露发布/量产待核验,B,官方新闻稿,https://www.prnewswire.com/news-releases/fourier-unveils-the-next-generation-humanoid-robot-gr-2-302262068.html,2026-05-26,中,GR系列参数来自公开发布；订单需另核
+Astribot S1,星尘智能/Astribot,中国,轮式双臂人形机器人,170cm/80kg,双臂各7自由度,单臂3-5kg水平伸展,4-6小时,轮式,高速双臂操作,DFAI架构,unknown,2024,产品展示,B,官网产品页,https://www.astribot.com/en/product/,2026-05-26,中,参数较完整；真实客户部署未证实
+PM01,众擎机器人/EngineAI,中国,轻量人形机器人,约138cm/约40kg,unknown,unknown,unknown,双足,开放科研/教育应用,unknown,unknown,2024,产品发布/销售待核验,B,官网产品页,https://en.engineai.com.cn/about-process-sa01.html,2026-05-26,中,自然步态和开源属性需补充官方规格
+KUAVO 5,乐聚机器人,中国,全尺寸人形机器人,unknown,unknown,unknown,unknown,双足/可选轮式版本,科研/工业/商业服务,开源平台/训练场方案,unknown,2025,产品平台/试点,B,官网,https://www.lejurobot.com/,2026-05-26,中,适合作为国产开源人形平台跟踪
+TORA-ONE,帕西尼感知科技,中国,触觉人形机器人,unknown,unknown,unknown,unknown,unknown,触觉灵巧操作,多维触觉传感/灵巧手,unknown,2026,展会展示/方案验证,B,官网介绍,https://paxini.com/kr/about,2026-05-26,中,核心价值在触觉基础设施；商用仍早期
+PUDU D9,普渡机器人,中国,全尺寸双足人形机器人,unknown,unknown,unknown,unknown,双足,服务/工业探索,具身AI产品线,unknown,2026,持续研发/B2早期,B,官网,https://www.pudurobotics.com/,2026-05-26,中,普渡服务机器人成熟但D9需单独验证
+XMAN-R1,擎朗智能,中国,人形服务机器人,unknown,unknown,unknown,unknown,双足/服务移动待核验,迎宾/递送/服务互动,KOM 2.0服务VLA,unknown,2026,展示/早期试点,B,官网,https://www.keenon.com/en/index.html,2026-05-26,中,服务机器人渠道强；人形落地需继续追踪
+X30,云深处科技,中国,四足巡检机器人,unknown,unknown,unknown,unknown,四足,巡检传感载荷,自主导航/巡检算法,unknown,2024,工业巡检商用,B,官网,https://www.deeprobotics.cn/en/,2026-05-26,高,复杂场景巡检证据较多
+Figure 02,Figure AI,美国,全尺寸人形机器人,unknown,unknown,unknown,unknown,双足,制造搬运/插装/家庭潜力,Helix VLA,unknown,2024,客户试点,C,客户公告,https://www.bmwgroup.com/en/news/general/2024/humanoid-robots.html,2026-05-26,中,BMW试验是核心证据；公开参数和订单需补
+Digit,Agility Robotics,美国,双足人形/物流机器人,unknown,unknown,箱体搬运任务,unknown,双足,物流搬运,Agility Arc/物流工作流,RaaS,2023,商业RaaS部署,B,官网新闻,https://www.agilityrobotics.com/content/digit-deployed-at-gxo-in-historic-humanoid-raas-agreement,2026-05-26,高,具备明确付费部署样本
+Apollo,Apptronik,美国,全尺寸人形机器人,约5英尺8英寸/约160磅,unknown,55磅,可自主充电/待核验,双足,物流送件/产线供料,Google Gemini Robotics合作待独立跟踪,unknown,2023,商业试点,B,官网新闻,https://apptronik.com/news-collection/apptronik-and-mercedes-benz-enter-commercial-agreement,2026-05-26,中,Mercedes-Benz试点明确；规模和收入未知
+NEO,1X Technologies,挪威/美国,家庭人形机器人,unknown,unknown,unknown,unknown,双足,家务/开门/取物,Redwood AI/远程辅助,20000美元或租赁待核验,2025-10-28,预售/Beta,B,官网新闻,https://www.1x.tech/discover/neo-home-robot,2026-05-26,中,家庭场景重要但真实使用数据仍少
+Phoenix,Sanctuary AI,加拿大,全尺寸人形机器人,unknown,unknown,unknown,unknown,双足,多行业工作任务,Carbon AI,unknown,2023,早期商业部署/公司自述,B,官网新闻,https://www.sanctuary.ai/blog/sanctuary-ai-unveils-phoenix-a-humanoid-general-purpose-robot-designed-for-work,2026-05-26,中,需补充客户和任务细节
+Atlas,Boston Dynamics,美国,全电人形机器人,unknown,unknown,unknown,unknown,双足,制造排序/移动操作,行业AI/Hyundai测试,unknown,2026-01-05,产品化测试,B,官网产品页,https://bostondynamics.com/products/atlas/,2026-05-26,高,技术领先；商业量产时间仍待验证
+4NE1,NEURA Robotics,德国,认知人形机器人,unknown,80轴/官网展示,unknown,unknown,双足/轮式版本,工业协作/家庭服务,NEURA AI/API,预订,2026,预订/早期部署,B,官网产品页,https://neura-robotics.com/products/4ne1/,2026-05-26,中,欧洲代表性人形机器人；交付数据待跟踪
+ANYmal,ANYbotics,瑞士,四足巡检机器人,unknown,unknown,传感载荷,自动回充/待核验,四足,工业巡检,自主导航/感知,unknown,commercial,规模商用,B,官网产品页,https://www.anybotics.com/robotics/,2026-05-26,高,工业巡检商业化成熟度高
+Tally,Simbe Robotics,美国,零售货架扫描机器人,unknown,unknown,传感器载荷,unknown,轮式,货架扫描/库存盘点,CV/RFID/Digimarc,服务订阅/待核验,2015,规模商用,B,官网新闻,https://www.simberobotics.com/about/newsroom/simbe-marks-10-years-of-tally-the-robot,2026-05-26,高,零售场景具备长期运营证据

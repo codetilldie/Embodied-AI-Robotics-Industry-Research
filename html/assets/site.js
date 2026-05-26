@@ -1,12 +1,1 @@
-(function () {
-  const input = document.querySelector('[data-search]');
-  if (!input) return;
-  const cards = Array.from(document.querySelectorAll('[data-card]'));
-  input.addEventListener('input', function () {
-    const q = input.value.trim().toLowerCase();
-    for (const card of cards) {
-      const text = card.textContent.toLowerCase();
-      card.style.display = !q || text.includes(q) ? '' : 'none';
-    }
-  });
-})();
+(function(){const i=document.querySelector('[data-search]');if(!i)return;const c=Array.from(document.querySelectorAll('[data-card]'));i.addEventListener('input',()=>{const q=i.value.trim().toLowerCase();for(const x of c)x.style.display=!q||x.textContent.toLowerCase().includes(q)?'':'none';});})();

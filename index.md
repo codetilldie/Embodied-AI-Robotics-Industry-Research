@@ -7,49 +7,43 @@
 - [网页目录 index.html](index.html)
 - [HTML 站点目录](html/index.html)
 - [管理层学习指南](html/reports/management_learning_guide.html)
-- [成熟度模型](html/reports/decision_tools/01_maturity_model.html)
-- [中国公司库](html/data/domestic_companies.html)
-- [落地案例库](html/data/deployment_cases.html)
+- [中国公司深度库](html/reports/competition/china_company_deep_index.html)
+- [公司深度来源库](html/data/company_deep_sources.html)
 
 ## 交付范围
 
-- Markdown 报告：44 个
-- 数据表：6 个
-- 静态 HTML 页面：50 个
-- 中国公司样本：51 家
-- 海外对照样本：20 家
-- 公开落地案例：36 条
-- 场景成熟度条目：8 个
+- Markdown 报告：200 个
+- 数据表：7 个
+- 静态 HTML 页面：207 个
+- 中国公司样本：51 个
+- 公开落地案例：36 个
 
 ## 建议阅读路径
 
 ### 2 小时管理层速读
 
 - [管理层总览](html/reports/management_learning_guide.html)
-- [董事会简报](html/reports/executive/01_board_briefing.html)
-- [决策地图](html/reports/executive/02_decision_map.html)
+- [中国公司深度库](html/reports/competition/china_company_deep_index.html)
 - [成熟度模型](html/reports/decision_tools/01_maturity_model.html)
 
 ### 半天专题学习
 
-- [90天试点](html/reports/decision_tools/03_90_day_pilot_playbook.html)
-- [中国公司库](html/data/domestic_companies.html)
-- [落地案例库](html/data/deployment_cases.html)
-- 结合行业基础课、场景商业化和竞品矩阵，形成内部讨论材料。
+- 阅读公司深度库中的核心 10 家企业入口。
+- 结合场景适配矩阵、采购与合作优先级形成内部讨论材料。
 
 ### 1 周深读
 
-- 按下面的完整目录依次阅读，并把每个业务线的潜在场景填入成熟度模型、供应商尽调清单和 ROI 模型。
+- 按下面完整目录依次阅读，并把潜在供应商填入成熟度模型、供应商尽调清单和 ROI 模型。
 
 ## 完整目录
 
 ### 管理层入口
 
-- [管理层具身智能机器人战略学习指南](html/reports/management_learning_guide.html) - 源文件：[`reports/management_learning_guide.md`](reports/management_learning_guide.md)
 - [管理层简报：为什么现在要学习具身智能机器人](html/reports/executive/01_board_briefing.html) - 源文件：[`reports/executive/01_board_briefing.md`](reports/executive/01_board_briefing.md)
 - [战略决策地图：管理层如何判断是否进入](html/reports/executive/02_decision_map.html) - 源文件：[`reports/executive/02_decision_map.md`](reports/executive/02_decision_map.md)
 - [2026 重点观察清单](html/reports/executive/03_2026_watchlist.html) - 源文件：[`reports/executive/03_2026_watchlist.md`](reports/executive/03_2026_watchlist.md)
 - [常见误区：管理层最容易被误导的 12 件事](html/reports/executive/04_common_misconceptions.html) - 源文件：[`reports/executive/04_common_misconceptions.md`](reports/executive/04_common_misconceptions.md)
+- [管理层具身智能机器人战略学习指南](html/reports/management_learning_guide.html) - 源文件：[`reports/management_learning_guide.md`](reports/management_learning_guide.md)
 
 ### 行业基础课
 
@@ -66,6 +60,157 @@
 - [公司深度分析：智元机器人](html/reports/company_profiles/agibot.html) - 源文件：[`reports/company_profiles/agibot.md`](reports/company_profiles/agibot.md)
 - [公司深度分析：Agility Robotics](html/reports/company_profiles/agility_robotics.html) - 源文件：[`reports/company_profiles/agility_robotics.md`](reports/company_profiles/agility_robotics.md)
 - [公司深度分析：Apptronik](html/reports/company_profiles/apptronik.html) - 源文件：[`reports/company_profiles/apptronik.md`](reports/company_profiles/apptronik.md)
+- [智元机器人：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/agibot/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/01_overview.md`](reports/company_profiles/china_deep_dive/core/agibot/01_overview.md)
+- [智元机器人：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/agibot/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/02_history.md`](reports/company_profiles/china_deep_dive/core/agibot/02_history.md)
+- [智元机器人：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/agibot/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/03_products.md`](reports/company_profiles/china_deep_dive/core/agibot/03_products.md)
+- [智元机器人：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/agibot/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/04_technology.md`](reports/company_profiles/china_deep_dive/core/agibot/04_technology.md)
+- [智元机器人：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/agibot/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/agibot/05_supply_chain_cost.md)
+- [智元机器人：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/agibot/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/agibot/06_customers_deployment.md)
+- [智元机器人：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/agibot/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/07_business_model.md`](reports/company_profiles/china_deep_dive/core/agibot/07_business_model.md)
+- [智元机器人：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/agibot/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/08_competition.md`](reports/company_profiles/china_deep_dive/core/agibot/08_competition.md)
+- [智元机器人：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/agibot/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/agibot/09_management_decision.md)
+- [智元机器人：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/agibot/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/agibot/10_risks_sources.md)
+- [智元机器人深度分析总入口](html/reports/company_profiles/china_deep_dive/core/agibot/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/agibot/index.md`](reports/company_profiles/china_deep_dive/core/agibot/index.md)
+- [云深处科技：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/deep_robotics/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/01_overview.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/01_overview.md)
+- [云深处科技：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/deep_robotics/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/02_history.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/02_history.md)
+- [云深处科技：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/deep_robotics/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/03_products.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/03_products.md)
+- [云深处科技：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/deep_robotics/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/04_technology.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/04_technology.md)
+- [云深处科技：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/deep_robotics/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/05_supply_chain_cost.md)
+- [云深处科技：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/deep_robotics/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/06_customers_deployment.md)
+- [云深处科技：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/deep_robotics/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/07_business_model.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/07_business_model.md)
+- [云深处科技：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/deep_robotics/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/08_competition.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/08_competition.md)
+- [云深处科技：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/deep_robotics/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/09_management_decision.md)
+- [云深处科技：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/deep_robotics/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/10_risks_sources.md)
+- [云深处科技深度分析总入口](html/reports/company_profiles/china_deep_dive/core/deep_robotics/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/deep_robotics/index.md`](reports/company_profiles/china_deep_dive/core/deep_robotics/index.md)
+- [众擎机器人/EngineAI：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/engineai/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/01_overview.md`](reports/company_profiles/china_deep_dive/core/engineai/01_overview.md)
+- [众擎机器人/EngineAI：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/engineai/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/02_history.md`](reports/company_profiles/china_deep_dive/core/engineai/02_history.md)
+- [众擎机器人/EngineAI：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/engineai/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/03_products.md`](reports/company_profiles/china_deep_dive/core/engineai/03_products.md)
+- [众擎机器人/EngineAI：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/engineai/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/04_technology.md`](reports/company_profiles/china_deep_dive/core/engineai/04_technology.md)
+- [众擎机器人/EngineAI：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/engineai/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/engineai/05_supply_chain_cost.md)
+- [众擎机器人/EngineAI：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/engineai/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/engineai/06_customers_deployment.md)
+- [众擎机器人/EngineAI：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/engineai/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/07_business_model.md`](reports/company_profiles/china_deep_dive/core/engineai/07_business_model.md)
+- [众擎机器人/EngineAI：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/engineai/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/08_competition.md`](reports/company_profiles/china_deep_dive/core/engineai/08_competition.md)
+- [众擎机器人/EngineAI：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/engineai/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/engineai/09_management_decision.md)
+- [众擎机器人/EngineAI：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/engineai/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/engineai/10_risks_sources.md)
+- [众擎机器人/EngineAI深度分析总入口](html/reports/company_profiles/china_deep_dive/core/engineai/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/engineai/index.md`](reports/company_profiles/china_deep_dive/core/engineai/index.md)
+- [傅利叶智能：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/fourier/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/01_overview.md`](reports/company_profiles/china_deep_dive/core/fourier/01_overview.md)
+- [傅利叶智能：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/fourier/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/02_history.md`](reports/company_profiles/china_deep_dive/core/fourier/02_history.md)
+- [傅利叶智能：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/fourier/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/03_products.md`](reports/company_profiles/china_deep_dive/core/fourier/03_products.md)
+- [傅利叶智能：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/fourier/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/04_technology.md`](reports/company_profiles/china_deep_dive/core/fourier/04_technology.md)
+- [傅利叶智能：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/fourier/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/fourier/05_supply_chain_cost.md)
+- [傅利叶智能：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/fourier/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/fourier/06_customers_deployment.md)
+- [傅利叶智能：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/fourier/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/07_business_model.md`](reports/company_profiles/china_deep_dive/core/fourier/07_business_model.md)
+- [傅利叶智能：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/fourier/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/08_competition.md`](reports/company_profiles/china_deep_dive/core/fourier/08_competition.md)
+- [傅利叶智能：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/fourier/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/fourier/09_management_decision.md)
+- [傅利叶智能：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/fourier/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/fourier/10_risks_sources.md)
+- [傅利叶智能深度分析总入口](html/reports/company_profiles/china_deep_dive/core/fourier/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/fourier/index.md`](reports/company_profiles/china_deep_dive/core/fourier/index.md)
+- [银河通用：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/galbot/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/01_overview.md`](reports/company_profiles/china_deep_dive/core/galbot/01_overview.md)
+- [银河通用：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/galbot/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/02_history.md`](reports/company_profiles/china_deep_dive/core/galbot/02_history.md)
+- [银河通用：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/galbot/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/03_products.md`](reports/company_profiles/china_deep_dive/core/galbot/03_products.md)
+- [银河通用：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/galbot/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/04_technology.md`](reports/company_profiles/china_deep_dive/core/galbot/04_technology.md)
+- [银河通用：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/galbot/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/galbot/05_supply_chain_cost.md)
+- [银河通用：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/galbot/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/galbot/06_customers_deployment.md)
+- [银河通用：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/galbot/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/07_business_model.md`](reports/company_profiles/china_deep_dive/core/galbot/07_business_model.md)
+- [银河通用：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/galbot/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/08_competition.md`](reports/company_profiles/china_deep_dive/core/galbot/08_competition.md)
+- [银河通用：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/galbot/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/galbot/09_management_decision.md)
+- [银河通用：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/galbot/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/galbot/10_risks_sources.md)
+- [银河通用深度分析总入口](html/reports/company_profiles/china_deep_dive/core/galbot/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/galbot/index.md`](reports/company_profiles/china_deep_dive/core/galbot/index.md)
+- [乐聚机器人：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/leju_robotics/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/01_overview.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/01_overview.md)
+- [乐聚机器人：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/leju_robotics/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/02_history.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/02_history.md)
+- [乐聚机器人：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/leju_robotics/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/03_products.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/03_products.md)
+- [乐聚机器人：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/leju_robotics/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/04_technology.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/04_technology.md)
+- [乐聚机器人：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/leju_robotics/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/05_supply_chain_cost.md)
+- [乐聚机器人：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/leju_robotics/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/06_customers_deployment.md)
+- [乐聚机器人：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/leju_robotics/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/07_business_model.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/07_business_model.md)
+- [乐聚机器人：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/leju_robotics/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/08_competition.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/08_competition.md)
+- [乐聚机器人：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/leju_robotics/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/09_management_decision.md)
+- [乐聚机器人：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/leju_robotics/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/10_risks_sources.md)
+- [乐聚机器人深度分析总入口](html/reports/company_profiles/china_deep_dive/core/leju_robotics/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/leju_robotics/index.md`](reports/company_profiles/china_deep_dive/core/leju_robotics/index.md)
+- [逐际动力：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/01_overview.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/01_overview.md)
+- [逐际动力：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/02_history.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/02_history.md)
+- [逐际动力：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/03_products.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/03_products.md)
+- [逐际动力：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/04_technology.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/04_technology.md)
+- [逐际动力：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/05_supply_chain_cost.md)
+- [逐际动力：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/06_customers_deployment.md)
+- [逐际动力：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/07_business_model.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/07_business_model.md)
+- [逐际动力：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/08_competition.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/08_competition.md)
+- [逐际动力：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/09_management_decision.md)
+- [逐际动力：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/10_risks_sources.md)
+- [逐际动力深度分析总入口](html/reports/company_profiles/china_deep_dive/core/limx_dynamics/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/limx_dynamics/index.md`](reports/company_profiles/china_deep_dive/core/limx_dynamics/index.md)
+- [普渡机器人：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/01_overview.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/01_overview.md)
+- [普渡机器人：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/02_history.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/02_history.md)
+- [普渡机器人：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/03_products.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/03_products.md)
+- [普渡机器人：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/04_technology.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/04_technology.md)
+- [普渡机器人：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/05_supply_chain_cost.md)
+- [普渡机器人：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/06_customers_deployment.md)
+- [普渡机器人：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/07_business_model.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/07_business_model.md)
+- [普渡机器人：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/08_competition.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/08_competition.md)
+- [普渡机器人：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/09_management_decision.md)
+- [普渡机器人：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/10_risks_sources.md)
+- [普渡机器人深度分析总入口](html/reports/company_profiles/china_deep_dive/core/pudu_robotics/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/pudu_robotics/index.md`](reports/company_profiles/china_deep_dive/core/pudu_robotics/index.md)
+- [优必选：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/ubtech/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/01_overview.md`](reports/company_profiles/china_deep_dive/core/ubtech/01_overview.md)
+- [优必选：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/ubtech/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/02_history.md`](reports/company_profiles/china_deep_dive/core/ubtech/02_history.md)
+- [优必选：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/ubtech/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/03_products.md`](reports/company_profiles/china_deep_dive/core/ubtech/03_products.md)
+- [优必选：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/ubtech/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/04_technology.md`](reports/company_profiles/china_deep_dive/core/ubtech/04_technology.md)
+- [优必选：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/ubtech/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/ubtech/05_supply_chain_cost.md)
+- [优必选：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/ubtech/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/ubtech/06_customers_deployment.md)
+- [优必选：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/ubtech/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/07_business_model.md`](reports/company_profiles/china_deep_dive/core/ubtech/07_business_model.md)
+- [优必选：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/ubtech/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/08_competition.md`](reports/company_profiles/china_deep_dive/core/ubtech/08_competition.md)
+- [优必选：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/ubtech/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/ubtech/09_management_decision.md)
+- [优必选：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/ubtech/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/ubtech/10_risks_sources.md)
+- [优必选深度分析总入口](html/reports/company_profiles/china_deep_dive/core/ubtech/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/ubtech/index.md`](reports/company_profiles/china_deep_dive/core/ubtech/index.md)
+- [宇树科技：公司定位与管理层摘要](html/reports/company_profiles/china_deep_dive/core/unitree/01_overview.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/01_overview.md`](reports/company_profiles/china_deep_dive/core/unitree/01_overview.md)
+- [宇树科技：发展历程与组织能力](html/reports/company_profiles/china_deep_dive/core/unitree/02_history.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/02_history.md`](reports/company_profiles/china_deep_dive/core/unitree/02_history.md)
+- [宇树科技：产品矩阵与任务边界](html/reports/company_profiles/china_deep_dive/core/unitree/03_products.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/03_products.md`](reports/company_profiles/china_deep_dive/core/unitree/03_products.md)
+- [宇树科技：技术路线与数据闭环](html/reports/company_profiles/china_deep_dive/core/unitree/04_technology.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/04_technology.md`](reports/company_profiles/china_deep_dive/core/unitree/04_technology.md)
+- [宇树科技：供应链、成本与制造能力](html/reports/company_profiles/china_deep_dive/core/unitree/05_supply_chain_cost.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/05_supply_chain_cost.md`](reports/company_profiles/china_deep_dive/core/unitree/05_supply_chain_cost.md)
+- [宇树科技：客户、案例与商业化证据](html/reports/company_profiles/china_deep_dive/core/unitree/06_customers_deployment.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/06_customers_deployment.md`](reports/company_profiles/china_deep_dive/core/unitree/06_customers_deployment.md)
+- [宇树科技：商业模式与收入质量](html/reports/company_profiles/china_deep_dive/core/unitree/07_business_model.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/07_business_model.md`](reports/company_profiles/china_deep_dive/core/unitree/07_business_model.md)
+- [宇树科技：竞争对手与替代方案](html/reports/company_profiles/china_deep_dive/core/unitree/08_competition.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/08_competition.md`](reports/company_profiles/china_deep_dive/core/unitree/08_competition.md)
+- [宇树科技：管理层合作建议与试点路径](html/reports/company_profiles/china_deep_dive/core/unitree/09_management_decision.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/09_management_decision.md`](reports/company_profiles/china_deep_dive/core/unitree/09_management_decision.md)
+- [宇树科技：风险、跟踪指标与来源索引](html/reports/company_profiles/china_deep_dive/core/unitree/10_risks_sources.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/10_risks_sources.md`](reports/company_profiles/china_deep_dive/core/unitree/10_risks_sources.md)
+- [宇树科技深度分析总入口](html/reports/company_profiles/china_deep_dive/core/unitree/index.html) - 源文件：[`reports/company_profiles/china_deep_dive/core/unitree/index.md`](reports/company_profiles/china_deep_dive/core/unitree/index.md)
+- [松灵机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/agilex_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/agilex_robotics.md`](reports/company_profiles/china_deep_dive/others/agilex_robotics.md)
+- [星尘智能/Astribot结构化深度分析](html/reports/company_profiles/china_deep_dive/others/astribot.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/astribot.md`](reports/company_profiles/china_deep_dive/others/astribot.md)
+- [遨博智能结构化深度分析](html/reports/company_profiles/china_deep_dive/others/aubo_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/aubo_robotics.md`](reports/company_profiles/china_deep_dive/others/aubo_robotics.md)
+- [北京人形机器人创新中心结构化深度分析](html/reports/company_profiles/china_deep_dive/others/beijing_humanoid_robotics_innovation_center.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/beijing_humanoid_robotics_innovation_center.md`](reports/company_profiles/china_deep_dive/others/beijing_humanoid_robotics_innovation_center.md)
+- [加速进化/Booster Robotics结构化深度分析](html/reports/company_profiles/china_deep_dive/others/booster_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/booster_robotics.md`](reports/company_profiles/china_deep_dive/others/booster_robotics.md)
+- [达闼机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/cloudminds.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/cloudminds.md`](reports/company_profiles/china_deep_dive/others/cloudminds.md)
+- [越疆科技结构化深度分析](html/reports/company_profiles/china_deep_dive/others/dobot.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/dobot.md`](reports/company_profiles/china_deep_dive/others/dobot.md)
+- [追觅科技结构化深度分析](html/reports/company_profiles/china_deep_dive/others/dreame.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/dreame.md`](reports/company_profiles/china_deep_dive/others/dreame.md)
+- [科沃斯结构化深度分析](html/reports/company_profiles/china_deep_dive/others/ecovacs.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/ecovacs.md`](reports/company_profiles/china_deep_dive/others/ecovacs.md)
+- [埃夫特结构化深度分析](html/reports/company_profiles/china_deep_dive/others/efort.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/efort.md`](reports/company_profiles/china_deep_dive/others/efort.md)
+- [大象机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/elephant_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/elephant_robotics.md`](reports/company_profiles/china_deep_dive/others/elephant_robotics.md)
+- [艾利特机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/elite_robots.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/elite_robots.md`](reports/company_profiles/china_deep_dive/others/elite_robots.md)
+- [埃斯顿结构化深度分析](html/reports/company_profiles/china_deep_dive/others/estun.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/estun.md`](reports/company_profiles/china_deep_dive/others/estun.md)
+- [非夕科技结构化深度分析](html/reports/company_profiles/china_deep_dive/others/flexiv.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/flexiv.md`](reports/company_profiles/china_deep_dive/others/flexiv.md)
+- [高仙机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/gaussian_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/gaussian_robotics.md`](reports/company_profiles/china_deep_dive/others/gaussian_robotics.md)
+- [极智嘉/Geekplus结构化深度分析](html/reports/company_profiles/china_deep_dive/others/geekplus.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/geekplus.md`](reports/company_profiles/china_deep_dive/others/geekplus.md)
+- [大族机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/hans_robot.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/hans_robot.md`](reports/company_profiles/china_deep_dive/others/hans_robot.md)
+- [禾赛科技结构化深度分析](html/reports/company_profiles/china_deep_dive/others/hesai.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/hesai.md`](reports/company_profiles/china_deep_dive/others/hesai.md)
+- [海康机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/hikrobot.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/hikrobot.md`](reports/company_profiles/china_deep_dive/others/hikrobot.md)
+- [汇川技术结构化深度分析](html/reports/company_profiles/china_deep_dive/others/inovance.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/inovance.md`](reports/company_profiles/china_deep_dive/others/inovance.md)
+- [节卡机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/jaka_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/jaka_robotics.md`](reports/company_profiles/china_deep_dive/others/jaka_robotics.md)
+- [擎朗智能结构化深度分析](html/reports/company_profiles/china_deep_dive/others/keenon_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/keenon_robotics.md`](reports/company_profiles/china_deep_dive/others/keenon_robotics.md)
+- [开普勒机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/kepler_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/kepler_robotics.md`](reports/company_profiles/china_deep_dive/others/kepler_robotics.md)
+- [绿的谐波结构化深度分析](html/reports/company_profiles/china_deep_dive/others/leaderdrive.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/leaderdrive.md`](reports/company_profiles/china_deep_dive/others/leaderdrive.md)
+- [梅卡曼德机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/mech_mind.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/mech_mind.md`](reports/company_profiles/china_deep_dive/others/mech_mind.md)
+- [云鲸智能结构化深度分析](html/reports/company_profiles/china_deep_dive/others/narwal.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/narwal.md`](reports/company_profiles/china_deep_dive/others/narwal.md)
+- [奥比中光结构化深度分析](html/reports/company_profiles/china_deep_dive/others/orbbec.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/orbbec.md`](reports/company_profiles/china_deep_dive/others/orbbec.md)
+- [帕西尼感知科技结构化深度分析](html/reports/company_profiles/china_deep_dive/others/paxini.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/paxini.md`](reports/company_profiles/china_deep_dive/others/paxini.md)
+- [快仓智能结构化深度分析](html/reports/company_profiles/china_deep_dive/others/quicktron.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/quicktron.md`](reports/company_profiles/china_deep_dive/others/quicktron.md)
+- [速腾聚创结构化深度分析](html/reports/company_profiles/china_deep_dive/others/robosense.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/robosense.md`](reports/company_profiles/china_deep_dive/others/robosense.md)
+- [珞石机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/rokae.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/rokae.md`](reports/company_profiles/china_deep_dive/others/rokae.md)
+- [三花智控结构化深度分析](html/reports/company_profiles/china_deep_dive/others/sanhua.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/sanhua.md`](reports/company_profiles/china_deep_dive/others/sanhua.md)
+- [仙工智能结构化深度分析](html/reports/company_profiles/china_deep_dive/others/seer_group.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/seer_group.md`](reports/company_profiles/china_deep_dive/others/seer_group.md)
+- [仙知机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/seer_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/seer_robotics.md`](reports/company_profiles/china_deep_dive/others/seer_robotics.md)
+- [新松机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/siasun.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/siasun.md`](reports/company_profiles/china_deep_dive/others/siasun.md)
+- [斯坦德机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/standard_robots.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/standard_robots.md`](reports/company_profiles/china_deep_dive/others/standard_robots.md)
+- [优必选教育/服务生态结构化深度分析](html/reports/company_profiles/china_deep_dive/others/ubtech_education_service.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/ubtech_education_service.md`](reports/company_profiles/china_deep_dive/others/ubtech_education_service.md)
+- [小鹏机器人结构化深度分析](html/reports/company_profiles/china_deep_dive/others/xpeng_robotics.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/xpeng_robotics.md`](reports/company_profiles/china_deep_dive/others/xpeng_robotics.md)
+- [优艾智合结构化深度分析](html/reports/company_profiles/china_deep_dive/others/youibot.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/youibot.md`](reports/company_profiles/china_deep_dive/others/youibot.md)
+- [中大力德结构化深度分析](html/reports/company_profiles/china_deep_dive/others/zd_motor.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/zd_motor.md`](reports/company_profiles/china_deep_dive/others/zd_motor.md)
+- [兆威机电结构化深度分析](html/reports/company_profiles/china_deep_dive/others/zwgearbox.html) - 源文件：[`reports/company_profiles/china_deep_dive/others/zwgearbox.md`](reports/company_profiles/china_deep_dive/others/zwgearbox.md)
 - [公司深度分析：Figure AI](html/reports/company_profiles/figure_ai.html) - 源文件：[`reports/company_profiles/figure_ai.md`](reports/company_profiles/figure_ai.md)
 - [公司深度分析：优必选](html/reports/company_profiles/ubtech.html) - 源文件：[`reports/company_profiles/ubtech.md`](reports/company_profiles/ubtech.md)
 - [公司深度分析：宇树科技](html/reports/company_profiles/unitree.html) - 源文件：[`reports/company_profiles/unitree.md`](reports/company_profiles/unitree.md)
@@ -74,6 +219,11 @@
 - [公司分层矩阵](html/reports/competition/03_company_tier_matrix.html) - 源文件：[`reports/competition/03_company_tier_matrix.md`](reports/competition/03_company_tier_matrix.md)
 - [核心供应链图谱](html/reports/competition/04_supply_chain_map.html) - 源文件：[`reports/competition/04_supply_chain_map.md`](reports/competition/04_supply_chain_map.md)
 - [模型与平台层：机器人智能的长期入口](html/reports/competition/05_platform_and_model_layer.html) - 源文件：[`reports/competition/05_platform_and_model_layer.md`](reports/competition/05_platform_and_model_layer.md)
+- [中国公司年度跟踪清单](html/reports/competition/china_company_annual_tracking_list.html) - 源文件：[`reports/competition/china_company_annual_tracking_list.md`](reports/competition/china_company_annual_tracking_list.md)
+- [中国公司深度库总目录](html/reports/competition/china_company_deep_index.html) - 源文件：[`reports/competition/china_company_deep_index.md`](reports/competition/china_company_deep_index.md)
+- [中国公司采购与合作优先级](html/reports/competition/china_company_purchase_priority.html) - 源文件：[`reports/competition/china_company_purchase_priority.md`](reports/competition/china_company_purchase_priority.md)
+- [中国公司场景适配矩阵](html/reports/competition/china_company_scenario_fit_matrix.html) - 源文件：[`reports/competition/china_company_scenario_fit_matrix.md`](reports/competition/china_company_scenario_fit_matrix.md)
+- [核心企业竞争矩阵](html/reports/competition/core_company_competition_matrix.html) - 源文件：[`reports/competition/core_company_competition_matrix.md`](reports/competition/core_company_competition_matrix.md)
 
 ### 场景与商业化
 
@@ -100,23 +250,17 @@
 
 ### 数据与证据
 
-- [来源索引](html/sources/source_index.html) - 源文件：[`sources/source_index.md`](sources/source_index.md)
+- [公司深度来源库](html/data/company_deep_sources.html) - 源文件：[`data/company_deep_sources.csv`](data/company_deep_sources.csv)
 - [落地案例库](html/data/deployment_cases.html) - 源文件：[`data/deployment_cases.csv`](data/deployment_cases.csv)
 - [中国公司库](html/data/domestic_companies.html) - 源文件：[`data/domestic_companies.csv`](data/domestic_companies.csv)
 - [融资事件库](html/data/financing_events.html) - 源文件：[`data/financing_events.csv`](data/financing_events.csv)
 - [海外对照公司库](html/data/overseas_companies.html) - 源文件：[`data/overseas_companies.csv`](data/overseas_companies.csv)
 - [产品库](html/data/products.html) - 源文件：[`data/products.csv`](data/products.csv)
 - [场景成熟度库](html/data/scenario_maturity.html) - 源文件：[`data/scenario_maturity.csv`](data/scenario_maturity.csv)
+- [来源索引](html/sources/source_index.html) - 源文件：[`sources/source_index.md`](sources/source_index.md)
 
 ### 项目文档
 
 - [Embodied-AI-Robotics-Industry-Research 项目任务规划](html/docs/project_task_plan.html) - 源文件：[`docs/project_task_plan.md`](docs/project_task_plan.md)
 - [研究范围与术语口径](html/docs/research_scope.html) - 源文件：[`docs/research_scope.md`](docs/research_scope.md)
 - [来源引用与可信度规则](html/docs/source_guidelines.html) - 源文件：[`docs/source_guidelines.md`](docs/source_guidelines.md)
-
-## 使用说明
-
-- 先用 `index.html` 浏览全站目录，再进入管理层学习指南。
-- 数据页由 `data/*.csv` 转换生成，适合快速筛选公司、产品、融资和落地案例。
-- 关键判断应回到 `sources/source_index.md` 和各报告来源段落核验。
-- 本包是管理学习和战略讨论材料，不构成投资建议或采购承诺。

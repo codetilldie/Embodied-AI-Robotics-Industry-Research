@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>具身智能机器人组成科普：大脑、小脑、本体</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #182235;
+      --nav: #101725;
+      --muted: #5c6678;
+      --soft: #f5f7fb;
+      --paper: #ffffff;
+      --line: #d9e0ea;
+      --blue: #225fc8;
+      --teal: #0f8b86;
+      --amber: #c77716;
+      --red: #c04747;
+      --green: #258658;
+      --violet: #6a55b8;
+      --shadow: 0 18px 46px rgba(31, 43, 68, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-width: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(34, 95, 200, 0.055) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(15, 139, 134, 0.05) 1px, transparent 1px),
+        #fbfcff;
+      background-size: 44px 44px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 14px 34px;
+      border-bottom: 1px solid rgba(217, 224, 234, 0.82);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      color: var(--nav);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, var(--blue), var(--teal) 55%, var(--amber));
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.56);
+      flex: 0 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav a {
+      padding: 7px 10px;
+      border-radius: 7px;
+      color: #233148;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav a:hover {
+      background: #eef4ff;
+    }
+
+    .nav a,
+    .nav .nav-current {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: #233148;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.3;
+    }
+
+    .nav a:hover {
+      background: #eef4ff;
+      color: #175aa8;
+      text-decoration: none;
+    }
+
+    .nav .nav-current {
+      background: #175aa8;
+      color: #ffffff;
+      cursor: default;
+      box-shadow: 0 8px 18px rgba(23, 90, 168, 0.16);
+    }
+
+    .shell {
+      width: min(1480px, calc(100% - 56px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.96fr) minmax(520px, 1.04fr);
+      gap: 44px;
+      align-items: center;
+      padding: 62px 0 34px;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--nav);
+      font-size: clamp(42px, 4.2vw, 68px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero-copy p {
+      max-width: 700px;
+      margin: 22px 0 0;
+      color: #344256;
+      font-size: 20px;
+      line-height: 1.78;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--nav);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .button.primary {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .button:hover {
+      border-color: var(--blue);
+      box-shadow: 0 10px 22px rgba(34, 95, 200, 0.12);
+    }
+
+    .hero-panel {
+      min-width: 0;
+      border: 1px solid rgba(217, 224, 234, 0.96);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, #f8fbff, #f7fbfa);
+    }
+
+    .panel-title strong {
+      color: var(--nav);
+      font-size: 17px;
+    }
+
+    .panel-title span {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .robot-visual {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #ffffff;
+    }
+
+    .concept-strip {
+      display: grid;
+      grid-template-columns: 1.1fr repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin: 14px 0 38px;
+    }
+
+    .strip-lead,
+    .strip-step {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .strip-lead {
+      padding: 16px 18px;
+      color: var(--nav);
+      font-size: 18px;
+      font-weight: 850;
+    }
+
+    .strip-step {
+      position: relative;
+      padding: 14px;
+    }
+
+    .strip-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      width: 10px;
+      height: 2px;
+      background: var(--line);
+    }
+
+    .strip-step b,
+    .strip-step span {
+      display: block;
+      min-width: 0;
+    }
+
+    .strip-step b {
+      color: var(--nav);
+      font-size: 15px;
+      line-height: 1.32;
+    }
+
+    .strip-step span {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.42;
+    }
+
+    .section {
+      padding: 36px 0;
+      border-top: 1px solid rgba(217, 224, 234, 0.82);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 20px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--nav);
+      font-size: 30px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .section-heading p {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      text-align: right;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .overview-card {
+      min-width: 0;
+      min-height: 250px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(31, 43, 68, 0.07);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .icon.brain {
+      background: var(--blue);
+    }
+
+    .icon.cerebellum {
+      background: var(--teal);
+    }
+
+    .icon.body {
+      background: var(--amber);
+    }
+
+    .overview-card h3 {
+      margin: 0;
+      color: var(--nav);
+      font-size: 20px;
+      line-height: 1.24;
+    }
+
+    .overview-card p {
+      margin: 0;
+      color: #354255;
+      font-size: 15px;
+    }
+
+    .key-line {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .part {
+      display: grid;
+      grid-template-columns: minmax(330px, 0.72fr) minmax(0, 1.28fr);
+      gap: 24px;
+      align-items: start;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 16px 36px rgba(31, 43, 68, 0.08);
+    }
+
+    .part + .part {
+      margin-top: 20px;
+    }
+
+    .part-intro {
+      min-width: 0;
+    }
+
+    .part-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 7px;
+      background: #eef4ff;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .part:nth-of-type(2) .part-index {
+      background: #eaf8f6;
+      color: var(--teal);
+    }
+
+    .part:nth-of-type(3) .part-index {
+      background: #fff3df;
+      color: var(--amber);
+    }
+
+    .part h3 {
+      margin: 14px 0 10px;
+      color: var(--nav);
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .part-intro p {
+      margin: 0;
+      color: #344256;
+      font-size: 16px;
+    }
+
+    .role-list {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .role-list li {
+      display: flex;
+      gap: 10px;
+      min-width: 0;
+      color: #354255;
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .role-list li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      margin-top: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .part-detail {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .detail-panel {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .detail-panel h4 {
+      margin: 0 0 12px;
+      color: var(--nav);
+      font-size: 17px;
+      line-height: 1.28;
+    }
+
+    .route-list,
+    .hardware-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .route-list li,
+    .hardware-list li {
+      min-width: 0;
+      padding: 10px 11px;
+      border: 1px solid #e5ebf4;
+      border-radius: 7px;
+      background: #fff;
+      color: #334054;
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .route-list b,
+    .hardware-list b {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--nav);
+      font-size: 14px;
+      line-height: 1.32;
+    }
+
+    .compare-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(31, 43, 68, 0.06);
+    }
+
+    table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    th {
+      position: sticky;
+      top: 60px;
+      background: #f3f7fc;
+      color: var(--nav);
+      font-size: 13px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .note-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .note {
+      min-width: 0;
+      padding: 18px;
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(31, 43, 68, 0.06);
+    }
+
+    .note:nth-child(2) {
+      border-left-color: var(--teal);
+    }
+
+    .note:nth-child(3) {
+      border-left-color: var(--amber);
+    }
+
+    .note b,
+    .note span {
+      display: block;
+    }
+
+    .note b {
+      color: var(--nav);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .note span {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    .footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    @media (max-width: 1240px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-width: 900px;
+      }
+
+      .concept-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .strip-lead {
+        grid-column: 1 / -1;
+      }
+
+      .part {
+        grid-template-columns: 1fr;
+      }
+
+      .part-detail {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 24px;
+      }
+
+      .shell {
+        width: min(100% - 36px, 1480px);
+      }
+
+      .overview-grid,
+      .note-grid,
+      .part-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .section-heading p {
+        text-align: left;
+      }
+
+      .concept-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="pop-science-navigation.html" aria-label="返回科普导航页">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Embodied AI Research</span>
+    </a>
+    <nav class="nav" aria-label="科普页面导航">
+      <a href="robotics-management-primer.html">概览行业</a>
+      <span class="nav-current" aria-current="page">机器人组成</span>
+      <a href="06_end_to_end_model_progress.html">大脑：端到端模型</a>
+      <a href="generalist-robot-foundation-models.html">泛化模型</a>
+      <a href="china_top20_embodied_robot_companies.html">公司图鉴</a>
+      <a href="retail-store-robot-ai-applications.html">门店应用讨论</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <h1 id="page-title">具身智能机器人由什么组成</h1>
+        <p>可以把一台会工作的机器人理解成三件事的组合：大脑负责理解任务并生成动作意图，小脑负责把意图变成稳定、实时、安全的运动，本体负责真正站起来、移动、抓取和接触世界。</p>
+        <p>这不是简单的“模型加外壳”。机器人必须同时解决模型泛化、运动控制、机械可靠性和传感反馈，三层缺一层，演示就很难变成可长期运行的产品。</p>
+        <div class="hero-actions" aria-label="快捷入口">
+          <a class="button primary" href="#brain">看大脑技术路线</a>
+          <a class="button" href="#compare">看三层分工表</a>
+        </div>
+      </div>
+
+      <figure class="hero-panel">
+        <div class="panel-title">
+          <strong>机器人三层结构示意</strong>
+          <span>从“想做什么”到“稳定做出来”</span>
+        </div>
+        <svg class="robot-visual" viewBox="0 0 920 640" role="img" aria-label="具身智能机器人的大脑、小脑和本体三层结构图">
+          <defs>
+            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1f2b44" flood-opacity="0.16"/>
+            </filter>
+            <linearGradient id="torso" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eef5ff"/>
+              <stop offset="1" stop-color="#edf9f6"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="0" y="0" width="920" height="640" fill="#ffffff"/>
+          <g opacity="0.55">
+            <path d="M52 108H870" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M52 228H870" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M52 348H870" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M52 468H870" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M160 54V586" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M320 54V586" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M480 54V586" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M640 54V586" stroke="#edf1f7" stroke-width="2"/>
+            <path d="M800 54V586" stroke="#edf1f7" stroke-width="2"/>
+          </g>
+
+          <g filter="url(#softShadow)">
+            <rect x="354" y="72" width="212" height="116" rx="34" fill="#ffffff" stroke="#d8e1ee" stroke-width="3"/>
+            <circle cx="410" cy="128" r="14" fill="#225fc8"/>
+            <circle cx="510" cy="128" r="14" fill="#0f8b86"/>
+            <path d="M424 108C446 93 479 93 499 108" fill="none" stroke="#8290a3" stroke-width="8" stroke-linecap="round"/>
+            <path d="M425 150C449 166 475 166 498 150" fill="none" stroke="#8290a3" stroke-width="8" stroke-linecap="round"/>
+            <rect x="386" y="186" width="148" height="48" rx="18" fill="#dfe7f2" stroke="#cdd8e8" stroke-width="3"/>
+            <rect x="318" y="226" width="284" height="232" rx="42" fill="url(#torso)" stroke="#cad7e7" stroke-width="3"/>
+            <path d="M358 278H562" stroke="#d7e0eb" stroke-width="3"/>
+            <path d="M358 338H562" stroke="#d7e0eb" stroke-width="3"/>
+            <path d="M358 398H562" stroke="#d7e0eb" stroke-width="3"/>
+            <circle cx="460" cy="340" r="46" fill="#ffffff" stroke="#cdd8e8" stroke-width="3"/>
+            <path d="M434 340H486M460 314V366" stroke="#225fc8" stroke-width="10" stroke-linecap="round"/>
+
+            <path d="M318 282C254 300 222 355 214 424" fill="none" stroke="#a6b5c8" stroke-width="24" stroke-linecap="round"/>
+            <path d="M602 282C666 300 698 355 706 424" fill="none" stroke="#a6b5c8" stroke-width="24" stroke-linecap="round"/>
+            <rect x="184" y="416" width="70" height="46" rx="19" fill="#ffffff" stroke="#cdd8e8" stroke-width="3"/>
+            <rect x="666" y="416" width="70" height="46" rx="19" fill="#ffffff" stroke="#cdd8e8" stroke-width="3"/>
+
+            <path d="M392 454L366 566" stroke="#a6b5c8" stroke-width="25" stroke-linecap="round"/>
+            <path d="M528 454L554 566" stroke="#a6b5c8" stroke-width="25" stroke-linecap="round"/>
+            <rect x="330" y="550" width="86" height="42" rx="18" fill="#ffffff" stroke="#cdd8e8" stroke-width="3"/>
+            <rect x="504" y="550" width="86" height="42" rx="18" fill="#ffffff" stroke="#cdd8e8" stroke-width="3"/>
+          </g>
+
+          <g>
+            <rect x="78" y="84" width="212" height="106" rx="12" fill="#eef4ff" stroke="#c9d9f5"/>
+            <text x="104" y="121" fill="#225fc8" font-size="24" font-weight="800">大脑</text>
+            <text x="104" y="153" fill="#314158" font-size="18">端到端模型</text>
+            <text x="104" y="176" fill="#5c6678" font-size="15">理解目标, 规划动作</text>
+            <path d="M290 138H354" stroke="#225fc8" stroke-width="4" stroke-linecap="round"/>
+            <path d="M342 128L354 138L342 148" fill="none" stroke="#225fc8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <rect x="630" y="256" width="214" height="110" rx="12" fill="#eaf8f6" stroke="#c5e5e1"/>
+            <text x="656" y="294" fill="#0f8b86" font-size="24" font-weight="800">小脑</text>
+            <text x="656" y="326" fill="#314158" font-size="18">运动控制系统</text>
+            <text x="656" y="350" fill="#5c6678" font-size="15">平衡, 避障, 安全</text>
+            <path d="M630 312H566" stroke="#0f8b86" stroke-width="4" stroke-linecap="round"/>
+            <path d="M578 302L566 312L578 322" fill="none" stroke="#0f8b86" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <rect x="76" y="438" width="220" height="112" rx="12" fill="#fff4e2" stroke="#f0d5aa"/>
+            <text x="102" y="476" fill="#c77716" font-size="24" font-weight="800">本体</text>
+            <text x="102" y="508" fill="#314158" font-size="18">机械身体和传感器</text>
+            <text x="102" y="532" fill="#5c6678" font-size="15">关节, 手, 电池, 结构</text>
+            <path d="M296 492H376" stroke="#c77716" stroke-width="4" stroke-linecap="round"/>
+            <path d="M364 482L376 492L364 502" fill="none" stroke="#c77716" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <rect x="626" y="452" width="222" height="70" rx="12" fill="#f7f9fc" stroke="#d9e0ea"/>
+            <text x="650" y="481" fill="#314158" font-size="18" font-weight="800">反馈闭环</text>
+            <text x="650" y="506" fill="#5c6678" font-size="15">传感数据回到模型和控制器</text>
+            <path d="M626 486C552 524 382 520 296 494" fill="none" stroke="#8c98aa" stroke-width="3" stroke-dasharray="8 9"/>
+          </g>
+        </svg>
+      </figure>
+    </section>
+
+    <section class="concept-strip" aria-label="机器人运行闭环">
+      <div class="strip-lead">机器人做一件事的闭环</div>
+      <div class="strip-step"><b>看见和听见</b><span>摄像头、深度、力觉、语音输入</span></div>
+      <div class="strip-step"><b>理解任务</b><span>端到端模型把目标转成动作意图</span></div>
+      <div class="strip-step"><b>实时控制</b><span>小脑保证平衡、避障和执行节奏</span></div>
+      <div class="strip-step"><b>身体执行</b><span>关节、轮腿、手爪和电池输出动作</span></div>
+      <div class="strip-step"><b>反馈修正</b><span>传感器回传结果, 下一步再调整</span></div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-heading">
+        <h2>三层总览</h2>
+        <p>大脑、小脑、本体不是谁替代谁，而是不同时间尺度上的分工：大脑按秒级理解任务，小脑按毫秒级守住运动，本体持续承受真实世界的摩擦和冲击。</p>
+      </div>
+      <div class="overview-grid">
+        <article class="overview-card">
+          <div class="card-head">
+            <span class="icon brain">01</span>
+            <h3>大脑：端到端模型</h3>
+          </div>
+          <p>把语言、视觉、历史状态和任务目标合在一起，直接生成动作策略或动作序列。它决定机器人是否能看懂环境、理解指令并迁移到新物体和新场景。</p>
+          <div class="key-line">关键问题：泛化能力、数据飞轮、真实任务成功率。</div>
+        </article>
+
+        <article class="overview-card">
+          <div class="card-head">
+            <span class="icon cerebellum">02</span>
+            <h3>小脑：运动控制</h3>
+          </div>
+          <p>把上层意图拆成稳定、安全、可执行的控制信号。它处理平衡、步态、轨迹、抓取力、碰撞保护和异常恢复，是演示能否长期运行的关键。</p>
+          <div class="key-line">关键问题：实时性、鲁棒性、接管机制和安全边界。</div>
+        </article>
+
+        <article class="overview-card">
+          <div class="card-head">
+            <span class="icon body">03</span>
+            <h3>本体：机械身体</h3>
+          </div>
+          <p>包括结构、关节、手、传感器、电池、线束、散热和外壳。它决定负载、续航、维护频率和成本下限，也是机器人能否商业化部署的基础。</p>
+          <div class="key-line">关键问题：寿命、可靠性、制造一致性和维护成本。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-label="三层拆解">
+      <article class="part" id="brain">
+        <div class="part-intro">
+          <span class="part-index">01 大脑</span>
+          <h3>端到端模型负责“想明白怎么做”</h3>
+          <p>传统机器人更像按脚本执行，大脑模型则试图把“看见什么、听到什么、要完成什么”合并成动作决策。它可以是 VLA 视觉-语言-动作模型，也可以是行为克隆、扩散策略或多模型协同系统。</p>
+          <ul class="role-list">
+            <li>输入：图像、深度、语音、文本指令、机器人当前姿态和历史轨迹。</li>
+            <li>输出：末端轨迹、动作 token、抓取策略、子任务序列或给小脑的高层目标。</li>
+            <li>难点：真实世界数据稀缺，跨物体和跨场景泛化仍然需要验证。</li>
+          </ul>
+        </div>
+        <div class="part-detail">
+          <div class="detail-panel">
+            <h4>技术路线</h4>
+            <ul class="route-list">
+              <li><b>VLA 视觉-语言-动作模型</b>把自然语言和视觉观察映射到动作, 适合做通用任务入口。</li>
+              <li><b>模仿学习和遥操作数据</b>通过人类示范积累技能, 是当前训练操作类任务的主流方法之一。</li>
+              <li><b>扩散策略和动作生成</b>把操作轨迹当成可生成对象, 常用于抓取、放置、插拔等连续动作。</li>
+              <li><b>分层任务规划</b>大模型拆任务, 专用策略执行子技能, 适合提高可控性和可解释性。</li>
+              <li><b>仿真和合成数据</b>降低数据采集成本, 但必须处理 sim-to-real 差距。</li>
+            </ul>
+          </div>
+          <div class="detail-panel">
+            <h4>硬件列表</h4>
+            <ul class="hardware-list">
+              <li><b>边缘计算平台</b>GPU、AI SoC、NPU 或工控机, 承担模型推理和感知计算。</li>
+              <li><b>视觉传感器</b>RGB 相机、深度相机、鱼眼相机或双目相机, 提供环境和物体信息。</li>
+              <li><b>语音和人机交互</b>麦克风阵列、扬声器、触摸屏或状态灯, 支持指令和反馈。</li>
+              <li><b>数据与通信</b>高速存储、Wi-Fi、5G、以太网, 用于日志、训练数据和远程运维。</li>
+              <li><b>散热和供电</b>计算单元的热管理、电源管理模块和安全冗余。</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="part" id="cerebellum">
+        <div class="part-intro">
+          <span class="part-index">02 小脑</span>
+          <h3>小脑负责“稳、准、快、安全地动起来”</h3>
+          <p>小脑不是另一个聊天模型，而是实时控制系统。它把大脑给出的目标变成电机能执行的轨迹和力矩，并在机器人摔倒、碰撞、打滑、抓取失败前做快速修正。</p>
+          <ul class="role-list">
+            <li>输入：目标位姿、关节状态、IMU、力觉、视觉定位和安全约束。</li>
+            <li>输出：关节角度、速度、力矩、电机电流、步态节奏和制动指令。</li>
+            <li>难点：控制频率高, 不能等云端模型慢慢思考, 必须本地实时闭环。</li>
+          </ul>
+        </div>
+        <div class="part-detail">
+          <div class="detail-panel">
+            <h4>技术路线</h4>
+            <ul class="route-list">
+              <li><b>全身控制 WBC</b>协调躯干、手臂、腿和重心, 让多个执行器一起完成动作。</li>
+              <li><b>模型预测控制 MPC</b>提前预测几步内的运动状态, 用于平衡、行走和轨迹跟踪。</li>
+              <li><b>强化学习运动控制</b>在仿真中训练步态、恢复和动态运动, 再迁移到实体机器人。</li>
+              <li><b>阻抗和力控</b>控制接触时的柔顺度, 让抓取、推拉、装配不至于过硬或失控。</li>
+              <li><b>安全状态机</b>处理急停、避障、跌倒保护、人工接管和低电量返回。</li>
+            </ul>
+          </div>
+          <div class="detail-panel">
+            <h4>硬件列表</h4>
+            <ul class="hardware-list">
+              <li><b>实时控制器</b>MCU、运动控制板、实时 Linux 或专用控制计算单元。</li>
+              <li><b>关节反馈</b>编码器、霍尔传感器、电流采样和温度传感器。</li>
+              <li><b>姿态和定位</b>IMU、里程计、视觉惯导或定位模块, 用于平衡和导航。</li>
+              <li><b>力觉和触觉</b>六维力传感器、足底压力、指尖触觉和扭矩估计。</li>
+              <li><b>通信和安全</b>CAN、EtherCAT、急停按钮、制动器和安全继电器。</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="part" id="body">
+        <div class="part-intro">
+          <span class="part-index">03 本体</span>
+          <h3>本体负责“把智能落到真实世界”</h3>
+          <p>本体是机器人真正的身体，包括形态、结构、关节、末端执行器、电池和外壳。大脑再聪明，如果身体负载不够、续航太短、关节寿命不足，也无法进入真实场景长期工作。</p>
+          <ul class="role-list">
+            <li>输入：来自小脑的控制信号和来自环境的接触反馈。</li>
+            <li>输出：移动、抓取、搬运、按压、转身、避让和人机协作动作。</li>
+            <li>难点：成本、重量、强度、寿命、维护便利性往往互相牵制。</li>
+          </ul>
+        </div>
+        <div class="part-detail">
+          <div class="detail-panel">
+            <h4>技术路线</h4>
+            <ul class="route-list">
+              <li><b>形态选择</b>人形、轮式、四足、双臂移动平台分别适合不同任务边界。</li>
+              <li><b>模块化关节</b>把电机、减速器、编码器、驱动和制动做成可替换单元。</li>
+              <li><b>轻量化结构</b>通过铝合金、复材、拓扑优化和线束布局降低重量。</li>
+              <li><b>灵巧手和末端执行器</b>在夹爪、吸盘、多指灵巧手之间按任务选择。</li>
+              <li><b>能源和热管理</b>围绕续航、换电、自动回充、散热和电池安全设计。</li>
+            </ul>
+          </div>
+          <div class="detail-panel">
+            <h4>硬件列表</h4>
+            <ul class="hardware-list">
+              <li><b>关节模组</b>电机、减速器、轴承、驱动器、编码器和制动组件。</li>
+              <li><b>末端执行器</b>夹爪、吸盘、灵巧手、腕部模组和快换接口。</li>
+              <li><b>移动系统</b>腿、轮、足端、底盘、减震和防滑接触材料。</li>
+              <li><b>能源系统</b>电池包、BMS、充电触点、换电结构和电源分配。</li>
+              <li><b>结构与外壳</b>承力骨架、防护外壳、线束、散热件和维修接口。</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="compare">
+      <div class="section-heading">
+        <h2>三层如何协同</h2>
+        <p>同一个动作会同时穿过三层。以“把货架上的瓶子拿起并放入周转箱”为例，大脑判断目标，小脑保证动作安全，本体承担真实接触。</p>
+      </div>
+      <div class="compare-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>层级</th>
+              <th>核心问题</th>
+              <th>典型输入</th>
+              <th>典型输出</th>
+              <th>失败时的表现</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>大脑</b></td>
+              <td>该做什么, 按什么顺序做, 如何理解环境变化。</td>
+              <td>语言指令、视觉画面、任务历史、场景记忆。</td>
+              <td>子任务、目标位姿、动作序列或技能调用。</td>
+              <td>认错物体、误解指令、规划顺序错误、泛化失败。</td>
+            </tr>
+            <tr>
+              <td><b>小脑</b></td>
+              <td>怎样稳定、安全、实时地完成动作。</td>
+              <td>目标位姿、关节状态、IMU、力觉、碰撞约束。</td>
+              <td>轨迹、速度、力矩、电机控制、急停或接管。</td>
+              <td>抖动、摔倒、抓取力不合适、避障不及时。</td>
+            </tr>
+            <tr>
+              <td><b>本体</b></td>
+              <td>身体能否承受任务, 成本和寿命是否可接受。</td>
+              <td>电控信号、负载、地面条件、接触力和电量状态。</td>
+              <td>移动、抓取、搬运、按压、旋转和反馈信号。</td>
+              <td>关节过热、续航不足、手爪损耗、结构松动、维护频繁。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-label="阅读提示">
+      <div class="section-heading">
+        <h2>读懂机器人的三个判断</h2>
+      </div>
+      <div class="note-grid">
+        <div class="note">
+          <b>不要只看大模型演示</b>
+          <span>模型能说清任务不等于机器人能稳定执行。真实部署要同时看任务成功率、异常恢复和人工接管比例。</span>
+        </div>
+        <div class="note">
+          <b>不要把运动能力等同于任务能力</b>
+          <span>会跑、会跳、会保持平衡只是小脑能力的一部分。客户真正购买的是可持续完成任务的系统。</span>
+        </div>
+        <div class="note">
+          <b>不要忽略硬件和维护</b>
+          <span>本体决定成本下限和可靠性上限。关节寿命、备件周期、电池策略和本地服务能力会直接影响商业化。</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    本页为科普型单页，内容参考项目内 <a href="project_files/html/reports/basics/04_hardware_stack.html">机器人硬件栈</a> 与 <a href="project_files/html/reports/technology_routes.html">技术路线梳理</a>，聚焦机器人本身的组成，不展开公司和场景分析。
+  </footer>
+</body>
+</html>

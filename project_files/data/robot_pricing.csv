@@ -1,0 +1,44 @@
+company_name,product_name,country_or_region,robot_form,target_use,official_price,currency,price_type,cny_estimate,tax_shipping_note,price_status,official_url,source_date,last_checked,confidence,notes
+宇树科技,Unitree Go2,中国,四足机器人,开发者/消费/教育/轻量巡检,From 1600,USD,公开零售价,约10880,不含税费关税和运费,官网公开价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,高,宇树官方商城集合页列示起售价；按USD/CNY=6.80粗略换算
+宇树科技,Unitree Go1,中国,四足机器人,开发者/教育/轻量巡检,From 2700,USD,公开零售价,约18360,不含税费关税和运费,官网公开价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,旧款四足平台仍在官方商城展示；按USD/CNY=6.80粗略换算
+宇树科技,Unitree R1-D,中国,人形/数据采集平台,开发者/数据采集/训练平台,From 4290,USD,公开零售价,约29172,不含税费关税和运费,官网公开价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,高,官方商城列示R1-D预售起价；按USD/CNY=6.80粗略换算
+宇树科技,Unitree R1,中国,轻量人形机器人,开发者/教育/展示,From 4900,USD,公开零售价,约33320,不含税费关税和运费,官网公开价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,高,官方商城列示R1起价；按USD/CNY=6.80粗略换算
+宇树科技,Unitree G1,中国,人形机器人,开发者/科研/教育/早期应用,13500,USD,公开零售价,约91800,不含税费和运费,官网公开价,https://www.unitree.com/g1/,unknown,2026-05-26,高,官网产品页列示G1价格为US $13.5K；G1 EDU为联系销售
+宇树科技,Unitree H2,中国,人形机器人,科研/开发者/展示/早期应用,29900,USD,公开零售价,约203320,不含税费关税和运费,官网公开价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,高,官方商城列示H2价格；按USD/CNY=6.80粗略换算
+宇树科技,Unitree H1,中国,全尺寸人形机器人,科研/展示/工业探索,90000,USD,官网显示价但需询价,约612000,不含税费关税和运费,官网显示占位价需询价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,官方商城同时标注Contact us for the real price；不能视为最终采购价
+宇树科技,Unitree B2,中国,工业四足机器人,工业巡检/科研/复杂地形,100000,USD,官网显示价但需询价,约680000,不含税费关税和运费,官网显示占位价需询价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,官方商城列示100000美元且提示联系销售获取真实价格
+宇树科技,Unitree B2-W,中国,工业轮足/四足机器人,工业巡检/复杂地形/户外移动,100000,USD,官网显示价但需询价,约680000,不含税费关税和运费,官网显示占位价需询价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,官方商城列示100000美元且提示联系销售获取真实价格
+宇树科技,Unitree A2,中国,工业四足机器人,工业巡检/复杂地形,100000,USD,官网显示价但需询价,约680000,不含税费关税和运费,官网显示占位价需询价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,官方商城列示100000美元；产品页提示联系销售购买
+宇树科技,Unitree As2,中国,工业四足机器人,工业巡检/小型工业应用,100000,USD,官网显示价但需询价,约680000,不含税费关税和运费,官网显示占位价需询价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,官方商城列示100000美元；需联系销售确认配置和最终报价
+宇树科技,Unitree B1,中国,工业四足机器人,工业巡检/教育/科研,100000,USD,官网显示价但需询价,约680000,不含税费关税和运费,官网显示占位价需询价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,官方商城列示100000美元；需联系销售确认配置和最终报价
+宇树科技,Aliengo,中国,四足机器人,科研/教育/行业开发,50000,USD,官网显示价,约340000,不含税费关税和运费,官网公开价,https://shop.unitree.com/collections/humanoid-robot,unknown,2026-05-26,中,官方商城列示价格；按USD/CNY=6.80粗略换算
+逐际动力,TRON 1 Standard Edition,中国,多模态双足机器人,科研/强化学习/开发者平台,15000,USD,公开零售价,约102000,税费和运费结账计算,官网公开价,https://shop.limxdynamics.com/,2024-10-16,2026-05-26,高,LimX官方商城列示Standard Edition价格
+逐际动力,TRON 1 Educational Edition,中国,多模态双足机器人,科研教育/强化学习平台,25000,USD,公开零售价,约170000,税费和运费结账计算,官网公开价,https://shop.limxdynamics.com/,2024-10-16,2026-05-26,高,LimX官方商城列示Educational Edition价格
+众擎机器人/EngineAI,SA01,中国,双足机器人平台,科研教育/开发者平台,42000,CNY,公开零售价,42000,官网跳转京东购买；税运以购买页为准,官网公开价,https://en.engineai.com.cn/product-purchase.html,unknown,2026-05-26,高,官网Product Purchase页列示SA01价格
+众擎机器人/EngineAI,PM01,中国,轻量人形机器人,科研教育/展示/开发者平台,188000,CNY,公开零售价,188000,官网跳转京东购买；税运以购买页为准,官网公开价,https://en.engineai.com.cn/product-purchase.html,unknown,2026-05-26,高,官网Product Purchase页列示PM01价格
+1X Technologies,NEO Standard,挪威/美国,家庭人形机器人,家庭服务/早期用户,499/mo,USD,订阅价,约3393/月,美国交付；具体税费和服务条款以订单页为准,官网公开订阅价,https://www.1x.tech/order,unknown,2026-05-26,高,官网订单页列示Standard订阅价
+1X Technologies,NEO Early Access,挪威/美国,家庭人形机器人,家庭服务/早期用户,20000,USD,所有权价格,约136000,美国交付；具体税费和服务条款以订单页为准,官网公开价,https://www.1x.tech/order,unknown,2026-05-26,高,官网订单页列示Early Access所有权价格并提示200美元定金
+1X Technologies,NEO Deposit,挪威/美国,家庭人形机器人,家庭服务/预订,200,USD,可退定金,约1360,美国交付；具体税费和服务条款以订单页为准,官网公开预订费,https://www.1x.tech/order,unknown,2026-05-26,高,这是定金不是整机价；不能用于替代采购报价
+NEURA Robotics,4NE1 Gen 3.5 1-19 units,德国,认知人形机器人,工业协作/家庭服务/科研,98000,EUR,预计单价,约772240,不含税和运费,官网公开预计价,https://neura-robotics.com/product/4ne1-reservation/,unknown,2026-05-26,高,官网预约页列示1-19台预计单价；按EUR/CNY=7.88粗略换算
+NEURA Robotics,4NE1 Gen 3.5 20+ units,德国,认知人形机器人,工业协作/批量部署,60000,EUR,预计批量单价,约472800,不含税和运费,官网公开预计价,https://neura-robotics.com/product/4ne1-reservation/,unknown,2026-05-26,高,官网预约页列示20台以上预计单价；按EUR/CNY=7.88粗略换算
+NEURA Robotics,4NE1 Reservation,德国,认知人形机器人,预订排队,100,EUR,可退预订费,约788,可抵扣最终购买价,官网公开预订费,https://neura-robotics.com/product/4ne1-reservation/,unknown,2026-05-26,高,这是预约费不是整机价；不能用于替代采购报价
+智元机器人/AGIBOT,AGIBOT X2,中国,小型人形/服务机器人,商业表演/互动服务/科研教育,24240,USD,公开零售价,约164832,运费500-3000美元且客户承担关税税费,官网公开价,https://store.agibot.com/products/x2,unknown,2026-05-26,高,官方商城列示X2售价；按USD/CNY=6.80粗略换算
+智元机器人/AGIBOT,AGIBOT A2 Lite,中国,全尺寸人形机器人,商业表演/互动服务/群控展示,44560,USD,公开零售价,约303008,运费500-3000美元且客户承担关税税费,官网公开价,https://store.agibot.com/products/a2-lite,unknown,2026-05-26,高,官方商城列示A2 Lite售价；按USD/CNY=6.80粗略换算
+优必选,Walker S2,中国/香港,工业人形机器人,汽车制造/3C/物流搬运/质检,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://owebsite-cdn.ubtrobot.com/resources/file/2025/09/16/720367161532485.pdf,2025-09-16,2026-05-26,高,中期报告披露工业人形进展；未列公开整机价格
+银河通用,Galbot G1,中国,轮式双臂人形机器人,零售/药店/货架抓取,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://cn.chinadaily.com.cn/a/202506/09/WS6846952da3102053770372d4.html,2025-06-09,2026-05-26,中,项目现有来源为媒体报道；未找到官网公开整机价格
+傅利叶智能,GR-2,中国,全尺寸人形机器人,康复医疗/科研/工业/服务,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.prnewswire.com/news-releases/fourier-unveils-the-next-generation-humanoid-robot-gr-2-302262068.html,2024-09-30,2026-05-26,中,官方新闻稿披露产品参数；未列公开整机价格
+星尘智能/Astribot,Astribot S1,中国,轮式双臂人形机器人,服务/家庭/科研/商业展示,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.astribot.com/en/product/,unknown,2026-05-26,中,官网产品页披露参数和能力；未列公开整机价格
+乐聚机器人,KUAVO 5,中国,全尺寸人形机器人,科研/商业服务/工业制造/训练场,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.lejurobot.com/,unknown,2026-05-26,中,官网披露产品和方案方向；未列公开整机价格
+帕西尼感知科技,TORA-ONE,中国,触觉人形机器人,灵巧操作/工业/科研/服务,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://paxini.com/kr/about,unknown,2026-05-26,中,官网介绍触觉与灵巧操作能力；未列公开整机价格
+普渡机器人,PUDU D9,中国,全尺寸双足人形机器人,服务/工业探索,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.pudurobotics.com/,2026-05-20,2026-05-26,中,普渡官网披露服务机器人和具身AI产品线；D9公开售价未披露
+擎朗智能,XMAN-R1,中国,人形服务机器人,迎宾/递送/服务互动,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.keenon.com/en/index.html,2026-03-26,2026-05-26,中,擎朗官网披露服务机器人信息；人形产品公开售价未披露
+云深处科技,X30,中国,四足巡检机器人,电力巡检/消防/安防/复杂地形,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.deeprobotics.cn/en/,2026-03-06,2026-05-26,高,工业四足巡检产品通常项目化报价；官网未列公开整机价格
+加速进化/Booster Robotics,Booster T1,中国,小型人形开发平台,科研教育/竞赛/开发者平台,unknown,unknown,询价,unknown,unknown,官网未披露,https://www.boosterobotics.com/store/,unknown,2026-05-26,中,官网商店为联系表单；未列公开整机价格
+Figure AI,Figure 02,美国,全尺寸人形机器人,汽车制造/物流/家庭潜力,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.bmwgroup.com/en/news/general/2024/humanoid-robots.html,2024-08-06,2026-05-26,中,BMW客户侧确认工厂试验；未列公开整机价格
+Agility Robotics,Digit,美国,双足物流机器人,仓储物流/制造,unknown,unknown,RaaS未披露单价,unknown,unknown,官网未披露单机价,https://www.agilityrobotics.com/content/digit-deployed-at-gxo-in-historic-humanoid-raas-agreement,2024-06-27,2026-05-26,高,官网披露GXO/SPANX RaaS部署；未列单机买断价格
+Apptronik,Apollo,美国,全尺寸人形机器人,汽车制造/物流/工业服务,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://apptronik.com/news-collection/apptronik-and-mercedes-benz-enter-commercial-agreement,2024-03-15,2026-05-26,中,官网披露Mercedes-Benz商业协议；未列公开整机价格
+Sanctuary AI,Phoenix,加拿大,全尺寸人形机器人,工业服务/多行业劳动任务,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.sanctuary.ai/blog/sanctuary-ai-unveils-phoenix-a-humanoid-general-purpose-robot-designed-for-work,unknown,2026-05-26,中,官网披露产品和早期商业部署表述；未列公开整机价格
+Tesla,Optimus,美国,人形机器人,汽车制造/未来家庭服务,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://www.tesla.com/AI,unknown,2026-05-26,中,Tesla AI页面披露Optimus方向；未列公开销售价格
+Boston Dynamics,Atlas,美国,全电人形机器人,制造排序/移动操作,unknown,unknown,官网未披露,unknown,unknown,官网未披露,https://bostondynamics.com/products/atlas/,2026-01-05,2026-05-26,高,Atlas产品页披露技术方向；未列公开整机价格
+ANYbotics,ANYmal,瑞士,四足巡检机器人,能源/化工/矿业/工业巡检,unknown,unknown,询价,unknown,unknown,官网未披露,https://www.anybotics.com/robotics/,unknown,2026-05-26,高,工业巡检成熟样本；官网未列公开整机价格
+Simbe Robotics,Tally,美国,零售货架扫描机器人,零售门店/库存盘点,unknown,unknown,服务订阅未披露单价,unknown,unknown,官网未披露单机价,https://www.simberobotics.com/about/newsroom/simbe-marks-10-years-of-tally-the-robot,2025-11-18,2026-05-26,高,官网披露长期运营和客户价值；未列单机买断价格

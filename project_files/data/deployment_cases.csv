@@ -1,0 +1,59 @@
+case_name,company_name,customer_or_partner,scenario,location,deployment_scale,paid_status,ongoing_status,evidence_type,source_level,source_url,source_date,last_checked,confidence,notes
+Digit在GXO/SPANX物流设施RaaS部署,Agility Robotics,GXO Logistics/SPANX,仓储物流搬运,美国佐治亚,多年度部署,是,持续运营/公司披露,官网新闻,B,https://www.agilityrobotics.com/content/digit-deployed-at-gxo-in-historic-humanoid-raas-agreement,2024-06-27,2026-05-26,高,公开证据较强的付费人形部署
+Apollo进入Mercedes-Benz制造试点,Apptronik,Mercedes-Benz,汽车制造物流供料,Mercedes-Benz制造设施,试点规模未披露,unknown,试点,官网新闻,B,https://apptronik.com/news-collection/apptronik-and-mercedes-benz-enter-commercial-agreement,2024-03-15,2026-05-26,中,具名工业客户试点
+Figure 02在BMW Spartanburg试验,Figure AI,BMW Group,汽车制造零件搬运,美国南卡Spartanburg,试验部署,unknown,阶段性试验,客户公告,A,https://www.bmwgroup.com/en/news/general/2024/humanoid-robots.html,2024-08-06,2026-05-26,中,BMW客户侧确认
+Walker S系列工业场景小批量合同,优必选,客户未披露,工业搬运/分拣/质检,中国,小批量采购合同,是,商业应用初期,中期报告,A,https://owebsite-cdn.ubtrobot.com/resources/file/2025/09/16/720367161532485.pdf,2025-09-16,2026-05-26,高,上市公司文件披露
+Galbot Shop上海机器人值守店,银河通用,Galbot Shop/上海陆家嘴商圈,无人零售/药店取货/商品抓取,中国上海,1个9平方米门店/计划扩张,unknown,单店运营/媒体披露,政府英文门户/媒体,C,https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260123/fd37e5488dd24b928deac020f468effa.html,2026-01-23,2026-05-26,中,上海政府英文门户转载媒体来源披露单店运营和日订单能力
+Pudu服务机器人全球部署,普渡机器人,酒店/餐饮/工业/零售客户,配送/清洁/工业物流/零售促销,全球,12万台以上出货/官网披露,是,持续运营,官网,B,https://www.pudurobotics.com/,2026-05-20,2026-05-26,高,成熟服务机器人样本 需按客户案例区分门店数量
+Keenon服务机器人餐饮酒店部署,擎朗智能,E.Leclerc/Compose Coffee/QooQoo/Hilton/Sheraton等,配送/清洁/餐饮酒店服务/超市服务,全球,官网披露多个单店和多机器人客户故事,是,持续运营,官网,B,https://www.keenon.com/en/stories/index.html,unknown,2026-05-26,高,服务机器人落地明确 但总门店数量未统一披露
+Pudu海底捞国内送餐机器人,普渡机器人,海底捞,餐饮门店送餐/后厨到桌边配送,中国深圳/中国大陆门店,官方案例披露深圳门店/历史媒体报道曾称200家海底捞 当前门店数需复核,是,持续运营/公司披露,官方案例/历史媒体报道,B,https://www.pudutech.com/zh-CN/case-studies/pudu-robotics-haidilao-restaurant-automation,unknown,2026-05-26,高,国内餐饮门店配送标杆 官方案例给效率提升但未披露当前门店总数 历史规模线索见来源索引
+Pudu大家乐中国香港快餐门店,普渡机器人,大家乐集团/一粥面/Oliver's Super Sandwiches,快餐门店营销配送,中国香港,超100台,是,持续运营/公司披露,官方案例,B,https://www.pudutech.com/zh-CN/case-studies/cafecoral-kettybot-dining,unknown,2026-05-26,高,大中华区连锁餐饮门店多台部署
+Keenon周师兄重庆火锅上海门店,擎朗智能,周师兄重庆火锅,餐饮送餐/配送,中国上海,11台/T5*10+T6*1,是,客户故事,官网案例,B,https://www.keenon.com/cn/stories/index.html,unknown,2026-05-26,高,官网客户故事披露具体机型数量
+Keenon海底捞智慧餐厅,擎朗智能,海底捞,智慧餐厅配送/导引,中国北京,首家智慧餐厅/门店数未披露,unknown,已落地/公司历程,官网,B,https://www.keenon.com/cn/about/,unknown,2026-05-26,中,官网发展历程披露助力海底捞全球首家智慧餐厅
+OrionStar智咖大师国内门店,猎户星空,咪咕咖啡/深圳文和友/北京大悦春风里/知嘛健康等,咖啡制饮/商场零售互动,中国多地,超百家客户/6个月,是,持续运营/公司披露,官方案例,B,https://www.orionstar.com/xyal/96.html,2021-04-16,2026-05-26,中,覆盖咖啡馆饮品店商场机场等
+Yunji锦江F1数字酒店,云迹科技,锦江酒店中国区,酒店门店送物/清扫/智能前台,中国,4个门店案例,是,客户证言/媒体发布,媒体报道,C,https://finance.sina.cn/2026-05-19/detail-inhymqcm7514263.d.html,2026-05-19,2026-05-26,中,酒店泛零售服务门店非狭义零售
+Gausium国内商综清洁履历,高仙机器人/Gausium,万达/龙湖/宝龙/华润/金鹰等,商业综合体/零售场清洁,中国,门店数量未披露,是,持续运营/公司披露,官方案例,B,https://www.gs-robot.com/case/%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E6%B4%81%E5%87%80%EF%BC%9A%E9%AB%98%E4%BB%99%E5%95%86%E7%94%A8%E6%B8%85%E6%B4%81%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%9C%A8%E8%A5%BF%E7%8F%AD%E7%89%99%E5%A5%A5%E7%89%B9/,2026-01-19,2026-05-26,中,官方海外案例中披露Scrubber 50履历覆盖国内商综客户 需客户侧核验
+Galbot北京智慧药店常态运营,银河通用,北京智慧药店/零售合作方未披露,智慧药店/商超值守/商品抓取,中国北京,近10家门店常态运营/100家门店订单,unknown,常态运营+订单,媒体报道,C,https://www.stcn.com/article/detail/2763707.html,2025-07-27,2026-05-26,中,100家为订单和计划投用 近10家常态运营为报道披露
+Deep Robotics与华电电科院巡检方案,云深处科技,华电电力科学研究院,火电厂巡检,中国,全场景巡检方案,unknown,方案发布/试点,新闻稿,C,https://www.globenewswire.com/news-release/2026/03/06/3250801/0/en/deep-robotics-chder-launch-full-scenario-robot-inspection-solution-empowering-safe-and-efficient-thermal-power-operations.html,2026-03-06,2026-05-26,中,合同与规模需核验
+Standard Robots半导体AMR案例,斯坦德机器人,环旭电子等,半导体工厂物流,中国/海外,多项目经验/媒体报道,是,持续运营,媒体报道,C,https://finance.sina.com.cn/wm/2026-05-13/doc-inhxteis9480018.shtml,2026-05-13,2026-05-26,中,媒体披露客户案例
+Mech-Mind汽车在线检测案例,梅卡曼德机器人,汽车产线客户,工业视觉检测,unknown,产线级应用,是,持续运营,官网新闻,B,https://www.mech-mind.com/,2025-12-15,2026-05-26,中,需补客户名称
+ANYmal工业巡检,ANYbotics,能源/化工/矿业客户,工业巡检,全球,规模商用,是,持续运营,官网产品页,B,https://www.anybotics.com/robotics/,unknown,2026-05-26,高,四足巡检成熟场景
+Amazon fulfillment robotics,Amazon Robotics,Amazon,电商仓储自动化,全球履约中心,百万级机器人体系,内部部署,持续运营,公司新闻,A,https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center,2025-10-22,2026-05-26,高,规模化标杆
+Sam's Club近600台清洁和库存扫描机器人,Brain Corp,Sam's Club/Tennant,会员仓储门店清洁+库存扫描,美国和波多黎各Sam's Club门店,近600台/全链部署,是,持续运营/客户公告,客户公告,A,https://corporate.walmart.com/about/samsclub/news/2022/10/20/sams-club-finalizes-national-deployment-of-inventory-scan-brain-corp-becomes-the-worlds-largest-supplier-of-robotic-inventory-scanners,2022-10-20,2026-05-26,高,客户侧披露近600个Inventory Scan塔加装到既有清洁机器人
+Simbe Tally零售货架智能,Simbe Robotics,全球零售商,零售货架扫描/库存智能,多国门店,10个国家/近12个零售细分/长期部署,是,持续运营,官网新闻,B,https://www.simberobotics.com/about/newsroom/simbe-marks-10-years-of-tally-the-robot,2025-11-12,2026-05-26,高,多年运营证据 包括Schnucks BJ's Wakefern SpartanNash等客户
+Simbe Tally在Schnucks门店部署,Simbe Robotics,Schnuck Markets,超市货架扫描/库存智能,美国中西部,62家门店,是,持续运营/公司披露,官网新闻,B,https://www.simberobotics.com/about/newsroom/schnuck-markets-expands-deployment-of-simbe-robotics-tally-inventory-robot,unknown,2026-05-26,高,来源披露新增46店后总计62个门店
+Simbe Tally在BJ's全店部署,Simbe Robotics,BJ's Wholesale Club,会员制仓储门店货架扫描,美国,全门店部署/门店数未披露,是,持续运营/公司披露,官网新闻,B,https://www.simberobotics.com/about/newsroom/bjs-rolls-out-ai-driven-inventory-tracking-robots-across-all-its-locations,unknown,2026-05-26,高,来源披露跨全部门店但未给具体门店数
+Pudu BellaBot在Carrefour波兰零售促销,普渡机器人,Carrefour/PepsiCo,零售门店促销/导购/配送,波兰华沙,2家门店起步/后续百店巡展,是/营销合作,阶段性运营/品牌活动,官网新闻,B,https://www.pudurobotics.com/about/news/637f47ebceac210066273369,2022-11-24,2026-05-26,中,两家门店实装较明确 但百店为巡展活动非固定部署
+Pudu CC1美国便利零售清洁,普渡机器人,美国便利零售商未披露,便利店清洁,美国,数台/客户未披露,unknown,真实客户案例/规模有限,官方案例,B,https://www.pudurobotics.com/en/case-studies/setting-standard-automated-cleaning-convenience-retail,unknown,2026-05-26,中,客户匿名且规模为少量机器人
+Pudu Shell波兰油站服务机器人,普渡机器人,Shell Poland,油站零售迎宾/店内配送,波兰Września,单站点/数量未披露,unknown,客户合作案例,官方案例,B,https://www.pudurobotics.com/en/case-studies/pudu-shell-BellaBot,unknown,2026-05-26,中,店内服务场景明确但规模较小
+Richtech ADAM入驻Walmart内Ghost Kitchens,Richtech Robotics,Ghost Kitchens International/Walmart,店内饮品自动化,美国佐治亚Dawsonville Walmart,1家已装/240家为非约束计划,是/需核验收入,已运营/计划扩张,上市公司新闻稿,B,https://ir.richtechrobotics.com/news-releases/news-release-details/richtech-robotics-celebrates-completion-installation-adam-ghost,2024-07-22,2026-05-26,中,已装一店明确但240家为LOI和前瞻性表述
+Galbot GroceryVLA零售值守店计划,银河通用,零售业态合作方未披露,零售货架抓取/值守店,中国,年内计划100家/已落地数量需核验,unknown,计划扩张/能力展示,政府转载媒体,C,https://kw.beijing.gov.cn/xwdt/kcyx/xwdtcyfz/202506/t20250613_4113263.html,2025-06-13,2026-05-26,中,100家为计划不可当作已部署
+Gausium AB Vassilopoulos超市清洁,Gausium/高仙机器人,AB Vassilopoulos(Ahold Delhaize)/Gerobo,超市清洁,希腊全国门店网络,25台/9台Omnie+16台Phantas,是,持续运营/官方案例,官方案例,B,https://gausium.com/case/ab-vassilopoulos-supermarkets/,2026-05-12,2026-05-26,高,明确客户数量和部署周期
+Starship Co-op/Save Mart零售配送,Starship Technologies,Co-op/Save Mart/Lucky California,门店到家无人配送,英国/美国加州,500台扩张计划/多地商业运营,是,持续运营,官方新闻稿,B,https://www.starship.xyz/press/co-op-and-starship-technologies-to-expand-partnership-to-500-robots-across-five-new-towns-and-cities-to-cut-carbon-on-last-mile-deliveries/,unknown,2026-05-26,高,属于门店外配送而非店内机器人 订单由社区门店拣货
+Nuro Kroger Fry's无人配送,Nuro,Kroger/Fry's Food Stores,超市到家无人配送,美国亚利桑那Scottsdale,单店/近千单早期配送,是,阶段性试点/历史商业运营,客户公告,A,https://ir.kroger.com/news/news-details/2018/Nuro-and-Kroger-Launch-First-Ever-Unmanned-Delivery-Service-for-the-General-Public/default.aspx,2018-12-18,2026-05-26,中,客户公告明确单店和近千单 但为早期试点
+Bear Robotics Chili's餐厅服务机器人,Bear Robotics,Chili's等餐饮连锁,餐厅送餐/收盘,美国,10家测试+51家扩展,是,试点扩展/媒体披露,媒体报道,C,https://www.restaurantdive.com/news/chilis-will-bring-restaurant-robot-to-51-more-stores/622183/,2022-04-26,2026-05-26,中,餐饮连锁规模来自媒体报道需客户侧复核
+Bossa Nova Walmart货架扫描历史部署,Bossa Nova Robotics,Walmart,零售货架扫描/库存检查,美国Walmart门店,约500店历史部署/后续终止,是/历史合同,已停止,媒体报道,C,https://www.retaildive.com/news/walmart-ends-aisle-scanning-robot-contract/588306/,2020-11-03,2026-05-26,中,作为反例保留 因客户终止不计入当前活跃部署
+Serve Robotics White Castle外卖配送,Serve Robotics,White Castle/Uber Eats,餐饮门店外卖无人配送,美国多个城市配送区,门店数未披露/多城市配送区,是,持续运营/合作发布,上市公司新闻稿,B,https://ir.serverobotics.com/news-releases/news-release-details/serve-robotics-and-white-castle-launch-autonomous-delivery-uber/,2026-03-11,2026-05-26,中,属于门店外配送而非店内作业
+Boston Dynamics Atlas Hyundai测试,Boston Dynamics,Hyundai,汽车制造排序任务,Hyundai设施,客户设施测试,unknown,测试中,官网产品页,B,https://bostondynamics.com/products/atlas/,2026-01-05,2026-05-26,中,量产部署未完成
+1X NEO家庭早期用户预售,1X Technologies,早期家庭用户,家庭服务,美国等,预售/早期交付待确认,是/预售,待交付,官网新闻,B,https://www.1x.tech/discover/neo-home-robot,2025-10-28,2026-05-26,中,更接近预售而非稳定落地
+Unitree四足机器人科研教育销售,宇树科技,高校/开发者/行业用户,科研教育/开发平台,全球,公开销售,是,持续销售,官网,B,https://www.unitree.com/en/about/,unknown,2026-05-26,高,作为低成本平台样本
+Unitree B2工业四足巡检,宇树科技,行业客户未完整披露,工业巡检/消防/电力,中国/全球,产品销售,是,持续销售,官网,B,https://www.unitree.com/,unknown,2026-05-26,中,客户需逐条核验
+智元5000台具身机器人下线,智元机器人,客户结构未披露,多场景交付/产线,中国,5000台下线,unknown,公司披露,官网新闻,B,https://www.agibot.com.cn/article/188/detail/101.html,2025-12-12,2026-05-26,中,下线不等于付费交付
+TRON 1科研开发平台发布,逐际动力,开发者/科研客户,双足机器人开发,全球,开放预订/销售,是/待核验,产品销售,官网新闻,B,https://www.limxdynamics.com/en/news/BK000040,2024-10-17,2026-05-26,中,适合科研平台观察
+GR系列康复/科研场景,傅利叶智能,康复医疗和科研客户,康复/科研/服务,中国/全球,产品发布和客户交付需核验,unknown,持续推进,官方新闻稿,B,https://www.prnewswire.com/news-releases/fourier-unveils-the-next-generation-humanoid-robot-gr-2-302262068.html,2024-09-30,2026-05-26,中,需补客户侧证据
+Hikrobot工业移动机器人,海康机器人,制造/物流客户,仓储物流/制造,中国/全球,规模商用,是,持续运营,官网,B,https://www.hikrobotics.com/,unknown,2026-05-26,高,工业视觉和AMR成熟样本
+Geekplus仓储机器人部署,极智嘉/Geekplus,电商/零售/物流客户,仓储自动化,全球,规模商用,是,持续运营,官网,B,https://www.geekplus.com/,unknown,2026-05-26,高,中国仓储机器人标杆
+Quicktron仓储AMR部署,快仓智能,仓储/制造客户,仓储自动化,中国/全球,规模商用,是,持续运营,官网,B,https://www.quicktron.com/,unknown,2026-05-26,高,仓储机器人标杆
+Gausium商用清洁机器人部署,高仙机器人/Gausium,商业物业/交通枢纽/零售客户,商用清洁/零售清洁,中国/全球,规模商用/零售多门店案例,是,持续运营,官网,B,https://gausium.com/solutions/retail/,unknown,2026-05-26,高,商用清洁成熟场景 零售门店需要按客户案例核验具体数量
+Ecovacs家庭清洁机器人,科沃斯,家庭用户,家庭清洁,全球,消费级规模出货,是,持续运营,官网/上市公司,A,https://www.ecovacs.com/,unknown,2026-05-26,高,家庭服务机器人商业基础
+Narwal家庭清洁机器人,云鲸智能,家庭用户,家庭清洁,全球,消费级销售,是,持续运营,官网,B,https://www.narwal.com/,unknown,2026-05-26,中,家庭服务机器人样本
+Dreame家庭清洁机器人,追觅科技,家庭用户,家庭清洁,全球,消费级销售,是,持续运营,官网,B,https://www.dreametech.com/,unknown,2026-05-26,中,消费机器人样本
+Flexiv力控机器人工业应用,非夕科技,工业/医疗客户,柔性操作,中国/全球,行业部署,是,持续运营,官网,B,https://www.flexiv.com/,unknown,2026-05-26,中,灵巧操作相关
+DOBOT协作机械臂教育与工业销售,越疆科技,教育/工业客户,机械臂开发/工业操作,全球,产品销售,是,持续销售,官网,B,https://www.dobot-robots.com/,unknown,2026-05-26,高,开发者和轻工业场景
+JAKA协作机器人制造应用,节卡机器人,制造客户,协作装配/上下料,中国/全球,规模销售,是,持续运营,官网,B,https://www.jaka.com/,unknown,2026-05-26,高,协作机器人成熟
+AUBO协作机器人制造应用,遨博智能,制造/教育客户,协作装配/教学,中国/全球,规模销售,是,持续运营,官网,B,https://www.aubo-cobot.com/public/,unknown,2026-05-26,高,协作机器人成熟
+CloudMinds政企服务机器人,达闼机器人,政企客户,服务/康养/教育,中国,部署规模需核验,unknown,持续运营,官网,B,https://www.cloudminds.com/,unknown,2026-05-26,中,客户和近年进展需复核
+XPeng IRON内部展示,小鹏机器人,小鹏汽车内部,汽车制造/展示,中国,内部验证,unknown,内部试点,官网,B,https://www.xpeng.com/,unknown,2026-05-26,低,外部商用未证实
+Tiangong开源人形平台,北京人形机器人创新中心,开发者/生态伙伴,科研/开源生态,中国,平台发布,unknown,生态建设,官网,B,https://x-humanoid.com/,unknown,2026-05-26,中,产业生态平台而非客户商用
+Orbbec机器人视觉客户,奥比中光,机器人厂商/工业客户,3D视觉感知,中国/全球,传感器规模销售,是,持续运营,官网/上市公司,A,https://www.orbbec.com.cn/,unknown,2026-05-26,高,上游传感器落地
+RoboSense机器人激光雷达客户,速腾聚创,机器人/车企客户,移动机器人感知,中国/全球,传感器销售,是,持续运营,官网/上市公司,A,https://www.robosense.ai/,unknown,2026-05-26,高,上游传感器落地

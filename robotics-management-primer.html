@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>管理层一页看懂具身智能机器人</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e2336'/%3E%3Cpath d='M20 36h24v10H20zM24 18h16v14H24z' fill='%23fff'/%3E%3Ccircle cx='28' cy='25' r='2.5' fill='%2325d0d0'/%3E%3Ccircle cx='36' cy='25' r='2.5' fill='%2325d0d0'/%3E%3Cpath d='M17 39h30M28 46v7M36 46v7' stroke='%23c47612' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #151b27;
+      --navy: #0e2336;
+      --muted: #596675;
+      --line: #d8e0e8;
+      --paper: #fbfcf8;
+      --panel: #ffffff;
+      --blue: #1f63d6;
+      --teal: #13857f;
+      --green: #238553;
+      --amber: #c47612;
+      --red: #bd3b2d;
+      --slate: #344154;
+      --shadow: 0 18px 50px rgba(21, 27, 39, 0.10);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-width: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(31, 99, 214, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(31, 99, 214, 0.035) 1px, transparent 1px),
+        #f3f6f4;
+      background-size: 42px 42px;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(216, 224, 232, 0.95);
+      background: rgba(251, 252, 248, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      width: min(1480px, calc(100% - clamp(40px, 5vw, 96px)));
+      margin: 0 auto;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      color: var(--navy);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, #1f63d6 0%, #13857f 58%, #c47612 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+      flex: 0 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .nav a {
+      padding: 8px 12px;
+      border-radius: 7px;
+      color: var(--slate);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav a:hover {
+      background: #eef4ff;
+      color: var(--blue);
+    }
+
+    .nav a,
+    .nav .nav-current {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: #233148;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.3;
+    }
+
+    .nav a:hover {
+      background: #eef4ff;
+      color: #175aa8;
+      text-decoration: none;
+    }
+
+    .nav .nav-current {
+      background: #175aa8;
+      color: #ffffff;
+      cursor: default;
+      box-shadow: 0 8px 18px rgba(23, 90, 168, 0.16);
+    }
+
+    .shell {
+      width: min(1480px, calc(100% - clamp(40px, 5vw, 96px)));
+      margin: 0 auto;
+      min-width: 0;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.94fr) minmax(420px, 1.06fr);
+      gap: clamp(28px, 4vw, 58px);
+      align-items: center;
+      padding: clamp(44px, 5vw, 72px) 0 36px;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      color: var(--teal);
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0 0 22px;
+      color: var(--navy);
+      font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+      font-size: clamp(42px, 4.1vw, 64px);
+      line-height: 1.06;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: #334155;
+      font-size: clamp(18px, 1.4vw, 23px);
+      line-height: 1.78;
+      font-weight: 600;
+    }
+
+    .lead strong {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 15px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #ffffff;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: 0 8px 22px rgba(21, 27, 39, 0.06);
+    }
+
+    .button.primary {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #ffffff;
+    }
+
+    .button svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+    }
+
+    .hero-media {
+      min-width: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid rgba(216, 224, 232, 0.95);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-media img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .hero-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 18px;
+      color: #415063;
+      background: #ffffff;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 99px;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(35, 133, 83, 0.12);
+      flex: 0 0 auto;
+    }
+
+    .thesis-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .thesis {
+      min-width: 0;
+      min-height: 164px;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(21, 27, 39, 0.06);
+    }
+
+    .thesis b {
+      display: block;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .thesis span {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .band {
+      margin: 0 calc(50% - 50vw);
+      padding: 42px max(clamp(40px, 5vw, 96px), calc((100vw - 1480px) / 2 + clamp(40px, 5vw, 96px))) 46px;
+      border-top: 1px solid rgba(216, 224, 232, 0.9);
+      background: rgba(255, 255, 255, 0.70);
+    }
+
+    .band.alt {
+      background: rgba(239, 246, 255, 0.58);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 24px;
+      min-width: 0;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+      font-size: clamp(28px, 2.5vw, 43px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 650;
+    }
+
+    .loop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .loop-card {
+      min-width: 0;
+      min-height: 196px;
+      padding: 24px;
+      border-radius: var(--radius);
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loop-card::after {
+      content: "";
+      position: absolute;
+      right: -42px;
+      bottom: -52px;
+      width: 140px;
+      height: 140px;
+      border: 18px solid rgba(255,255,255,0.16);
+      border-radius: 50%;
+    }
+
+    .loop-card:nth-child(1) { background: #1f63d6; }
+    .loop-card:nth-child(2) { background: #6d55cf; }
+    .loop-card:nth-child(3) { background: #c47612; }
+    .loop-card:nth-child(4) { background: #238553; }
+
+    .loop-index {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.18);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .loop-card b {
+      display: block;
+      position: relative;
+      z-index: 1;
+      font-size: 25px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .loop-card span {
+      display: block;
+      position: relative;
+      z-index: 1;
+      color: rgba(255,255,255,0.88);
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .stack-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.86fr) minmax(460px, 1.14fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .diagram-panel,
+    .matrix-panel,
+    .decision-panel {
+      min-width: 0;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 36px rgba(21, 27, 39, 0.07);
+    }
+
+    .robot-diagram {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background:
+        radial-gradient(circle at 26% 20%, rgba(31, 99, 214, 0.13), transparent 28%),
+        radial-gradient(circle at 76% 78%, rgba(19, 133, 127, 0.14), transparent 30%),
+        #f7fafb;
+      border-radius: var(--radius);
+      border: 1px solid #e5ebf1;
+    }
+
+    .robot-diagram svg {
+      width: min(420px, 100%);
+      height: auto;
+    }
+
+    .layer-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .layer {
+      display: grid;
+      grid-template-columns: minmax(124px, 0.35fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      min-width: 0;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-left: 8px solid var(--blue);
+    }
+
+    .layer:nth-child(2) { border-left-color: var(--teal); }
+    .layer:nth-child(3) { border-left-color: #6d55cf; }
+    .layer:nth-child(4) { border-left-color: var(--green); }
+    .layer:nth-child(5) { border-left-color: var(--amber); }
+
+    .layer b {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .layer span {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .routes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .route {
+      min-width: 0;
+      min-height: 176px;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .route::after {
+      content: "";
+      position: absolute;
+      right: -32px;
+      top: -32px;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: rgba(31, 99, 214, 0.08);
+    }
+
+    .route b {
+      display: block;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.22;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .route p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 650;
+      position: relative;
+      z-index: 1;
+    }
+
+    .matrix-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .maturity-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .maturity-row {
+      display: grid;
+      grid-template-columns: minmax(150px, 0.34fr) minmax(220px, 1fr) 86px 76px;
+      gap: 14px;
+      align-items: center;
+      min-width: 0;
+      padding: 14px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .scene-name {
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 850;
+      line-height: 1.28;
+    }
+
+    .bar-track {
+      min-width: 0;
+      height: 16px;
+      border-radius: 99px;
+      background: #e8eef5;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+    }
+
+    .level {
+      justify-self: start;
+      min-width: 70px;
+      padding: 6px 10px;
+      border-radius: 7px;
+      background: var(--navy);
+      color: #ffffff;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .priority {
+      color: var(--slate);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .side-summary {
+      display: grid;
+      gap: 14px;
+    }
+
+    .summary-block {
+      min-width: 0;
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .summary-block strong {
+      display: block;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.25;
+      margin-bottom: 9px;
+    }
+
+    .summary-block span {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .conditions {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .condition {
+      min-width: 0;
+      min-height: 174px;
+      padding: 22px;
+      border-radius: var(--radius);
+      color: #ffffff;
+      background: var(--blue);
+    }
+
+    .condition:nth-child(2) { background: var(--teal); }
+    .condition:nth-child(3) { background: var(--green); }
+    .condition:nth-child(4) { background: #6d55cf; }
+    .condition:nth-child(5) { background: var(--amber); }
+
+    .condition b {
+      display: block;
+      font-size: 23px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .condition span {
+      color: rgba(255,255,255,0.88);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .decision-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .decision-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .decision-item {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      min-width: 0;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .num {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #eef4ff;
+      color: var(--blue);
+      font-weight: 950;
+    }
+
+    .decision-item b {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .decision-item span {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .risk {
+      min-width: 0;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: #fffaf0;
+      border: 1px solid #f2ddba;
+    }
+
+    .risk b {
+      display: block;
+      color: #7a3f12;
+      font-size: 17px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .risk span {
+      color: #6b5a43;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .footer {
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    @media (max-width: 1240px) {
+      .hero,
+      .stack-layout,
+      .matrix-layout,
+      .decision-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        max-width: 720px;
+        font-size: clamp(38px, 4.2vw, 54px);
+      }
+
+      .lead {
+        max-width: 900px;
+      }
+
+      .hero-media {
+        max-width: 980px;
+      }
+
+      .thesis-row,
+      .loop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .conditions {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .topbar {
+        position: static;
+      }
+
+      .topbar-inner,
+      .shell {
+        width: min(100% - 32px, 1480px);
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .band {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .routes,
+      .conditions,
+      .risk-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .maturity-row {
+        grid-template-columns: minmax(130px, 0.45fr) minmax(160px, 1fr) 76px;
+      }
+
+      .priority {
+        display: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .thesis-row,
+      .loop-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .layer {
+        grid-template-columns: 1fr;
+      }
+
+      .maturity-row {
+        grid-template-columns: 1fr;
+      }
+
+      .level {
+        justify-self: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="pop-science-navigation.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>具身智能机器人管理层速览</span>
+      </a>
+      <nav class="nav" aria-label="科普页面导航">
+        <span class="nav-current" aria-current="page">概览行业</span>
+        <a href="06_robot_anatomy_pop_science.html">机器人组成</a>
+        <a href="06_end_to_end_model_progress.html">大脑：端到端模型</a>
+        <a href="generalist-robot-foundation-models.html">泛化模型</a>
+        <a href="china_top20_embodied_robot_companies.html">公司图鉴</a>
+        <a href="retail-store-robot-ai-applications.html">门店应用讨论</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="shell hero">
+      <div class="hero-copy">
+        <p class="kicker">面向董事会、总经理、业务负责人</p>
+        <h1>先选任务，<br>再选机器人形态</h1>
+        <p class="lead">具身智能机器人不是“会聊天的机器”，而是 AI 进入物理世界后，通过<strong>感知、决策、行动和反馈学习</strong>完成真实任务。管理层判断价值时，应把重点放在任务频次、场景边界、客户证据、ROI 和运维能力上。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#scenarios">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            看场景优先级
+          </a>
+          <a class="button" href="#pilot">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            看试点打法
+          </a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="project_files/html/assets/robotics-management-hero.png" alt="仓储、制造和零售场景中的具身智能机器人">
+        <figcaption class="hero-caption">
+          <span>真实业务价值来自流程嵌入，而不是单机展示</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="shell thesis-row" aria-label="管理层核心判断">
+      <article class="thesis">
+        <b>形态不是第一问题</b>
+        <span>人形、四足、AMR、机械臂、服务机器人各有边界，先看任务和现场，再选形态。</span>
+      </article>
+      <article class="thesis">
+        <b>成熟场景先于通用想象</b>
+        <span>仓储、巡检、服务配送、工业视觉更容易产生明确回报，家庭通用机器人仍偏长期。</span>
+      </article>
+      <article class="thesis">
+        <b>试点不是买机器</b>
+        <span>试点本质是验证任务成功率、异常处理、流程改造、员工接受度和运维成本。</span>
+      </article>
+      <article class="thesis">
+        <b>证据要分层核验</b>
+        <span>客户公告、合同、持续运营和付费使用，比演示视频、发布会和战略合作更关键。</span>
+      </article>
+    </section>
+
+    <section id="essence" class="band alt">
+      <div class="section-head">
+        <h2>具身智能的核心闭环</h2>
+        <p class="section-note">机器人能否创造价值，取决于四个环节是否能在真实现场连续运转，而不是某一次演示能否成功。</p>
+      </div>
+      <div class="loop-grid">
+        <article class="loop-card">
+          <span class="loop-index">01</span>
+          <b>感知</b>
+          <span>通过视觉、深度、触觉、激光雷达和业务系统数据理解现场。</span>
+        </article>
+        <article class="loop-card">
+          <span class="loop-index">02</span>
+          <b>决策</b>
+          <span>把语言指令、任务目标和环境约束转成可执行动作序列。</span>
+        </article>
+        <article class="loop-card">
+          <span class="loop-index">03</span>
+          <b>行动</b>
+          <span>完成移动、抓取、搬运、巡检、清洁、配送或操作动作。</span>
+        </article>
+        <article class="loop-card">
+          <span class="loop-index">04</span>
+          <b>学习</b>
+          <span>从遥操作、失败案例、真实部署数据和仿真训练中持续提升。</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="industry" class="band">
+      <div class="section-head">
+        <h2>产业竞争正在变成系统竞争</h2>
+        <p class="section-note">单个本体只是入口，真正的壁垒来自本体、零部件、模型、数据和应用交付的组合能力。</p>
+      </div>
+      <div class="stack-layout">
+        <div class="diagram-panel">
+          <div class="robot-diagram" aria-label="机器人系统结构示意图">
+            <svg viewBox="0 0 420 380" role="img" aria-label="机器人由本体、感知、模型、数据和场景组成">
+              <defs>
+                <linearGradient id="bodyGrad" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#ffffff"/>
+                  <stop offset="1" stop-color="#dce9f6"/>
+                </linearGradient>
+              </defs>
+              <rect x="50" y="280" width="320" height="24" rx="12" fill="#d8e0e8"/>
+              <rect x="86" y="300" width="248" height="18" rx="9" fill="#eef2f5"/>
+              <circle cx="210" cy="88" r="46" fill="url(#bodyGrad)" stroke="#0e2336" stroke-width="4"/>
+              <rect x="176" y="79" width="68" height="28" rx="14" fill="#0e2336"/>
+              <circle cx="194" cy="93" r="5" fill="#25d0d0"/>
+              <circle cx="226" cy="93" r="5" fill="#25d0d0"/>
+              <rect x="157" y="142" width="106" height="120" rx="34" fill="url(#bodyGrad)" stroke="#0e2336" stroke-width="4"/>
+              <path d="M156 164 C114 176 104 218 112 252" fill="none" stroke="#0e2336" stroke-width="14" stroke-linecap="round"/>
+              <path d="M264 164 C306 176 316 218 308 252" fill="none" stroke="#0e2336" stroke-width="14" stroke-linecap="round"/>
+              <path d="M181 260 L164 318" stroke="#0e2336" stroke-width="16" stroke-linecap="round"/>
+              <path d="M239 260 L256 318" stroke="#0e2336" stroke-width="16" stroke-linecap="round"/>
+              <circle cx="112" cy="252" r="16" fill="#1f63d6"/>
+              <circle cx="308" cy="252" r="16" fill="#c47612"/>
+              <circle cx="164" cy="320" r="16" fill="#13857f"/>
+              <circle cx="256" cy="320" r="16" fill="#238553"/>
+              <g fill="none" stroke="#8ba0b5" stroke-width="2">
+                <path d="M78 88 H44 V188 H92"/>
+                <path d="M342 88 H376 V188 H328"/>
+                <path d="M92 338 H44 V236 H92"/>
+                <path d="M328 338 H376 V236 H328"/>
+              </g>
+              <g font-family="PingFang SC, Arial, sans-serif" font-weight="800" font-size="15">
+                <text x="18" y="84" fill="#1f63d6">感知</text>
+                <text x="350" y="84" fill="#6d55cf">模型</text>
+                <text x="18" y="354" fill="#13857f">数据</text>
+                <text x="340" y="354" fill="#c47612">场景</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="layer-list">
+          <article class="layer"><b>机器人本体层</b><span>人形、四足、轮式双臂、AMR、服务机器人，决定能进入什么物理环境。</span></article>
+          <article class="layer"><b>核心零部件层</b><span>电机、减速器、关节、灵巧手、传感器、控制器，决定成本、寿命和可靠性。</span></article>
+          <article class="layer"><b>模型与智能层</b><span>VLA、世界模型、任务规划和异常处理，让机器人把环境理解转为动作。</span></article>
+          <article class="layer"><b>数据与仿真层</b><span>遥操作、真实部署数据、合成数据和仿真评估，决定能力迭代速度。</span></article>
+          <article class="layer"><b>应用交付层</b><span>仓储、制造、巡检、零售、酒店、康养，把技术嵌入客户业务流程。</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="routes" class="band alt">
+      <div class="section-head">
+        <h2>六条技术路线要分开看</h2>
+        <p class="section-note">大模型提升理解和规划，但不能替代运动控制、安全认证、末端执行器、现场运维和商业闭环。</p>
+      </div>
+      <div class="routes">
+        <article class="route"><b>VLA 视觉-语言-动作</b><p>把自然语言和视觉输入转成动作方向，是长期关键路线，但真实成功率仍需场景验证。</p></article>
+        <article class="route"><b>遥操作与模仿学习</b><p>用人类示范快速训练技能，是数据积累起点，也要求披露人工介入比例。</p></article>
+        <article class="route"><b>强化学习与运动控制</b><p>让双足、四足和全身协同更稳定，但会运动不等于能完成客户任务。</p></article>
+        <article class="route"><b>仿真与合成数据</b><p>降低真实采集成本，核心挑战是仿真到现实的差距和评估标准。</p></article>
+        <article class="route"><b>机器人 OS 与平台</b><p>降低应用开发和部署复杂度，但标准、生态和跨本体适配仍在形成。</p></article>
+        <article class="route"><b>触觉与灵巧操作</b><p>抓取、插拔、补货、装配是难点，需要感知、力控、末端执行器协同。</p></article>
+      </div>
+    </section>
+
+    <section id="scenarios" class="band">
+      <div class="section-head">
+        <h2>场景优先级：先做可控高频任务</h2>
+        <p class="section-note">成熟度不是热度排名。管理层应优先选择客户痛点强、流程可控、风险可隔离、指标可量化的场景。</p>
+      </div>
+      <div class="matrix-layout">
+        <div class="matrix-panel">
+          <div class="maturity-list">
+            <div class="maturity-row"><span class="scene-name">仓储物流</span><span class="bar-track"><span class="bar-fill" style="width: 100%"></span></span><span class="level">L3</span><span class="priority">P0</span></div>
+            <div class="maturity-row"><span class="scene-name">能源电力化工巡检</span><span class="bar-track"><span class="bar-fill" style="width: 88%"></span></span><span class="level">L2-L3</span><span class="priority">P0</span></div>
+            <div class="maturity-row"><span class="scene-name">酒店餐饮商用服务</span><span class="bar-track"><span class="bar-fill" style="width: 84%"></span></span><span class="level">L2-L3</span><span class="priority">P1</span></div>
+            <div class="maturity-row"><span class="scene-name">制造业汽车产线</span><span class="bar-track"><span class="bar-fill" style="width: 62%"></span></span><span class="level">L1-L2</span><span class="priority">P1</span></div>
+            <div class="maturity-row"><span class="scene-name">零售门店</span><span class="bar-track"><span class="bar-fill" style="width: 64%"></span></span><span class="level">L1-L3</span><span class="priority">P1</span></div>
+            <div class="maturity-row"><span class="scene-name">医疗康养</span><span class="bar-track"><span class="bar-fill" style="width: 48%"></span></span><span class="level">L1-L2</span><span class="priority">P2</span></div>
+            <div class="maturity-row"><span class="scene-name">园区安防公共空间</span><span class="bar-track"><span class="bar-fill" style="width: 68%"></span></span><span class="level">L2</span><span class="priority">P2</span></div>
+            <div class="maturity-row"><span class="scene-name">家庭服务</span><span class="bar-track"><span class="bar-fill" style="width: 28%"></span></span><span class="level">L0-L1</span><span class="priority">P3</span></div>
+          </div>
+        </div>
+        <aside class="side-summary" aria-label="场景判断摘要">
+          <div class="summary-block"><strong>P0：可以进入试点筛选</strong><span>仓储物流、能源电力化工巡检。任务边界更清楚，客户预算和ROI更容易测算。</span></div>
+          <div class="summary-block"><strong>P1：适合限定任务验证</strong><span>制造、零售、酒店餐饮和商用服务。要拆开“展示体验”和“稳定生产任务”。</span></div>
+          <div class="summary-block"><strong>P2/P3：谨慎观察或局部进入</strong><span>医疗康养、园区公共空间、家庭服务。安全、责任、成本和泛化仍是主要约束。</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="section-head">
+        <h2>商业化只看五个条件</h2>
+        <p class="section-note">判断一个机器人项目能不能落地，不要被外形、视频和发布会带偏，回到这五件事。</p>
+      </div>
+      <div class="conditions">
+        <article class="condition"><b>高频</b><span>每天都有足够多、可重复的任务，机器人不是偶尔展示。</span></article>
+        <article class="condition"><b>可控</b><span>环境变化不超过感知、规划和动作控制能力。</span></article>
+        <article class="condition"><b>ROI</b><span>能降本、提效、降低风险或增加收入，并能量化。</span></article>
+        <article class="condition"><b>复制</b><span>从一个点到多个点不需要完全重新开发和部署。</span></article>
+        <article class="condition"><b>运维</b><span>维护、安全、培训、故障处理成本不能吞掉收益。</span></article>
+      </div>
+    </section>
+
+    <section id="pilot" class="band">
+      <div class="section-head">
+        <h2>90 天试点：把风险关进小范围</h2>
+        <p class="section-note">试点价值不是证明机器人万能，而是用可承受成本暴露技术、流程、组织和商业问题。</p>
+      </div>
+      <div class="decision-layout">
+        <div class="decision-list">
+          <article class="decision-item"><span class="num">1</span><div><b>统一认知</b><span>明确机器人不是采购玩具，而是流程自动化和数据闭环项目。</span></div></article>
+          <article class="decision-item"><span class="num">2</span><div><b>列任务池</b><span>筛出高频、可控、可量化、失败风险低的 5 到 10 个任务。</span></div></article>
+          <article class="decision-item"><span class="num">3</span><div><b>访谈供应商</b><span>重点问客户证据、同类部署、遥操作比例、故障率和运维责任。</span></div></article>
+          <article class="decision-item"><span class="num">4</span><div><b>做低风险试点</b><span>先选可隔离场景，定义成功率、人工接管、成本和体验指标。</span></div></article>
+          <article class="decision-item"><span class="num">5</span><div><b>季度复盘</b><span>判断是否扩大部署、换供应商、暂停投入或转向其他场景。</span></div></article>
+        </div>
+        <div class="decision-panel">
+          <div class="risk-grid">
+            <article class="risk"><b>不要把“量产”当作“商用”</b><span>下线、可售、试产、客户交付、收入确认是不同口径。</span></article>
+            <article class="risk"><b>不要把“签约”当作“订单”</b><span>战略合作、意向协议、采购合同和续费复购需要拆开核验。</span></article>
+            <article class="risk"><b>不要忽视遥操作比例</b><span>远程接管本身不是问题，问题是是否透明、可控、可计入成本。</span></article>
+            <article class="risk"><b>不要只看单机价格</b><span>集成、维护、备件、安全、保险、培训和停机成本同样影响 ROI。</span></article>
+            <article class="risk"><b>不要直接追求全流程替代</b><span>先让机器人做边界清楚的部分任务，再逐步扩大任务范围。</span></article>
+            <article class="risk"><b>不要让供应商定义全部指标</b><span>企业必须掌握自己的任务数据、验收指标和退出机制。</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="shell footer">
+      本页用于管理层内部学习和试点讨论。正式决策前，应重新核验客户公告、付费状态、持续运营、部署规模、安全合规和运维责任。
+    </footer>
+  </main>
+</body>
+</html>

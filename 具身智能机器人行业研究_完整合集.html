@@ -661,22 +661,63 @@
 
     .scene-tile {
       min-width: 0;
-      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255,255,255,0.76);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.94), rgba(251,253,255,0.86)),
+        #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
     }
 
     .scene-art {
       width: 100%;
-      height: 104px;
+      height: 126px;
       display: block;
+      padding: 7px;
+      border: 1px solid #dbe4ed;
+      border-radius: 7px;
+      background:
+        linear-gradient(90deg, rgba(31,99,214,0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(31,99,214,0.05) 1px, transparent 1px),
+        #f8fbfd;
+      background-size: 24px 24px;
       color: var(--blue);
     }
 
     .scene-tile:nth-child(2) .scene-art { color: var(--teal); }
     .scene-tile:nth-child(3) .scene-art { color: var(--amber); }
     .scene-tile:nth-child(4) .scene-art { color: var(--green); }
+
+    .scene-art .line {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .scene-art .soft {
+      fill: currentColor;
+      opacity: 0.09;
+    }
+
+    .scene-art .route {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 9 8;
+    }
+
+    .scene-art .mark {
+      fill: #fff;
+      stroke: currentColor;
+      stroke-width: 3;
+    }
 
     .scene-tile strong {
       display: block;
@@ -692,6 +733,26 @@
       color: var(--muted);
       font-size: 12px;
       line-height: 1.45;
+    }
+
+    .scene-kpi {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 9px;
+    }
+
+    .scene-kpi b {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: #f5f8fb;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 760;
     }
 
     .maturity-map {
@@ -2526,51 +2587,62 @@
           </div>
           <div class="hero-panorama">
             <div class="scene-tile">
-              <svg class="scene-art" viewBox="0 0 220 110" aria-hidden="true">
-                <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 88h172M34 20h52v68H34zM104 20h52v68h-52zM48 38h24M48 56h24M118 38h24M118 56h24"/>
-                  <path d="M164 78h34M181 54v24M172 54h18l8 13v11h-26z"/>
-                  <circle cx="177" cy="88" r="7"/><circle cx="198" cy="88" r="7"/>
-                </g>
+              <svg class="scene-art" viewBox="0 0 220 126" aria-hidden="true">
+                <rect class="soft" x="22" y="20" width="176" height="86" rx="10"/>
+                <path class="line" d="M28 104h164M40 30h34v64H40zM92 30h34v64H92zM144 30h34v64h-34z"/>
+                <path class="line" d="M48 44h18M48 60h18M100 44h18M100 60h18M152 44h18M152 60h18"/>
+                <path class="route" d="M32 104C56 84 72 76 104 76s56 8 86-20"/>
+                <rect class="mark" x="96" y="69" width="26" height="18" rx="8"/>
+                <circle class="mark" cx="188" cy="55" r="8"/>
+                <path class="line" d="M174 96h22M184 80v16M176 80h18l8 10v6h-26z"/>
               </svg>
               <strong>仓储物流</strong>
-              <span>路径固定、ROI 清晰，最接近规模商用</span>
+              <span>固定通道、货架和月台，适合验证搬运、拣选和库存周转。</span>
+              <div class="scene-kpi"><b>吞吐效率</b><b>路径成功率</b></div>
             </div>
             <div class="scene-tile">
-              <svg class="scene-art" viewBox="0 0 220 110" aria-hidden="true">
-                <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M26 88h168M48 88V28h28v60M126 88V20h28v68M36 52h50M116 48h48"/>
-                  <path d="M88 78h38M104 54v24M95 54h18l10 14v10H95z"/>
-                  <circle cx="100" cy="88" r="7"/><circle cx="124" cy="88" r="7"/>
-                  <path d="M166 34l12-12 12 12M178 22v42"/>
-                </g>
+              <svg class="scene-art" viewBox="0 0 220 126" aria-hidden="true">
+                <rect class="soft" x="26" y="18" width="168" height="88" rx="10"/>
+                <path class="line" d="M34 104h156M54 104V34h28v70M128 104V24h28v80M42 60h50M118 55h48"/>
+                <path class="route" d="M42 96c22-22 40-32 68-32 26 0 46-12 72-34"/>
+                <rect class="mark" x="96" y="76" width="30" height="20" rx="9"/>
+                <circle class="mark" cx="108" cy="96" r="6"/>
+                <circle class="mark" cx="128" cy="96" r="6"/>
+                <path class="line" d="M174 38l12-12 12 12M186 26v52"/>
+                <circle class="mark" cx="160" cy="48" r="7"/>
               </svg>
               <strong>能源巡检</strong>
-              <span>替代危险巡检，重点看稳定性和异常识别</span>
+              <span>围绕设备、管廊和危险区域巡检，重点验证异常识别和接管机制。</span>
+              <div class="scene-kpi"><b>异常检出</b><b>安全替代</b></div>
             </div>
             <div class="scene-tile">
-              <svg class="scene-art" viewBox="0 0 220 110" aria-hidden="true">
-                <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 88h172M32 30h62v58H32zM126 30h54v58h-54zM46 46h34M46 62h34M138 48h30M138 64h30"/>
-                  <path d="M96 78h30M111 56v22M101 56h20l8 12v10h-28z"/>
-                  <circle cx="104" cy="88" r="6"/><circle cx="127" cy="88" r="6"/>
-                  <path d="M176 20c12 0 18 8 18 18"/>
-                </g>
+              <svg class="scene-art" viewBox="0 0 220 126" aria-hidden="true">
+                <rect class="soft" x="24" y="22" width="172" height="82" rx="10"/>
+                <path class="line" d="M30 104h164M38 34h52v56H38zM122 34h44v56h-44zM50 50h28M50 66h28M134 52h20M134 68h20"/>
+                <path class="line" d="M170 36h18v44h-18"/>
+                <path class="route" d="M42 98C70 78 92 74 112 76s38 16 66-8"/>
+                <rect class="mark" x="98" y="71" width="28" height="18" rx="8"/>
+                <circle class="mark" cx="178" cy="68" r="7"/>
+                <path class="line" d="M184 28c10 0 16 6 16 16"/>
               </svg>
               <strong>零售门店</strong>
-              <span>先做导购、巡店、工单和数据沉淀</span>
+              <span>从入口、货架到售后柜台，先做导购、巡店、工单和数据沉淀。</span>
+              <div class="scene-kpi"><b>接待转化</b><b>人工接管</b></div>
             </div>
             <div class="scene-tile">
-              <svg class="scene-art" viewBox="0 0 220 110" aria-hidden="true">
-                <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 88h172M42 88V30h44v58M134 88V40h46v48M56 46h18M56 62h18M146 56h20"/>
-                  <path d="M90 78h34M108 50v28M94 50h28l10 14-8 14H94z"/>
-                  <circle cx="98" cy="88" r="7"/><circle cx="124" cy="88" r="7"/>
-                  <path d="M156 34l18-16M174 18l10 10"/>
-                </g>
+              <svg class="scene-art" viewBox="0 0 220 126" aria-hidden="true">
+                <rect class="soft" x="24" y="22" width="172" height="82" rx="10"/>
+                <path class="line" d="M28 104h164M40 46h50v30H40zM132 42h42v44h-42M50 58h30M142 58h20"/>
+                <path class="line" d="M94 98V74M94 74l28-22M122 52l28 20M150 72h22M172 62v20"/>
+                <circle class="mark" cx="94" cy="74" r="8"/>
+                <circle class="mark" cx="122" cy="52" r="8"/>
+                <path class="route" d="M44 96c26-12 48-10 74-24 22-12 42-18 64-18"/>
+                <rect class="mark" x="76" y="88" width="34" height="14" rx="7"/>
+                <path class="line" d="M154 32l18-12M172 20l10 8"/>
               </svg>
               <strong>制造工位</strong>
-              <span>适合从标准动作包和安全边界切入</span>
+              <span>围绕上下料、质检和装配节拍，先封装标准动作包与安全边界。</span>
+              <div class="scene-kpi"><b>节拍稳定</b><b>停机风险</b></div>
             </div>
           </div>
         </div>

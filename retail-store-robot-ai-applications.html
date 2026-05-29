@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>门店机器人应用分析：端到端未成熟时的二开路径</title>
+  <title>门店机器人应用与试点建议：平台二开与分层落地路径</title>
   <link rel="icon" type="image/svg+xml" href="project_files/html/assets/learning-map.svg">
   <style>
     :root {
@@ -791,12 +791,12 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
-        <h1>门店机器人应用分析</h1>
-        <p>端到端模型短期内还难以稳定接管开放门店，但本体运动、小脑控制和厂商开发平台已经足够做二开。科技企业可以在机器人平台上叠加行业 AI 交互、门店系统接口和标准动作包，先替代一部分高频、低判断、可度量的工作。</p>
+        <h1>门店机器人应用与试点建议</h1>
+        <p>现阶段可行路径是平台能力 + 行业 AI + 门店系统的分层集成。科技企业可以在机器人平台上叠加行业 AI 交互、门店系统接口和标准动作包，优先承接一部分高频、低判断、可度量的工作。</p>
         <div class="hero-actions">
           <a class="button primary" href="#route">看二开路径</a>
           <a class="button" href="#roi">测算 ROI</a>
-          <a class="button" href="#limits">查看不足</a>
+          <a class="button" href="#limits">看实施边界</a>
         </div>
       </div>
     </div>
@@ -804,7 +804,7 @@
 
   <div class="shell thesis-strip" aria-label="核心判断">
     <div class="thesis-card">
-      <strong>短期路线不是等通用大脑成熟，而是先把可控动作做成业务工具。</strong>
+      <strong>短期路线重点不是等待通用大脑成熟，而是先把可控动作做成业务工具。</strong>
       <span>机器人公司提供本体、运动控制、导航、SDK 和运维；行业科技企业负责场景模型、业务流程、门店接口和运营指标。</span>
     </div>
     <div class="metric-card">
@@ -830,13 +830,13 @@
       <div class="model-map">
         <div class="explain-card">
           <h3>核心逻辑</h3>
-          <p>门店不是实验室：顾客会挡路，货架会调整，网络会波动，员工也会临时改变 SOP。与其把所有问题压给一个端到端模型，不如把任务拆开：云端 AI 负责问答和意图识别，小脑负责动作和安全，本体负责执行，行业二开层负责把它们接入门店业务。</p>
+          <p>门店环境比实验室更复杂：顾客会挡路，货架会调整，网络会波动，员工也会临时改变 SOP。与其将复杂任务完全交由端到端模型承担，更适合把任务拆开：云端 AI 负责问答和意图识别，小脑负责动作和安全，本体负责执行，行业二开层负责把它们接入门店业务。</p>
         </div>
         <div class="capability-stack" aria-label="能力分层">
           <div class="stack-row">
             <b>端到端大脑</b>
             <span>跨场景理解、长尾异常、复杂抓取和连续任务规划仍需要大量真实数据验证。</span>
-            <span class="state red">短期不宜全押</span>
+            <span class="state red">短期建议分层验证</span>
           </div>
           <div class="stack-row">
             <b>小脑控制</b>
@@ -862,7 +862,7 @@
     <div class="shell">
       <div class="section-heading">
         <h2>科技企业可以做什么</h2>
-        <p>二开不是简单换一个欢迎语，而是把门店任务、AI 交互、机器人动作和经营系统串成闭环。</p>
+        <p>二开的重点不是简单换一个欢迎语，而是把门店任务、AI 交互、机器人动作和经营系统串成闭环。</p>
       </div>
       <div class="workflow">
         <div class="workflow-step">
@@ -892,7 +892,7 @@
   <section class="section">
     <div class="shell">
       <div class="section-heading">
-        <h2>短期可以替代哪些工作</h2>
+        <h2>短期可承接哪些门店任务</h2>
         <p>优先选择高频、重复、低风险、能量化的门店任务；把复杂成交、投诉判断和高价值服务留给人。</p>
       </div>
       <div class="task-board">
@@ -957,23 +957,23 @@
   <section id="limits" class="section">
     <div class="shell">
       <div class="section-heading">
-        <h2>当前不足要提前写进方案</h2>
-        <p>机器人项目失败，常常不是败在演示，而是败在网络、充电、平台碎片化、门店改造和售后响应。</p>
+        <h2>实施边界与管理要点</h2>
+        <p>门店机器人试点需要把网络、充电、平台接口、门店空间、异常接管和售后响应纳入项目管理，避免只看首轮演示效果。</p>
       </div>
       <div class="risk-grid">
         <div class="risk-card">
-          <span class="tag">平台碎片化</span>
-          <h3>各家二开平台独立</h3>
+          <span class="tag">平台适配</span>
+          <h3>平台接口需要统一适配</h3>
           <p>不同机器人厂商的 SDK、地图、任务编排、权限和数据格式差异很大。科技企业做行业应用时，要避免把业务逻辑深度绑死在单一厂商接口上。</p>
         </div>
         <div class="risk-card">
           <span class="tag">网络与云端</span>
-          <h3>AI 云端延迟会影响体验</h3>
+          <h3>云端响应需要体验兜底</h3>
           <p>多轮语音、视觉识别和大模型问答依赖网络质量。门店 Wi-Fi、5G 信号、边缘缓存和离线兜底都要设计，否则顾客会直接感知卡顿。</p>
         </div>
         <div class="risk-card">
-          <span class="tag">部署改造</span>
-          <h3>门店不是天然适配机器人</h3>
+          <span class="tag">部署评估</span>
+          <h3>门店空间需要部署评估</h3>
           <p>通道宽度、临时堆头、玻璃反光、地面坡度、顾客拥堵、货架高度都会影响运行。试点前要做空间勘测和路线仿真。</p>
         </div>
         <div class="risk-card">
@@ -982,13 +982,13 @@
           <p>充电桩位置、自动回充成功率、高峰运行时长、夜间充电安排都要写入 SOP。机器人没电时，门店员工必须知道谁来接管。</p>
         </div>
         <div class="risk-card">
-          <span class="tag">异常处理</span>
-          <h3>开放环境长尾问题很多</h3>
-          <p>儿童围观、顾客挡路、商品摆错、语音误识别、抓取失败、系统掉线都需要人工接管机制。不能把 Demo 成功率当成真实门店成功率。</p>
+          <span class="tag">异常接管</span>
+          <h3>开放环境需要接管机制</h3>
+          <p>儿童围观、顾客挡路、商品摆错、语音误识别、抓取失败、系统掉线都需要人工接管机制。演示效果需通过真实门店运营数据复核。</p>
         </div>
         <div class="risk-card">
           <span class="tag">售后周期</span>
-          <h3>半年到一年才看得清真实成本</h3>
+          <h3>真实成本需要周期复盘</h3>
           <p>售后时长建议按 6-12 个月规划，覆盖备件、巡检、软件升级、模型调优、员工培训和故障响应。只看首月数据容易低估运维成本。</p>
         </div>
       </div>
@@ -998,14 +998,14 @@
   <section class="section">
     <div class="shell">
       <div class="section-heading">
-        <h2>机器人为什么仍然值得做</h2>
+        <h2>机器人应用的长期价值</h2>
         <p>它不是短期万能替人，但能把门店从“人靠经验跑流程”推进到“人机协同、数据可追踪、能力持续迭代”。</p>
       </div>
       <div class="advantage-grid">
         <div class="advantage-card">
           <span class="tag">客流吸引</span>
           <h3>天然具备门店展示性</h3>
-          <p>机器人能成为入口视觉焦点，适合新店开业、品牌活动、会员拉新和高峰分流。引流价值要单独计入营销收益，而不是硬塞进人力替代。</p>
+          <p>机器人能成为入口视觉焦点，适合新店开业、品牌活动、会员拉新和高峰分流。引流价值要单独计入营销收益，不宜简单归入人力替代。</p>
         </div>
         <div class="advantage-card">
           <span class="tag">持续迭代</span>
@@ -1046,7 +1046,7 @@
         <div class="phase-card">
           <span class="tag">0-1 个月</span>
           <h3>部署验收</h3>
-          <p>完成地图、路线、充电桩、网络、权限、员工培训和安全边界验收。核心看能不能每天稳定完成基础任务。</p>
+          <p>完成地图、路线、充电桩、网络、权限、员工培训和安全边界验收。核心看是否能够每天稳定完成基础任务。</p>
         </div>
         <div class="phase-card">
           <span class="tag">1-3 个月</span>
@@ -1080,7 +1080,7 @@
   <section id="roi" class="section">
     <div class="shell">
       <div class="section-heading">
-        <h2>商用 ROI 不能只算“少雇几个人”</h2>
+        <h2>商用 ROI 需要分项核算</h2>
         <p>门店机器人常常同时包含运营工具、营销装置和战略探索。把收益拆清楚，才不会把品牌预算包装成降本项目。</p>
       </div>
       <div class="roi-layout">
@@ -1129,12 +1129,12 @@
             <div class="result-panel">
               <span>月度净收益</span>
               <b id="netValue">-1400 元</b>
-              <p id="netNote">当前更像品牌体验或战略探索，不能按降本项目立项。</p>
+              <p id="netNote">当前更适合作为品牌体验或战略探索项目管理。</p>
             </div>
             <div class="result-panel">
               <span>建议判断</span>
               <b id="decisionValue">谨慎试点</b>
-              <p>若不能在 90 天内记录真实任务数据，不建议扩大部署。</p>
+              <p>若 90 天内尚未形成真实任务数据，建议暂缓扩大部署。</p>
             </div>
             <div class="result-panel full">
               <span>ROI 口径</span>
@@ -1142,9 +1142,9 @@
             </div>
           </div>
           <ul class="decision-list">
-            <li><b>必须计入</b><span>设备、二开、云端模型、部署改造、网络、充电、培训、半年到一年售后、备件和停机成本。</span></li>
-            <li><b>必须验证</b><span>日均任务数、成功率、接管次数、员工采纳率、顾客转化、故障响应和复购续费意愿。</span></li>
-            <li><b>必须分账</b><span>吸引客流是营销收益；替代重复工作是运营收益；沉淀数据是战略收益，不能混在一个数字里。</span></li>
+            <li><b>需计入</b><span>设备、二开、云端模型、部署改造、网络、充电、培训、半年到一年售后、备件和停机成本。</span></li>
+            <li><b>需验证</b><span>日均任务数、成功率、接管次数、员工采纳率、顾客转化、故障响应和复购续费意愿。</span></li>
+            <li><b>需分账</b><span>吸引客流是营销收益；替代重复工作是运营收益；沉淀数据是战略收益，需分开核算。</span></li>
           </ul>
         </div>
       </div>
@@ -1220,7 +1220,7 @@
       outputs.netNote.textContent = "项目接近打平，应重点验证员工采纳率、售后成本和客流转化。";
     } else {
       outputs.decision.textContent = "谨慎试点";
-      outputs.netNote.textContent = "当前更像品牌体验或战略探索，不能按降本项目立项。";
+      outputs.netNote.textContent = "当前更适合作为品牌体验或战略探索项目管理。";
     }
   }
 

@@ -704,29 +704,10 @@
     .badge-type.t-industrial { background: var(--soft-amber); color: #7a4f13; }
     .badge-type.t-upstream { background: #f0edf5; color: #6a55b8; }
 
-    /* ===== SVG Diagrams ===== */
-    .svg-diagram {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 16px 0;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: var(--panel);
-      box-shadow: 0 10px 24px rgba(21, 27, 39, 0.05);
-      overflow: hidden;
-    }
-
-    .dia-caption {
-      text-align: center;
-      margin: -8px 0 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* ===== Generated Visual Figures ===== */
-    .visual-figure {
+    /* ===== HTML Visual Modules ===== */
+    .html-visual {
       margin: 18px 0 22px;
+      padding: 18px;
       border-radius: var(--radius);
       border: 1px solid var(--line);
       background: var(--panel);
@@ -734,17 +715,10 @@
       overflow: hidden;
     }
 
-    .visual-img {
-      display: block;
-      width: 100%;
-      height: auto;
-      background: var(--paper);
-    }
-
     .visual-caption {
-      margin: 0;
-      padding: 10px 14px 12px;
-      border-top: 1px solid var(--line);
+      margin: 14px 0 0;
+      padding: 10px 12px;
+      border-radius: 6px;
       background: #fbfdff;
       color: var(--muted);
       font-size: 13px;
@@ -775,6 +749,572 @@
       margin-bottom: 3px;
       color: var(--nav);
       font-size: 14px;
+    }
+
+    .visual-kicker {
+      display: inline-flex;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 760;
+      margin-bottom: 10px;
+    }
+
+    .html-node {
+      min-width: 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fbfdff;
+    }
+
+    .html-node strong {
+      display: block;
+      color: var(--nav);
+      line-height: 1.35;
+    }
+
+    .html-node span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .loop-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .loop-node {
+      position: relative;
+      padding: 16px 14px;
+      border-left: 4px solid var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .loop-node:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      width: 12px;
+      height: 2px;
+      background: var(--muted);
+      transform: translateY(-50%);
+    }
+
+    .loop-node:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -17px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 7px solid var(--muted);
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .loop-node:nth-child(2) { border-left-color: var(--teal); background: var(--soft-teal); }
+    .loop-node:nth-child(3) { border-left-color: var(--amber); background: var(--soft-amber); }
+    .loop-node:nth-child(4) { border-left-color: var(--green); background: #eefaf2; }
+    .loop-node:nth-child(5) { border-left-color: var(--coral); background: var(--soft-coral); }
+
+    .loop-node strong {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .loop-node span {
+      font-size: 13px;
+    }
+
+    .loop-feedback {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .loop-feedback .html-node {
+      padding: 12px 14px;
+      background: #fff;
+    }
+
+    .chain-map-html {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .chain-layer {
+      position: relative;
+      padding: 16px 14px;
+      min-height: 190px;
+      border-top: 5px solid var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .chain-layer:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .chain-layer:nth-child(2) { border-top-color: var(--teal); background: var(--soft-teal); }
+    .chain-layer:nth-child(3) { border-top-color: var(--amber); background: var(--soft-amber); }
+    .chain-layer:nth-child(4) { border-top-color: #6a55b8; background: #f0edf5; }
+    .chain-layer:nth-child(5) { border-top-color: var(--green); background: #eefaf2; }
+
+    .chain-layer .chain-num {
+      display: inline-flex;
+      width: 28px;
+      height: 28px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      margin-bottom: 10px;
+      background: rgba(255,255,255,0.72);
+      color: var(--nav);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .chain-layer strong {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .chain-layer span {
+      font-size: 13px;
+    }
+
+    .chain-layer em {
+      display: block;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(93,104,120,0.18);
+      color: var(--muted);
+      font-size: 12px;
+      font-style: normal;
+      line-height: 1.5;
+    }
+
+    .architecture-visual {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr) 210px;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .arch-side {
+      padding: 16px;
+      background: #fbfdff;
+    }
+
+    .arch-side strong {
+      color: var(--blue);
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .arch-side span {
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .arch-side.output strong { color: var(--green); }
+
+    .arch-layers {
+      display: grid;
+      gap: 12px;
+    }
+
+    .arch-layer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 0.85fr);
+      gap: 12px;
+      align-items: center;
+      padding: 16px 18px;
+      border-left: 5px solid var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .arch-layer:nth-child(2) { border-left-color: var(--teal); background: var(--soft-teal); }
+    .arch-layer:nth-child(3) { border-left-color: var(--amber); background: var(--soft-amber); }
+
+    .arch-layer strong {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .arch-layer span {
+      font-size: 13px;
+    }
+
+    .arch-layer .arch-note {
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.68);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .model-roadmap {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.55fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .flywheel {
+      position: relative;
+      min-height: 330px;
+      padding: 18px;
+      background: #fbfdff;
+    }
+
+    .flywheel-core {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 120px;
+      height: 120px;
+      display: grid;
+      place-items: center;
+      border: 10px solid #dbe4ee;
+      border-radius: 50%;
+      color: var(--nav);
+      font-size: 20px;
+      font-weight: 850;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    .fly-node {
+      position: absolute;
+      width: 116px;
+      min-height: 42px;
+      display: grid;
+      place-items: center;
+      padding: 6px 8px;
+      border: 2px solid var(--blue);
+      border-radius: 8px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 850;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .fly-node:nth-child(2) { left: 50%; top: 22px; transform: translateX(-50%); }
+    .fly-node:nth-child(3) { right: 18px; top: 118px; border-color: var(--teal); background: var(--soft-teal); color: var(--teal); }
+    .fly-node:nth-child(4) { right: 58px; bottom: 32px; border-color: var(--amber); background: var(--soft-amber); color: var(--amber); }
+    .fly-node:nth-child(5) { left: 58px; bottom: 32px; border-color: var(--green); background: #eefaf2; color: var(--green); }
+    .fly-node:nth-child(6) { left: 18px; top: 118px; border-color: var(--coral); background: var(--soft-coral); color: var(--coral); }
+
+    .roadmap-panel {
+      padding: 18px;
+      background: #fbfdff;
+    }
+
+    .roadmap-line {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: start;
+    }
+
+    .roadmap-stage {
+      position: relative;
+      min-width: 0;
+      padding: 50px 10px 12px;
+      text-align: center;
+    }
+
+    .roadmap-stage::before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: -50%;
+      right: 50%;
+      height: 3px;
+      background: #c5cfda;
+    }
+
+    .roadmap-stage:first-child::before { display: none; }
+
+    .roadmap-stage i {
+      position: absolute;
+      top: 17px;
+      left: 50%;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px #fff;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .roadmap-stage:nth-child(2) i { background: var(--teal); }
+    .roadmap-stage:nth-child(3) i { background: var(--green); }
+    .roadmap-stage:nth-child(4) i { background: var(--amber); }
+    .roadmap-stage:nth-child(5) i { background: var(--coral); }
+
+    .roadmap-stage strong {
+      color: var(--nav);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .roadmap-stage span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .roadmap-tags {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .roadmap-tags .html-node {
+      padding: 12px;
+      background: #fff;
+    }
+
+    .company-quadrant-html {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .quadrant-plot-html {
+      position: relative;
+      min-height: 470px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, transparent 49.8%, #d8e0e8 49.8%, #d8e0e8 50.2%, transparent 50.2%),
+        linear-gradient(180deg, transparent 49.8%, #d8e0e8 49.8%, #d8e0e8 50.2%, transparent 50.2%),
+        #fbfdff;
+      overflow: hidden;
+    }
+
+    .quad-axis-x,
+    .quad-axis-y,
+    .quad-zone {
+      position: absolute;
+      color: #b5c0cc;
+      font-size: 12px;
+      font-weight: 800;
+      pointer-events: none;
+    }
+
+    .quad-axis-x { left: 50%; bottom: 12px; transform: translateX(-50%); }
+    .quad-axis-y { left: 12px; top: 50%; transform: rotate(-90deg) translateX(-50%); transform-origin: left top; }
+    .quad-zone.z1 { left: 18%; top: 10%; }
+    .quad-zone.z2 { right: 14%; top: 10%; }
+    .quad-zone.z3 { left: 20%; bottom: 10%; }
+    .quad-zone.z4 { right: 16%; bottom: 10%; }
+
+    .quad-point {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 7px 3px 5px;
+      border: 1px solid currentColor;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.9);
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+      transform: translate(-8px, -50%);
+      box-shadow: 0 3px 8px rgba(21,27,39,0.08);
+    }
+
+    .quad-point::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .quad-point.service { color: var(--teal); }
+    .quad-point.industrial { color: var(--amber); }
+    .quad-point.upstream { color: #6a55b8; }
+
+    .quadrant-side {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .quadrant-side .html-node {
+      padding: 13px 14px;
+      background: #fbfdff;
+    }
+
+    .company-quadrant-html .visual-caption,
+    .store-roi-visual .visual-caption {
+      grid-column: 1 / -1;
+    }
+
+    .legend-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin: 4px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .legend-dot i {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex: 0 0 auto;
+    }
+
+    .store-roi-visual {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.75fr) minmax(0, 1.45fr) minmax(210px, 0.85fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .store-scene,
+    .roi-card {
+      padding: 16px;
+      background: #fbfdff;
+    }
+
+    .store-box {
+      position: relative;
+      height: 270px;
+      margin-top: 12px;
+      border: 2px solid #cfd8e3;
+      background:
+        linear-gradient(90deg, transparent 48%, #dfe6ee 48%, #dfe6ee 52%, transparent 52%),
+        #eef2f5;
+    }
+
+    .store-chip {
+      position: absolute;
+      padding: 4px 8px;
+      border: 1px solid var(--teal);
+      border-radius: 6px;
+      background: var(--soft-teal);
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .store-chip.c1 { left: 14px; top: 16px; }
+    .store-chip.c2 { left: 14px; bottom: 72px; }
+    .store-chip.c3 { left: 14px; bottom: 20px; }
+
+    .store-robot {
+      position: absolute;
+      left: 50%;
+      bottom: 36px;
+      width: 92px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--blue);
+      border-radius: 18px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 850;
+      transform: translateX(-50%);
+    }
+
+    .store-robot::before {
+      content: "";
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--blue);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .task-funnel {
+      display: grid;
+      gap: 10px;
+      align-content: center;
+    }
+
+    .task-funnel-row {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr);
+      align-items: center;
+      min-height: 44px;
+      padding: 0 14px;
+      border-radius: 6px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .task-funnel-row strong { color: #fff; font-size: 15px; }
+    .task-funnel-row:nth-child(2) { width: 92%; margin: 0 auto; background: var(--teal); }
+    .task-funnel-row:nth-child(3) { width: 84%; margin: 0 auto; background: var(--green); }
+    .task-funnel-row:nth-child(4) { width: 76%; margin: 0 auto; background: var(--amber); }
+    .task-funnel-row:nth-child(5) { width: 68%; margin: 0 auto; background: var(--coral); }
+    .task-funnel-row:nth-child(6) { width: 60%; margin: 0 auto; background: #6a55b8; }
+
+    .funnel-result {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--green);
+      border-radius: var(--radius);
+      background: #eefaf2;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 760;
+      text-align: center;
+    }
+
+    .roi-card .html-node {
+      padding: 10px 12px;
+      margin-top: 10px;
+      background: #fff;
     }
 
     /* ===== Heat Map ===== */
@@ -1107,15 +1647,38 @@
       .stage-strip,
       .route-strip,
       .visual-note-grid,
+      .loop-strip,
+      .loop-feedback,
+      .chain-map-html,
+      .architecture-visual,
+      .model-roadmap,
+      .roadmap-line,
+      .roadmap-tags,
+      .company-quadrant-html,
+      .store-roi-visual,
       .pilot-timeline { grid-template-columns: 1fr; }
 
       .pilot-step:not(:last-child)::after { display: none; }
+
+      .loop-node::before,
+      .loop-node::after,
+      .chain-layer::after,
+      .roadmap-stage::before { display: none !important; }
 
       .ch-summary { grid-template-columns: 1fr; }
 
       .funnel-row .f-bar {
         font-size: 12px;
         padding: 0 8px;
+      }
+
+      .arch-layer,
+      .task-funnel-row {
+        grid-template-columns: 1fr;
+      }
+
+      .quadrant-plot-html {
+        min-height: 560px;
       }
     }
 
@@ -1280,10 +1843,21 @@
         <h3>具身智能系统的核心闭环</h3>
         <p>机器人能否创造价值，取决于四个环节是否能在真实现场连续运转，而不是某一次演示能否成功。</p>
 
-        <figure class="visual-figure">
-          <img class="visual-img" src="project_files/html/assets/visuals/core-loop-system.webp" alt="具身智能系统核心闭环：现场输入、感知理解、决策规划、身体行动、学习回流" loading="lazy" decoding="async">
-          <figcaption class="visual-caption">机器人不是单点模型能力，而是现场输入、感知理解、决策规划、身体行动和学习回流构成的持续闭环系统。</figcaption>
-        </figure>
+        <div class="html-visual" role="img" aria-label="具身智能系统核心闭环：现场输入、感知理解、决策规划、身体行动、学习回流">
+          <div class="loop-strip">
+            <div class="html-node loop-node"><strong>现场输入</strong><span>摄像头、深度、触觉、语音、业务系统状态</span></div>
+            <div class="html-node loop-node"><strong>感知理解</strong><span>识别物体、人员、空间、异常和任务上下文</span></div>
+            <div class="html-node loop-node"><strong>决策规划</strong><span>VLA / 世界模型把目标转成可控动作意图</span></div>
+            <div class="html-node loop-node"><strong>身体行动</strong><span>移动、抓取、巡检、清洁、配送或操作</span></div>
+            <div class="html-node loop-node"><strong>学习回流</strong><span>失败样本、接管过程、结果数据回到训练集</span></div>
+          </div>
+          <div class="loop-feedback">
+            <div class="html-node"><strong>价值判断</strong><span>能否连续运转，而不是一次演示能否成功</span></div>
+            <div class="html-node"><strong>管理抓手</strong><span>任务成功率、接管次数、失败原因、复训改善曲线</span></div>
+            <div class="html-node"><strong>落地原则</strong><span>先做数据闭环，再谈多门店复制</span></div>
+          </div>
+          <p class="visual-caption">机器人不是单点模型能力，而是现场输入、感知理解、决策规划、身体行动和学习回流构成的持续闭环系统。</p>
+        </div>
         <div class="visual-note-grid">
           <div><strong>看价值</strong>判断它能否在真实现场连续运转，而不是某一次演示是否成功。</div>
           <div><strong>看数据</strong>持续记录任务成功率、接管次数、失败原因和复训改善曲线。</div>
@@ -1293,10 +1867,16 @@
         <h3>产业竞争的体系化特征</h3>
         <p>单个本体只是入口，真正的壁垒来自本体、零部件、模型、数据和应用交付的组合能力：</p>
 
-        <figure class="visual-figure">
-          <img class="visual-img" src="project_files/html/assets/visuals/industry-chain-map.webp" alt="具身智能机器人产业链五层地图：核心零部件、机器人本体、模型与智能、数据与仿真、场景交付" loading="lazy" decoding="async">
-          <figcaption class="visual-caption">从左到右：上游零部件决定成本下限，中间模型和数据决定能力上限，下游场景交付决定商业价值上限。</figcaption>
-        </figure>
+        <div class="html-visual" role="img" aria-label="具身智能机器人产业链五层地图">
+          <div class="chain-map-html">
+            <div class="html-node chain-layer"><span class="chain-num">01</span><strong>核心零部件</strong><span>电机 / 减速器<br>关节 / 灵巧手<br>传感器 / 控制器</span><em>决定成本与可靠性</em></div>
+            <div class="html-node chain-layer"><span class="chain-num">02</span><strong>机器人本体</strong><span>人形 / 四足<br>轮式双臂 / AMR<br>服务机器人</span><em>决定进入什么环境</em></div>
+            <div class="html-node chain-layer"><span class="chain-num">03</span><strong>模型与智能</strong><span>VLA / 世界模型<br>任务规划<br>异常处理</span><em>理解任务并转成动作</em></div>
+            <div class="html-node chain-layer"><span class="chain-num">04</span><strong>数据与仿真</strong><span>遥操作数据<br>失败样本<br>仿真评估</span><em>决定迭代速度</em></div>
+            <div class="html-node chain-layer"><span class="chain-num">05</span><strong>场景交付</strong><span>仓储 / 制造<br>巡检 / 零售<br>酒店 / 康养</span><em>嵌入业务流程</em></div>
+          </div>
+          <p class="visual-caption">从左到右：上游零部件决定成本下限，中间模型和数据决定能力上限，下游场景交付决定商业价值上限。</p>
+        </div>
 
         <h3>六条技术路线的差异化评估</h3>
         <div class="table-wrap">
@@ -1407,10 +1987,41 @@
         <p>可以把一台会工作的机器人理解成三件事的组合：<strong>大脑</strong>负责理解任务并生成动作意图，<strong>小脑</strong>负责把意图变成稳定、实时、安全的运动，<strong>本体</strong>负责真正站起来、移动、抓取和接触世界。</p>
         <p>这不是简单的"模型加外壳"。机器人必须同时解决模型泛化、运动控制、机械可靠性和传感反馈，三层缺一层，演示就很难变成可长期运行的产品。</p>
 
-        <figure class="visual-figure">
-          <img class="visual-img" src="project_files/html/assets/visuals/three-layer-architecture.webp" alt="大脑、小脑、本体三层架构图：输入、多模态模型、运动控制、机械身体、输出与反馈" loading="lazy" decoding="async">
-          <figcaption class="visual-caption">三层缺一层，演示就无法变成可长期运行的产品。大脑按秒级理解任务，小脑按毫秒级守住运动，本体持续承受真实世界的摩擦和冲击。</figcaption>
-        </figure>
+        <div class="html-visual" role="img" aria-label="大脑、小脑、本体三层架构图">
+          <div class="architecture-visual">
+            <div class="html-node arch-side">
+              <strong>输入</strong>
+              <span>视觉 / 深度</span>
+              <span>语音 / 文本</span>
+              <span>关节 / IMU</span>
+              <span>力觉 / 触觉</span>
+              <span>业务系统</span>
+            </div>
+            <div class="arch-layers">
+              <div class="html-node arch-layer">
+                <div><strong>大脑：端到端模型</strong><span>理解任务 · 生成动作意图 · VLA / 世界模型</span></div>
+                <div class="arch-note">输入多模态上下文，输出末端轨迹或动作策略</div>
+              </div>
+              <div class="html-node arch-layer">
+                <div><strong>小脑：运动控制系统</strong><span>稳定控制 · 安全约束 · 实时执行 · 平衡避障</span></div>
+                <div class="arch-note">把上层意图转成毫秒级控制信号</div>
+              </div>
+              <div class="html-node arch-layer">
+                <div><strong>本体：机械身体</strong><span>关节 · 手爪 · 电池 · 结构 · 传感器 · 散热</span></div>
+                <div class="arch-note">真实执行移动、抓取、搬运、按压</div>
+              </div>
+            </div>
+            <div class="html-node arch-side output">
+              <strong>输出与反馈</strong>
+              <span>动作执行</span>
+              <span>任务结果</span>
+              <span>失败样本</span>
+              <span>人工接管</span>
+              <span>复训数据</span>
+            </div>
+          </div>
+          <p class="visual-caption">三层缺一层，演示就无法变成可长期运行的产品。大脑按秒级理解任务，小脑按毫秒级守住运动，本体持续承受真实世界的摩擦和冲击。</p>
+        </div>
 
         <h3>任务执行的闭环流程</h3>
         <ol>
@@ -1548,10 +2159,33 @@
         </div>
 
         <h3 id="ch03-tl">未来十年发展时间线预测</h3>
-        <figure class="visual-figure">
-          <img class="visual-img" src="project_files/html/assets/visuals/model-roadmap-timeline.webp" alt="端到端模型数据飞轮与 2026 到 2036 年十年发展时间线" loading="lazy" decoding="async">
-          <figcaption class="visual-caption">十年判断被压缩为三条线索：短期数据争夺和限定试点，中期行业模型包，长期成为部分行业的常规劳动力补充。</figcaption>
-        </figure>
+        <div class="html-visual" role="img" aria-label="端到端模型数据飞轮与 2026 到 2036 年十年发展时间线">
+          <div class="model-roadmap">
+            <div class="html-node flywheel">
+              <div class="flywheel-core">数据<br>飞轮</div>
+              <div class="fly-node">采集示范</div>
+              <div class="fly-node">清洗标注</div>
+              <div class="fly-node">模型训练</div>
+              <div class="fly-node">安全上线</div>
+              <div class="fly-node">失败回流</div>
+            </div>
+            <div class="html-node roadmap-panel">
+              <div class="roadmap-line">
+                <div class="roadmap-stage"><i></i><strong>2026<br>数据争夺</strong><span>真机数据集、遥操作平台、VLA 模型密集出现</span></div>
+                <div class="roadmap-stage"><i></i><strong>2027-2028<br>限定试点</strong><span>半结构化任务试点增多，数据采集标准化</span></div>
+                <div class="roadmap-stage"><i></i><strong>2029-2031<br>行业模型包</strong><span>拣选、补货、清洁、巡检形成可复用能力</span></div>
+                <div class="roadmap-stage"><i></i><strong>2032-2034<br>开放场景探索</strong><span>家庭和办公试点升温，合规与成本仍是约束</span></div>
+                <div class="roadmap-stage"><i></i><strong>2035-2036<br>常规补充</strong><span>平台与场景公司分化，进入部分劳动力体系</span></div>
+              </div>
+              <div class="roadmap-tags">
+                <div class="html-node"><strong>中国路线</strong><span>真机数据、供应链、场景密度更强；关键是客户侧指标。</span></div>
+                <div class="html-node"><strong>海外路线</strong><span>基础模型、仿真平台、工具链更强；关键是部署成本。</span></div>
+                <div class="html-node"><strong>会合点</strong><span>高质量真实任务数据、失败回流、安全兜底和正 ROI。</span></div>
+              </div>
+            </div>
+          </div>
+          <p class="visual-caption">十年判断被压缩为三条线索：短期数据争夺和限定试点，中期行业模型包，长期成为部分行业的常规劳动力补充。</p>
+        </div>
         <div class="visual-note-grid">
           <div><strong>2026-2028</strong>核心是数据来源、遥操作平台和限定任务试点，适合学习、访厂和小样本验证。</div>
           <div><strong>2029-2034</strong>核心是行业模型包、开放场景探索和数据资产合规，采购条款会更复杂。</div>
@@ -1662,10 +2296,54 @@
 
         <h3 id="ch05-table">重点企业速览表</h3>
 
-        <figure class="visual-figure">
-          <img class="visual-img" src="project_files/html/assets/visuals/company-quadrant.webp" alt="Top20 具身智能机器人公司格局象限图，按技术平台能力与商业落地程度分层" loading="lazy" decoding="async">
-          <figcaption class="visual-caption">象限图用于快速分层，不替代尽调。右上角公司仍需核验客户公告、持续运营、付费使用和复购证据。</figcaption>
-        </figure>
+        <div class="html-visual company-quadrant-html" role="img" aria-label="Top20 公司格局象限图，按技术平台能力与商业落地程度分层">
+          <div class="quadrant-plot-html">
+            <span class="quad-axis-x">技术平台能力 →</span>
+            <span class="quad-axis-y">商业落地程度 →</span>
+            <span class="quad-zone z1">高潜力 · 待验证</span>
+            <span class="quad-zone z2">平台型领导者</span>
+            <span class="quad-zone z3">场景深耕者</span>
+            <span class="quad-zone z4">商用规模化</span>
+            <span class="quad-point" style="--x:33%;--y:26%;">智元</span>
+            <span class="quad-point" style="--x:29%;--y:33%;">宇树</span>
+            <span class="quad-point" style="--x:37%;--y:31%;">优必选</span>
+            <span class="quad-point" style="--x:35%;--y:21%;">银河</span>
+            <span class="quad-point" style="--x:24%;--y:30%;">傅利叶</span>
+            <span class="quad-point" style="--x:18%;--y:43%;">逐际</span>
+            <span class="quad-point" style="--x:21%;--y:38%;">乐聚</span>
+            <span class="quad-point" style="--x:32%;--y:52%;">众擎</span>
+            <span class="quad-point" style="--x:25%;--y:60%;">星尘</span>
+            <span class="quad-point" style="--x:16%;--y:23%;">开普勒</span>
+            <span class="quad-point" style="--x:47%;--y:18%;">小鹏</span>
+            <span class="quad-point upstream" style="--x:30%;--y:68%;">帕西尼</span>
+            <span class="quad-point service" style="--x:72%;--y:55%;">普渡</span>
+            <span class="quad-point service" style="--x:66%;--y:62%;">擎朗</span>
+            <span class="quad-point industrial" style="--x:62%;--y:66%;">云深处</span>
+            <span class="quad-point industrial" style="--x:62%;--y:73%;">越疆</span>
+            <span class="quad-point industrial" style="--x:69%;--y:78%;">优艾智合</span>
+            <span class="quad-point industrial" style="--x:80%;--y:49%;">梅卡曼德</span>
+            <span class="quad-point industrial" style="--x:51%;--y:45%;">非夕</span>
+            <span class="quad-point industrial" style="--x:75%;--y:83%;">斯坦德</span>
+          </div>
+          <div class="quadrant-side">
+            <div class="html-node">
+              <strong>图例与读法</strong>
+              <span class="legend-dot"><i></i>人形/通用</span>
+              <span class="legend-dot"><i style="background:var(--teal)"></i>服务商用</span>
+              <span class="legend-dot"><i style="background:var(--amber)"></i>工业/巡检</span>
+              <span class="legend-dot"><i style="background:#6a55b8"></i>上游能力</span>
+            </div>
+            <div class="html-node">
+              <strong>管理层重点</strong>
+              <span>右上不等于一定胜出，仍需核验客户公告、持续运营、付费和复购。</span>
+            </div>
+            <div class="html-node">
+              <strong>使用方式</strong>
+              <span>先按公司类型筛选，再看商业证据；不要只被演示视频带偏。</span>
+            </div>
+          </div>
+          <p class="visual-caption">象限图用于快速分层，不替代尽调。右上角公司仍需核验客户公告、持续运营、付费使用和复购证据。</p>
+        </div>
 
         <h4>筛选公司</h4>
         <div class="filter-bar" id="companyFilter">
@@ -1814,10 +2492,36 @@
 
         <p>门店机器人试点应通过"任务筛选漏斗"决定优先实施哪些场景：</p>
 
-        <figure class="visual-figure">
-          <img class="visual-img" src="project_files/html/assets/visuals/store-roi-funnel.webp" alt="门店机器人试点 ROI 漏斗：任务筛选、优先试点、运营收益、营销收益、战略收益和成本项" loading="lazy" decoding="async">
-          <figcaption class="visual-caption">优先试点：巡店、迎宾、导购辅助、库存盘点、取放货辅助。漏斗通过任务频率、环境可控、风险、数据、ROI 和复制性逐层筛选。</figcaption>
-        </figure>
+        <div class="html-visual store-roi-visual" role="img" aria-label="门店机器人试点 ROI 漏斗">
+          <div class="html-node store-scene">
+            <strong>门店现场</strong>
+            <div class="store-box">
+              <span class="store-chip c1">迎宾</span>
+              <span class="store-chip c2">巡店</span>
+              <span class="store-chip c3">盘点</span>
+              <span class="store-robot">机器人</span>
+            </div>
+          </div>
+          <div>
+            <div class="task-funnel">
+              <div class="task-funnel-row"><strong>1. 高频任务</strong><span>每天足够多可重复操作</span></div>
+              <div class="task-funnel-row"><strong>2. 环境可控</strong><span>变化不超过感知和控制能力</span></div>
+              <div class="task-funnel-row"><strong>3. 失败风险低</strong><span>出错不影响客户体验和安全</span></div>
+              <div class="task-funnel-row"><strong>4. 数据可采集</strong><span>每次执行沉淀运营数据</span></div>
+              <div class="task-funnel-row"><strong>5. ROI 可核算</strong><span>工时、错误、转化可量化</span></div>
+              <div class="task-funnel-row"><strong>6. 可复制多店</strong><span>区域扩张无需重新开发</span></div>
+            </div>
+            <div class="funnel-result">优先试点：巡店 · 迎宾 · 导购辅助 · 库存盘点 · 取放货辅助</div>
+          </div>
+          <div class="html-node roi-card">
+            <strong>ROI 核算卡</strong>
+            <div class="html-node"><strong>运营收益</strong><span>节省工时、降低差错</span></div>
+            <div class="html-node"><strong>营销收益</strong><span>吸引客流、提高转化</span></div>
+            <div class="html-node"><strong>战略收益</strong><span>沉淀任务和失败数据</span></div>
+            <div class="html-node"><strong>成本项</strong><span>设备、部署、云端、培训、售后</span></div>
+          </div>
+          <p class="visual-caption">漏斗通过任务频率、环境可控、风险、数据、ROI 和复制性逐层筛选，避免把试点做成一次性采购。</p>
+        </div>
 
         <p><strong>需计入</strong>：设备、二开、云端模型、部署改造、网络、充电、培训、售后、备件和停机成本。<br>
         <strong>需验证</strong>：日均任务数、成功率、接管次数、员工采纳率、顾客转化、故障响应和复购续费意愿。<br>

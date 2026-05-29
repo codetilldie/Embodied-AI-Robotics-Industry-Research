@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>具身智能机器人行业研究 — 完整合集</title>
+  <link rel="icon" type="image/svg+xml" href="project_files/html/assets/learning-map.svg">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5d6878;
+      --line: #d8e0e8;
+      --paper: #f3f6f4;
+      --panel: #ffffff;
+      --blue: #1f63d6;
+      --teal: #13857f;
+      --green: #238553;
+      --amber: #c47612;
+      --coral: #bd3b2d;
+      --nav: #0e2336;
+      --soft-blue: #eef4ff;
+      --soft-teal: #eaf8f6;
+      --soft-amber: #fff4dd;
+      --soft-coral: #fff0ed;
+      --shadow: 0 18px 50px rgba(21, 27, 39, 0.10);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-width: 0; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(31, 99, 214, 0.04) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(31, 99, 214, 0.03) 1px, transparent 1px),
+        var(--paper);
+      background-size: 42px 42px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 34px;
+      border-bottom: 1px solid rgba(216, 224, 232, 0.92);
+      background: rgba(251, 252, 248, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      color: var(--nav);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, var(--blue), var(--teal) 58%, var(--amber));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+      flex: 0 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a, .nav .nav-current {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: #233148;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.3;
+    }
+
+    .nav a:hover { background: var(--soft-blue); color: var(--blue); text-decoration: none; }
+    .nav .nav-current { background: var(--blue); color: #fff; cursor: default; box-shadow: 0 8px 18px rgba(23, 90, 168, 0.16); }
+
+    /* ===== Layout ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 0;
+      width: min(1480px, calc(100% - 56px));
+      margin: 0 auto;
+      min-height: calc(100vh - 74px);
+    }
+
+    /* ===== Sidebar TOC ===== */
+    .sidebar {
+      position: sticky;
+      top: 74px;
+      align-self: start;
+      max-height: calc(100vh - 74px);
+      overflow-y: auto;
+      padding: 28px 18px 28px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .toc-title {
+      margin: 0 0 16px;
+      color: var(--nav);
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .toc-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc-list li { margin: 0; }
+
+    .toc-list a {
+      display: block;
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.35;
+      transition: all 120ms ease;
+      border-left: 3px solid transparent;
+    }
+
+    .toc-list a:hover,
+    .toc-list a.active {
+      color: var(--nav);
+      background: var(--soft-blue);
+      border-left-color: var(--blue);
+      text-decoration: none;
+    }
+
+    .toc-list .toc-sub {
+      padding-left: 22px;
+      font-size: 12px;
+    }
+
+    /* ===== Main Content ===== */
+    .content {
+      min-width: 0;
+      padding: 34px 0 30px 34px;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      margin-bottom: 34px;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      color: var(--nav);
+      font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+      font-size: clamp(36px, 3.8vw, 58px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 800px;
+      color: #415063;
+      font-size: 19px;
+      line-height: 1.78;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .hero-meta span {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* ===== Section ===== */
+    .chapter {
+      padding: 36px 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 88px;
+    }
+
+    .chapter:first-of-type { border-top: 0; }
+
+    .chapter h2 {
+      margin: 0 0 18px;
+      color: var(--nav);
+      font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+      font-size: clamp(26px, 2.8vw, 40px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .chapter .source {
+      margin: -12px 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .chapter .source a { color: var(--blue); }
+
+    .chapter h3 {
+      margin: 28px 0 12px;
+      color: var(--nav);
+      font-size: 22px;
+      line-height: 1.28;
+    }
+
+    .chapter h4 {
+      margin: 22px 0 10px;
+      color: var(--nav);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .chapter p {
+      margin: 0 0 14px;
+      color: #344256;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .chapter ul, .chapter ol {
+      margin: 10px 0 18px;
+      padding-left: 22px;
+      color: #344256;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .chapter li { margin: 4px 0; }
+
+    .chapter strong { color: var(--nav); }
+
+    /* ===== Tables ===== */
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 12px 28px rgba(21, 27, 39, 0.06);
+      margin: 16px 0;
+    }
+
+    table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 11px 13px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #eff5fb;
+      color: var(--nav);
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    td { color: #344256; }
+    tr:nth-child(even) td { background: #fbfdff; }
+
+    /* ===== Cards ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 10px 24px rgba(21, 27, 39, 0.05);
+    }
+
+    .card h4 {
+      margin: 0 0 8px;
+      color: var(--nav);
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 10px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background: var(--soft-teal);
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .tag.blue { background: var(--soft-blue); color: var(--blue); }
+    .tag.amber { background: var(--soft-amber); color: #7a4f13; }
+    .tag.coral { background: var(--soft-coral); color: var(--coral); }
+
+    /* ===== Notice panels ===== */
+    .notice {
+      margin: 16px 0;
+      padding: 14px 16px;
+      border-left: 4px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      background: var(--soft-teal);
+      color: #214a4a;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .notice.blue { border-left-color: var(--blue); background: var(--soft-blue); color: #1e3a6a; }
+    .notice.amber { border-left-color: var(--amber); background: var(--soft-amber); color: #55340b; }
+    .notice.coral { border-left-color: var(--coral); background: var(--soft-coral); color: #6b2a1f; }
+
+    /* ===== Timeline ===== */
+    .timeline {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .tl-year {
+      padding: 10px 0;
+      color: var(--blue);
+      font-size: 20px;
+      font-weight: 850;
+      line-height: 1.2;
+      text-align: right;
+    }
+
+    .tl-card {
+      padding: 12px 14px;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .tl-card .tl-tag {
+      display: inline-flex;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 760;
+      margin-bottom: 4px;
+    }
+
+    .tl-card.tl-teal { border-left-color: var(--teal); }
+    .tl-card.tl-teal .tl-tag { background: var(--soft-teal); color: var(--teal); }
+    .tl-card.tl-amber { border-left-color: var(--amber); }
+    .tl-card.tl-amber .tl-tag { background: var(--soft-amber); color: #7a4f13; }
+    .tl-card.tl-green { border-left-color: var(--green); }
+    .tl-card.tl-green .tl-tag { background: #eefaf2; color: var(--green); }
+    .tl-card h4 { margin: 0 0 4px; font-size: 16px; }
+    .tl-card p { margin: 0; font-size: 14px; }
+
+    /* ===== Glossary ===== */
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .gloss-item {
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .gloss-item .term {
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .gloss-item .def {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      border-top: 1px solid var(--line);
+      margin-top: 20px;
+      padding: 24px 0 36px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* ===== TOC toggle (mobile) ===== */
+    .toc-toggle {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 40;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      place-items: center;
+      font-size: 20px;
+      color: var(--nav);
+    }
+
+    .toc-toggle:hover { background: var(--soft-blue); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1240px) {
+      .layout { grid-template-columns: 200px minmax(0, 1fr); }
+      .sidebar { padding-right: 14px; }
+    }
+
+    @media (max-width: 980px) {
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 20px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        width: min(100% - 32px, 1480px);
+      }
+
+      .sidebar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 35;
+        max-height: 50vh;
+        padding: 16px 20px;
+        border-right: 0;
+        border-top: 1px solid var(--line);
+        background: rgba(251, 252, 248, 0.97);
+        backdrop-filter: blur(14px);
+        display: none;
+        overflow-y: auto;
+      }
+
+      .sidebar.open { display: block; }
+
+      .toc-toggle { display: grid; }
+
+      .content { padding: 24px 0 80px; }
+
+      .card-grid,
+      .glossary-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .hero h1 { font-size: 30px; }
+      .chapter h2 { font-size: 24px; }
+      .timeline { grid-template-columns: 56px minmax(0, 1fr); }
+      .tl-year { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <a class="brand" href="pop-science-navigation.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Embodied AI Research</span>
+    </a>
+    <nav class="nav" aria-label="科普页面导航">
+      <a href="robotics-management-primer.html">概览行业</a>
+      <a href="06_robot_anatomy_pop_science.html">机器人组成</a>
+      <a href="06_end_to_end_model_progress.html">大脑：端到端模型</a>
+      <a href="generalist-robot-foundation-models.html">泛化模型</a>
+      <a href="china_top20_embodied_robot_companies.html">公司图鉴</a>
+      <a href="retail-store-robot-ai-applications.html">门店应用</a>
+      <span class="nav-current" aria-current="page">完整合集</span>
+    </nav>
+  </header>
+
+  <!-- ===== Layout ===== -->
+  <div class="layout">
+
+    <!-- ===== Sidebar TOC ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="目录导航">
+      <p class="toc-title">📖 章节导航</p>
+      <ul class="toc-list">
+        <li><a href="#ch01" data-toc="ch01">01 — 管理层速览</a></li>
+        <li><a href="#ch02" data-toc="ch02">02 — 机器人组成</a></li>
+        <li><a href="#ch03" data-toc="ch03">03 — 端到端模型</a></li>
+        <li><a href="#ch04" data-toc="ch04">04 — 泛化模型</a></li>
+        <li><a href="#ch05" data-toc="ch05">05 — 公司图鉴</a></li>
+        <li><a href="#ch06" data-toc="ch06">06 — 门店应用</a></li>
+        <li><a href="#references" data-toc="references">附录 — 参考文献</a></li>
+        <li><a href="#glossary" data-toc="glossary">附录 — 术语表</a></li>
+      </ul>
+    </aside>
+
+    <!-- ===== Main Content ===== -->
+    <main class="content">
+
+      <!-- ===== Hero ===== -->
+      <section class="hero">
+        <h1>具身智能机器人行业研究</h1>
+        <p>本文档由 6 个科普页面合并而成，按推荐阅读顺序排列，覆盖行业概览、技术拆解、端到端模型、泛化模型、公司图鉴到门店应用的全景内容。</p>
+        <div class="hero-meta">
+          <span>数据更新：2026-05 前后</span>
+          <span>涵盖 6 个章节</span>
+          <span>引用 20+ 来源链接</span>
+        </div>
+      </section>
+
+      <!-- ===== 01 ===== -->
+      <section class="chapter" id="ch01">
+        <h2>01 — 具身智能机器人产业评估框架</h2>
+
+        <h3>评估路径：从任务需求出发选择机器人形态</h3>
+        <p>具身智能机器人不是"会聊天的机器"，而是 AI 进入物理世界后，通过<strong>感知、决策、行动和反馈学习</strong>完成真实任务。管理层判断价值时，应把重点放在任务频次、场景边界、客户证据、ROI 和运维能力上。</p>
+
+        <h3>管理层核心判断</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>判断</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td><strong>形态不是第一问题</strong></td><td>人形、四足、AMR、机械臂、服务机器人各有边界，先看任务和现场，再选形态。</td></tr>
+              <tr><td>2</td><td><strong>成熟场景先于通用想象</strong></td><td>仓储、巡检、服务配送、工业视觉更容易产生明确回报，家庭通用机器人仍偏长期。</td></tr>
+              <tr><td>3</td><td><strong>试点不是买机器</strong></td><td>试点本质是验证任务成功率、异常处理、流程改造、员工接受度和运维成本。</td></tr>
+              <tr><td>4</td><td><strong>证据要分层核验</strong></td><td>客户公告、合同、持续运营和付费使用，比演示视频、发布会和战略合作更关键。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>具身智能系统的核心闭环</h3>
+        <ol>
+          <li><strong>感知</strong> — 通过视觉、深度、触觉、激光雷达和业务系统数据理解现场。</li>
+          <li><strong>决策</strong> — 把语言指令、任务目标和环境约束转成可执行动作序列。</li>
+          <li><strong>行动</strong> — 完成移动、抓取、搬运、巡检、清洁、配送或操作动作。</li>
+          <li><strong>学习</strong> — 从遥操作、失败案例、真实部署数据和仿真训练中持续提升。</li>
+        </ol>
+
+        <h3>产业竞争的体系化特征</h3>
+        <p>单个本体只是入口，真正的壁垒来自本体、零部件、模型、数据和应用交付的组合能力：</p>
+        <ul>
+          <li><strong>机器人本体层</strong> — 人形、四足、轮式双臂、AMR、服务机器人，决定能进入什么物理环境。</li>
+          <li><strong>核心零部件层</strong> — 电机、减速器、关节、灵巧手、传感器、控制器，决定成本、寿命和可靠性。</li>
+          <li><strong>模型与智能层</strong> — VLA、世界模型、任务规划和异常处理，让机器人把环境理解转为动作。</li>
+          <li><strong>数据与仿真层</strong> — 遥操作、真实部署数据、合成数据和仿真评估，决定能力迭代速度。</li>
+          <li><strong>应用交付层</strong> — 仓储、制造、巡检、零售、酒店、康养，把技术嵌入客户业务流程。</li>
+        </ul>
+
+        <h3>六条技术路线的差异化评估</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>路线</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td><strong>VLA 视觉-语言-动作</strong></td><td>把自然语言和视觉输入转成动作方向，是长期关键路线，但真实成功率仍需场景验证。</td></tr>
+              <tr><td><strong>遥操作与模仿学习</strong></td><td>用人类示范快速训练技能，是数据积累起点，也要求披露人工介入比例。</td></tr>
+              <tr><td><strong>强化学习与运动控制</strong></td><td>让双足、四足和全身协同更稳定，但会运动不等于能完成客户任务。</td></tr>
+              <tr><td><strong>仿真与合成数据</strong></td><td>降低真实采集成本，核心挑战是仿真到现实的差距和评估标准。</td></tr>
+              <tr><td><strong>机器人 OS 与平台</strong></td><td>降低应用开发和部署复杂度，但标准、生态和跨本体适配仍在形成。</td></tr>
+              <tr><td><strong>触觉与灵巧操作</strong></td><td>抓取、插拔、补货、装配是难点，需要感知、力控、末端执行器协同。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>应用场景优先级矩阵</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>场景</th><th>成熟度</th><th>优先级</th></tr></thead>
+            <tbody>
+              <tr><td>仓储物流</td><td>L3</td><td><strong>P0</strong>：可以进入试点筛选</td></tr>
+              <tr><td>能源电力化工巡检</td><td>L2-L3</td><td><strong>P0</strong>：可以进入试点筛选</td></tr>
+              <tr><td>酒店餐饮商用服务</td><td>L2-L3</td><td><strong>P1</strong>：适合限定任务验证</td></tr>
+              <tr><td>制造业汽车产线</td><td>L1-L2</td><td><strong>P1</strong>：适合限定任务验证</td></tr>
+              <tr><td>零售门店</td><td>L1-L3</td><td><strong>P1</strong>：适合限定任务验证</td></tr>
+              <tr><td>医疗康养</td><td>L1-L2</td><td><strong>P2</strong>：谨慎观察或局部进入</td></tr>
+              <tr><td>园区安防公共空间</td><td>L2</td><td><strong>P2</strong>：谨慎观察或局部进入</td></tr>
+              <tr><td>家庭服务</td><td>L0-L1</td><td><strong>P3</strong>：谨慎观察或局部进入</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>商业化落地的五项核心条件</h3>
+        <ol>
+          <li><strong>高频</strong> — 每天都有足够多、可重复的任务，机器人不是偶尔展示。</li>
+          <li><strong>可控</strong> — 环境变化不超过感知、规划和动作控制能力。</li>
+          <li><strong>ROI</strong> — 能降本、提效、降低风险或增加收入，并能量化。</li>
+          <li><strong>复制</strong> — 从一个点到多个点不需要完全重新开发和部署。</li>
+          <li><strong>运维</strong> — 维护、安全、培训、故障处理成本不能吞掉收益。</li>
+        </ol>
+
+        <h3>试点实施的 90 天行动框架</h3>
+        <ol>
+          <li><strong>统一认知</strong> — 明确机器人不是采购玩具，而是流程自动化和数据闭环项目。</li>
+          <li><strong>列任务池</strong> — 筛出高频、可控、可量化、失败风险低的 5 到 10 个任务。</li>
+          <li><strong>访谈供应商</strong> — 重点问客户证据、同类部署、遥操作比例、故障率和运维责任。</li>
+          <li><strong>做低风险试点</strong> — 先选可隔离场景，定义成功率、人工接管、成本和体验指标。</li>
+          <li><strong>季度复盘</strong> — 判断是否扩大部署、换供应商、暂停投入或转向其他场景。</li>
+        </ol>
+
+        <h4>常见认知偏差与风险管理提示</h4>
+        <ul>
+          <li>不要把"量产"当作"商用"：下线、可售、试产、客户交付、收入确认是不同口径。</li>
+          <li>不要把"签约"当作"订单"：战略合作、意向协议、采购合同和续费复购需要拆开核验。</li>
+          <li>不要忽视遥操作比例：远程接管本身不是问题，问题是是否透明、可控、可计入成本。</li>
+          <li>不要只看单机价格：集成、维护、备件、安全、保险、培训和停机成本同样影响 ROI。</li>
+          <li>不要直接追求全流程替代：先让机器人做边界清楚的部分任务，再逐步扩大任务范围。</li>
+          <li>不要让供应商定义全部指标：企业必须掌握自己的任务数据、验收指标和退出机制。</li>
+        </ul>
+      </section>
+
+      <!-- ===== 02 ===== -->
+      <section class="chapter" id="ch02">
+        <h2>02 — 机器人系统的三层架构：大脑、小脑与本体</h2>
+
+        <p>可以把一台会工作的机器人理解成三件事的组合：<strong>大脑</strong>负责理解任务并生成动作意图，<strong>小脑</strong>负责把意图变成稳定、实时、安全的运动，<strong>本体</strong>负责真正站起来、移动、抓取和接触世界。</p>
+        <p>这不是简单的"模型加外壳"。机器人必须同时解决模型泛化、运动控制、机械可靠性和传感反馈，三层缺一层，演示就很难变成可长期运行的产品。</p>
+
+        <h3>任务执行的闭环流程</h3>
+        <ol>
+          <li><strong>看见和听见</strong> — 摄像头、深度、力觉、语音输入</li>
+          <li><strong>理解任务</strong> — 端到端模型把目标转成动作意图</li>
+          <li><strong>实时控制</strong> — 小脑保证平衡、避障和执行节奏</li>
+          <li><strong>身体执行</strong> — 关节、轮腿、手爪和电池输出动作</li>
+          <li><strong>反馈修正</strong> — 传感器回传结果，下一步再调整</li>
+        </ol>
+
+        <h3>三层架构总览</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>层级</th><th>核心问题</th><th>关键问题</th></tr></thead>
+            <tbody>
+              <tr><td><strong>大脑：端到端模型</strong></td><td>把语言、视觉、历史状态和任务目标合在一起，直接生成动作策略或动作序列。</td><td>泛化能力、数据飞轮、真实任务成功率。</td></tr>
+              <tr><td><strong>小脑：运动控制</strong></td><td>把上层意图拆成稳定、安全、可执行的控制信号。</td><td>实时性、鲁棒性、接管机制和安全边界。</td></tr>
+              <tr><td><strong>本体：机械身体</strong></td><td>包括结构、关节、手、传感器、电池、线束、散热和外壳。</td><td>寿命、可靠性、制造一致性和维护成本。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>大脑层：端到端模型技术路线</h3>
+        <p><strong>输入</strong>：图像、深度、语音、文本指令、机器人当前姿态和历史轨迹。<br>
+        <strong>输出</strong>：末端轨迹、动作 token、抓取策略、子任务序列或给小脑的高层目标。<br>
+        <strong>难点</strong>：真实世界数据稀缺，跨物体和跨场景泛化仍然需要验证。</p>
+        <p>技术路线：VLA 视觉-语言-动作模型、模仿学习和遥操作数据、扩散策略和动作生成、分层任务规划、仿真和合成数据。</p>
+
+        <div class="notice blue">
+          <strong>硬件列表</strong>：边缘计算平台（GPU/AI SoC/NPU）、视觉传感器（RGB/深度/鱼眼）、语音和人机交互、数据与通信（高速存储/Wi-Fi/5G）、散热和供电。
+        </div>
+
+        <h3>小脑层：运动控制技术路线</h3>
+        <p><strong>输入</strong>：目标位姿、关节状态、IMU、力觉、视觉定位和安全约束。<br>
+        <strong>输出</strong>：关节角度、速度、力矩、电机电流、步态节奏和制动指令。<br>
+        <strong>难点</strong>：控制频率高，不能等云端模型慢慢思考，必须本地实时闭环。</p>
+        <p>技术路线：全身控制 WBC、模型预测控制 MPC、强化学习运动控制、阻抗和力控、安全状态机。</p>
+
+        <div class="notice blue">
+          <strong>硬件列表</strong>：实时控制器（MCU/运动控制板）、关节反馈（编码器/霍尔传感器）、姿态和定位（IMU/里程计）、力觉和触觉（六维力传感器/足底压力）、通信和安全（CAN/EtherCAT/急停按钮）。
+        </div>
+
+        <h3>本体层：机械结构技术路线</h3>
+        <p><strong>输入</strong>：来自小脑的控制信号和来自环境的接触反馈。<br>
+        <strong>输出</strong>：移动、抓取、搬运、按压、转身、避让和人机协作动作。<br>
+        <strong>难点</strong>：成本、重量、强度、寿命、维护便利性往往互相牵制。</p>
+        <p>技术路线：形态选择、模块化关节、轻量化结构、灵巧手和末端执行器、能源和热管理。</p>
+
+        <div class="notice blue">
+          <strong>硬件列表</strong>：关节模组（电机/减速器/轴承/驱动器/编码器）、末端执行器（夹爪/吸盘/灵巧手）、移动系统（腿/轮/足端/底盘）、能源系统（电池包/BMS/充电触点）、结构与外壳。
+        </div>
+
+        <h3>三层架构的协同运作机制</h3>
+        <p>以"把货架上的瓶子拿起并放入周转箱"为例：</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>层级</th><th>核心问题</th><th>典型输入</th><th>失败表现</th></tr></thead>
+            <tbody>
+              <tr><td><strong>大脑</strong></td><td>该做什么，按什么顺序做</td><td>语言指令、视觉画面</td><td>认错物体、误解指令</td></tr>
+              <tr><td><strong>小脑</strong></td><td>怎样稳定、安全、实时地完成动作</td><td>目标位姿、关节状态、IMU</td><td>抖动、摔倒、抓取力不合适</td></tr>
+              <tr><td><strong>本体</strong></td><td>身体能否承受任务</td><td>电控信号、负载、地面条件</td><td>关节过热、续航不足、结构松动</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>评估机器人系统的三个关键视角</h3>
+        <ul>
+          <li><strong>不要只看大模型演示</strong> — 模型能说清任务不等于机器人能稳定执行。</li>
+          <li><strong>不要把运动能力等同于任务能力</strong> — 客户真正购买的是可持续完成任务的系统。</li>
+          <li><strong>不要忽略硬件和维护</strong> — 本体决定成本下限和可靠性上限。</li>
+        </ul>
+      </section>
+
+      <!-- ===== 03 ===== -->
+      <section class="chapter" id="ch03">
+        <h2>03 — 机器人智能化的演进路径：端到端模型十年发展展望</h2>
+
+        <p>端到端模型不是魔法按钮，而是一套把真实任务数据、遥操作、仿真、视觉语言模型和安全控制连接起来的工程系统。中国公司的优势在数据场景和硬件迭代，海外公司正在把基础模型和仿真平台推向产品化。</p>
+
+        <h3>核心结论</h3>
+        <ol>
+          <li><strong>端到端不是全自动</strong> — 短期主流形态仍是模型、任务规划、安全控制和人工接管的混合系统。</li>
+          <li><strong>数据决定上限</strong> — 最稀缺的是带失败原因和人工接管过程的真实机器人任务数据。</li>
+          <li><strong>中国重在采集闭环</strong> — 智元、觅蜂、银河、宇树等路线分别押注真机、轻量采集、场景 VLA 和开发者生态。</li>
+          <li><strong>海外重在模型平台</strong> — Google DeepMind、Figure、NVIDIA、Physical Intelligence 正在把具身模型做成平台能力。</li>
+        </ol>
+
+        <h3>端到端模型的工作流程</h3>
+        <ol>
+          <li><strong>采集示范</strong> — 真机遥操作、穿戴设备、手柄、VR、移动端和视频数据提供动作样本。</li>
+          <li><strong>清洗标注</strong> — 把图像、语言、关节、力控、触觉、接管和失败原因整理成可训练数据。</li>
+          <li><strong>训练模型</strong> — VLA、世界模型、扩散策略、模仿学习、强化学习和后训练共同提升泛化。</li>
+          <li><strong>安全上线</strong> — 任务规划器、低层控制器、碰撞约束和人工接管让模型输出可控。</li>
+          <li><strong>回流迭代</strong> — 真实部署产生新失败样本，进入下一轮训练，形成数据飞轮。</li>
+        </ol>
+
+        <h3>中国产业进展：数据入口争夺与模型闭环构建</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>公司</th><th>路线</th><th>强项</th><th>风险</th></tr></thead>
+            <tbody>
+              <tr><td><strong>智元机器人</strong><br>AgiBot World / GO-1</td><td>真机数据工厂</td><td>数据质量和本体闭环</td><td>真机采集成本高，客户侧指标仍需验证</td></tr>
+              <tr><td><strong>觅蜂科技</strong><br>Maniformer / MEgo</td><td>轻量采集</td><td>降低采集门槛，补充长尾动作</td><td>数据标准、精度和隐私合规是关键</td></tr>
+              <tr><td><strong>银河通用</strong><br>GraspVLA / GroceryVLA</td><td>场景 VLA</td><td>半结构化场景形成可衡量 ROI</td><td>多门店、长周期运营仍有距离</td></tr>
+              <tr><td><strong>宇树科技</strong><br>UnifoLM-WBT</td><td>开发者生态</td><td>硬件可获得性和社区扩散</td><td>科研数据与工业交付不能等同</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>海外进展</h3>
+        <div class="card-grid">
+          <div class="card"><h4>Physical Intelligence</h4><p>pi0 / pi0.7 多本体基础模型方向。启发：中国公司需要把本体数据沉淀成可复用模型资产。</p></div>
+          <div class="card"><h4>Figure — Helix</h4><p>人形机器人 VLA/端到端叙事。启发：端到端模型会成为机器人公司的核心产品卖点。</p></div>
+          <div class="card"><h4>Google DeepMind</h4><p>Gemini Robotics 把多模态推理引入机器人。启发：语言和视觉推理会变成机器人能力底座。</p></div>
+          <div class="card"><h4>NVIDIA — GR00T N1</h4><p>Isaac 仿真平台与工具链。启发：中国硬件公司如果没有工具链，长期会被平台层压低价值。</p></div>
+        </div>
+
+        <h3>中国与海外技术路线对比分析</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>维度</th><th>中国路线</th><th>海外路线</th><th>未来会合点</th></tr></thead>
+            <tbody>
+              <tr><td>数据来源</td><td>真机遥操作、训练场、产业场景</td><td>多机器人数据、研究实验室、仿真</td><td>高质量真实任务数据成为共同瓶颈</td></tr>
+              <tr><td>模型表达</td><td>VLA、场景模型并行</td><td>机器人基础模型、VLA</td><td>从演示模型转向可部署模型</td></tr>
+              <tr><td>商业优势</td><td>成本、供应链、场景密度</td><td>基础模型、计算平台、工具链</td><td>硬件利润下降，软件和数据占比提升</td></tr>
+              <tr><td>主要风险</td><td>演示多、客户侧指标少</td><td>模型强但部署成本高</td><td>都需要证明正 ROI</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>未来十年发展时间线预测</h3>
+        <div class="timeline">
+          <div class="tl-year">2026</div>
+          <div class="tl-card"><span class="tl-tag">基准观察</span><h4>数据争夺和路线验证</h4><p>真机数据集、遥操作平台、VLA 模型密集出现。适合学习、访厂和小样本试点。</p></div>
+          <div class="tl-year">2027</div>
+          <div class="tl-card"><span class="tl-tag">限定试点</span><h4>限定任务试点增多</h4><p>工业、仓储、门店等半结构化任务出现更多端到端试点。</p></div>
+          <div class="tl-year">2028</div>
+          <div class="tl-card"><span class="tl-tag">数据标准</span><h4>数据采集开始标准化</h4><p>数据外包、训练场、仿真数据和评测基准成熟。</p></div>
+          <div class="tl-year">2029</div>
+          <div class="tl-card tl-teal"><span class="tl-tag">产品上线</span><h4>分层端到端商用</h4><p>更多商用机器人搭载端到端模型。</p></div>
+          <div class="tl-year">2030</div>
+          <div class="tl-card tl-teal"><span class="tl-tag">任务模型</span><h4>行业模型包出现</h4><p>拣选、补货、清洁、巡检等高频任务形成可复用模型包。</p></div>
+          <div class="tl-year">2031</div>
+          <div class="tl-card tl-teal"><span class="tl-tag">协同运营</span><h4>多机器人协同增强</h4><p>单一客户可复用部分模型能力。</p></div>
+          <div class="tl-year">2032</div>
+          <div class="tl-card tl-teal"><span class="tl-tag">开放场景</span><h4>家庭和办公试点升温</h4><p>安全、隐私和成本仍限制规模化。</p></div>
+          <div class="tl-year">2033</div>
+          <div class="tl-card tl-amber"><span class="tl-tag">软硬融合</span><h4>模型吸收更多低层动作</h4><p>端到端模型与传统控制边界重新划分。</p></div>
+          <div class="tl-year">2034</div>
+          <div class="tl-card tl-amber"><span class="tl-tag">数据资产</span><h4>机器人数据成为行业资产</h4><p>数据合规、隐私、责任追踪成为采购核心条款。</p></div>
+          <div class="tl-year">2035</div>
+          <div class="tl-card tl-amber"><span class="tl-tag">行业整合</span><h4>平台公司和场景公司分化</h4><p>通用平台与垂直场景机器人公司分化。</p></div>
+          <div class="tl-year">2036</div>
+          <div class="tl-card tl-green"><span class="tl-tag">常规补充</span><h4>常规劳动力补充</h4><p>机器人进入部分行业的常规劳动力补充体系。</p></div>
+        </div>
+
+        <h3>管理层尽职调查核心问题</h3>
+        <ul>
+          <li>数据从哪里来？真实客户现场、实验室遥操作、仿真、公开视频分别占多少？</li>
+          <li>自主比例是多少？哪些动作自主完成，哪些需要人工接管？</li>
+          <li>失败如何回流？是否记录失败原因和二次训练后的改善曲线？</li>
+          <li>安全如何兜底？端到端输出外是否有碰撞检测、速度限制和人工确认？</li>
+        </ul>
+
+      </section>
+
+      <!-- ===== 04 ===== -->
+      <section class="chapter" id="ch04">
+        <h2>04 — 泛化机器人模型的比较分析：GEN-1 与 π0.7</h2>
+
+        <p>2026 年春，Generalist AI 的 GEN-1 和 Physical Intelligence 的 π0.7 把行业讨论从"单个任务能不能跑"推进到"一个模型能否跨任务、跨场景、跨机器人本体迁移"。</p>
+
+        <h3>核心发现</h3>
+        <ul>
+          <li><strong>GEN-1</strong> — 2026-04-02 发布，主打高可靠、高速度和少量机器人数据适配。</li>
+          <li><strong>π0.7</strong> — 2026-04-16 发布，主打可提示、可组合、跨本体迁移。</li>
+          <li><strong>50 万小时+</strong> — GEN-1 公开披露的高保真物理交互数据规模。</li>
+          <li><strong>两种 scaling</strong> — Generalist 给出更接近"幂律"的曲线；PI 更强调多样数据和元数据。</li>
+        </ul>
+
+        <h3>GEN-1 与 π0.7 全面对比</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>维度</th><th>GEN-1</th><th>π0.7</th></tr></thead>
+            <tbody>
+              <tr><td>模型定位</td><td>简单物理任务的 mastery：可靠、快速、能恢复</td><td>可提示、可组合的策略系统</td></tr>
+              <tr><td>跨本体能力</td><td>1 小时机器人数据适配同时面对"新任务+新本体"</td><td>UR5e 衣物折叠零样本迁移</td></tr>
+              <tr><td>公开数据规模</td><td>半百万小时以上高保真物理交互数据</td><td>总小时数未披露</td></tr>
+              <tr><td>机器人数据依赖</td><td>基础预训练不含 robot data；展示约 1 小时</td><td>可通过语言 coaching 学新任务</td></tr>
+              <tr><td>Scaling law</td><td>幂律关系；7B 附近出现能力阈值</td><td>元数据让混合质量数据仍可受益</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>跨本体迁移的三层对齐框架</h3>
+        <ol>
+          <li><strong>感知对齐</strong> — 不同相机位置和视角下，模型仍要识别同一物体和同一错误状态。</li>
+          <li><strong>动作空间对齐</strong> — 单臂、双臂、移动底盘等本体的动作维度不同，控制模式也不同。</li>
+          <li><strong>策略目标对齐</strong> — 模型要知道任务结果、速度、质量、是否允许犯错及下一步子目标。</li>
+        </ol>
+
+        <h3>训练数据的规模、质量与标注策略</h3>
+        <p><strong>GEN-1</strong>：从 27 万小时扩展到 50 万小时以上，核心叙事是"物理交互数据越大，模型越可预测地变好"。<br>
+        <strong>π0.7</strong>：未披露总小时数，披露了更多数据类型：机器人演示、自动策略、失败轨迹、人类视频、开源数据等。</p>
+
+        <div class="notice amber">
+          <strong>注意</strong>：不能把"小时数"当作唯一排名 — 同样 1 小时数据，可能是高质量示教、失败轨迹、自动 rollout、人类第一视角视频或动作级机器人数据。
+        </div>
+
+        <h3>评估 Scaling Law 的四个关键问题</h3>
+        <p>A. 横轴到底是什么？<br>
+        B. 纵轴是不是闭环表现？<br>
+        C. 是否跨任务同时变好？<br>
+        D. 有没有失败边界？</p>
+
+        <h3>对企业决策的启示</h3>
+        <ul>
+          <li><strong>短期看任务边界</strong> — 已见任务、受控场景、标准流程最容易受益。</li>
+          <li><strong>中期看数据飞轮</strong> — 谁能低成本采集真实物理交互，谁就更可能持续降低单位任务数据成本。</li>
+          <li><strong>长期看本体生态</strong> — 如果同一模型能跨多种本体迁移，模型层会成为机器人行业的基础入口。</li>
+        </ul>
+
+      </section>
+
+      <!-- ===== 05 ===== -->
+      <section class="chapter" id="ch05">
+        <h2>05 — 中国具身智能机器人重点企业概览</h2>
+        <p class="source">更新日期：2026-05-27</p>
+        <p>这不是投资排名，而是一份面向非技术管理层和产业观察者的速读页面，帮助判断"哪个公司在做什么、做到哪一步、离真实商用还有多远"。</p>
+
+        <h3>样本选择标准与方法</h3>
+        <ul>
+          <li><strong>知名度优先</strong> — 综合公开报道、融资热度、上市披露、客户案例和行业讨论度。</li>
+          <li><strong>进度分层</strong> — L0 概念、L1 试点、L2 小批量、L3 规模商用。</li>
+          <li><strong>公开口径</strong> — 股东背景只写公开可核验层级。</li>
+        </ul>
+
+        <h3>样本整体概况</h3>
+        <ul>
+          <li>20 家公司进入本次科普样本</li>
+          <li>12 家涉及人形或通用本体，7 家已有较强商业场景基础</li>
+          <li>10 家在深圳有布局</li>
+          <li>4 类公司不应混为一个赛道（通用人形、服务商用、工业巡检、灵巧操作）</li>
+        </ul>
+
+        <h3>重点企业速览表</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>公司</th><th>英文</th><th>成立</th><th>总部</th><th>类型</th><th>商用进度</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>智元机器人</td><td>Agibot</td><td>2023</td><td>上海</td><td>人形/通用</td><td>L2 小批量/量产叙事</td></tr>
+              <tr><td>2</td><td>宇树科技</td><td>Unitree</td><td>2016</td><td>杭州</td><td>人形/通用</td><td>L2 平台销售/IPO推进</td></tr>
+              <tr><td>3</td><td>优必选</td><td>UBTECH</td><td>2012</td><td>深圳</td><td>人形/通用</td><td>L2 工业小批量</td></tr>
+              <tr><td>4</td><td>银河通用</td><td>Galbot</td><td>2023</td><td>北京</td><td>人形/通用</td><td>L2 轮式双臂试商用</td></tr>
+              <tr><td>5</td><td>傅利叶智能</td><td>Fourier</td><td>2015</td><td>上海</td><td>人形/通用</td><td>L2 康复基础/人形量产</td></tr>
+              <tr><td>6</td><td>逐际动力</td><td>LimX</td><td>2022</td><td>深圳</td><td>人形/通用</td><td>L1 平台/试点</td></tr>
+              <tr><td>7</td><td>乐聚机器人</td><td>Leju</td><td>2016</td><td>深圳</td><td>人形/通用</td><td>L1/L2 开源平台与试产</td></tr>
+              <tr><td>8</td><td>众擎机器人</td><td>EngineAI</td><td>2023</td><td>深圳</td><td>人形/通用</td><td>L1 产品发布/早期销售</td></tr>
+              <tr><td>9</td><td>星尘智能</td><td>Astribot</td><td>2022</td><td>深圳</td><td>人形/通用</td><td>L1 展示/量产探索</td></tr>
+              <tr><td>10</td><td>开普勒机器人</td><td>Kepler</td><td>2023</td><td>上海</td><td>人形/通用</td><td>L1 产业试点</td></tr>
+              <tr><td>11</td><td>普渡机器人</td><td>Pudu</td><td>2016</td><td>深圳</td><td>服务商用</td><td>L3 服务机器人规模商用</td></tr>
+              <tr><td>12</td><td>擎朗智能</td><td>Keenon</td><td>2010</td><td>上海</td><td>服务商用</td><td>L3 服务机器人规模商用</td></tr>
+              <tr><td>13</td><td>云深处科技</td><td>DeepRobotics</td><td>2017</td><td>杭州</td><td>工业/巡检</td><td>L3 工业巡检商用</td></tr>
+              <tr><td>14</td><td>小鹏机器人</td><td>XPeng</td><td>2016</td><td>广州</td><td>人形/通用</td><td>L1 车企内部试点</td></tr>
+              <tr><td>15</td><td>越疆科技</td><td>DOBOT</td><td>2015</td><td>深圳</td><td>工业/巡检</td><td>L3 协作机器人商用</td></tr>
+              <tr><td>16</td><td>优艾智合</td><td>Youibot</td><td>2017</td><td>深圳/合肥</td><td>工业/巡检</td><td>L3 工业 AMR 商用</td></tr>
+              <tr><td>17</td><td>梅卡曼德</td><td>Mech-Mind</td><td>2016</td><td>北京</td><td>工业/巡检</td><td>L3 工业智能化商用</td></tr>
+              <tr><td>18</td><td>帕西尼感知</td><td>PaXini</td><td>2021</td><td>深圳</td><td>上游能力</td><td>L2 部件/整机方案</td></tr>
+              <tr><td>19</td><td>非夕科技</td><td>Flexiv</td><td>2016</td><td>上海/硅谷</td><td>工业/巡检</td><td>L2/L3 自适应机器人</td></tr>
+              <tr><td>20</td><td>斯坦德机器人</td><td>Standard Robots</td><td>2016</td><td>深圳</td><td>工业/巡检</td><td>L3 工业 AMR 商用</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>深圳布局企业汇总</h3>
+        <ul>
+          <li><strong>优必选</strong> — 深圳总部，港股上市公司</li>
+          <li><strong>逐际动力</strong> — 深圳公司主体，双足/轮足平台</li>
+          <li><strong>乐聚机器人</strong> — 深圳总部，创业板 IPO 进程中</li>
+          <li><strong>众擎机器人</strong> — 深圳公司主体，聚焦人形本体</li>
+          <li><strong>星尘智能</strong> — 深圳公司主体，S1 品牌曝光高</li>
+          <li><strong>普渡机器人</strong> — 深圳总部，服务机器人出海基础强</li>
+          <li><strong>越疆科技</strong> — 深圳协作机器人公司</li>
+          <li><strong>优艾智合</strong> — 深圳起家，工业移动机器人</li>
+          <li><strong>帕西尼感知</strong> — 深圳触觉感知和灵巧操作公司</li>
+          <li><strong>斯坦德机器人</strong> — 深圳 AMR 公司</li>
+        </ul>
+
+      </section>
+
+      <!-- ===== 06 ===== -->
+      <section class="chapter" id="ch06">
+        <h2>06 — 零售门店机器人应用与试点实施建议</h2>
+
+        <h3>战略判断</h3>
+        <p>现阶段可行路径是平台能力 + 行业 AI + 门店系统的分层集成。科技企业可以在机器人平台上叠加行业 AI 交互、门店系统接口和标准动作包，优先承接一部分高频、低判断、可度量的工作。</p>
+        <ul>
+          <li><strong>短期路线重点</strong>不是等待通用大脑成熟，而是先把可控动作做成业务工具。</li>
+          <li>机器人公司提供本体、运动控制、导航、SDK 和运维；行业科技企业负责场景模型、业务流程、门店接口和运营指标。</li>
+        </ul>
+
+        <div class="notice blue">
+          <strong>三个关键数字</strong>：6-12 个月售后周期建议 | 3 类价值（客流吸引、重复工作替代、数据沉淀）应分别核算 | 先试点 3-5 家门店 A/B 对照
+        </div>
+
+        <h3>技术能力分层评估</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>层级</th><th>状态</th></tr></thead>
+            <tbody>
+              <tr><td>端到端大脑 — 跨场景理解、长尾异常、复杂抓取</td><td>短期建议分层验证</td></tr>
+              <tr><td>小脑控制 — 导航、避障、平衡、运动控制、返航</td><td>相对成熟</td></tr>
+              <tr><td>机器人本体 — 轮式、配送、清洁、导览、人形</td><td>可选型采购</td></tr>
+              <tr><td>二开平台 — SDK、任务编排、语音交互、云端接口</td><td>商业切入点</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>科技企业的实施路径</h3>
+        <ol>
+          <li><strong>选机器人平台</strong> — 按场景选本体，先核验 SDK、地图、调度、充电和售后 SLA。</li>
+          <li><strong>做行业 AI 交互</strong> — 把商品知识、门店政策、会员权益、库存状态接入问答和多轮对话。</li>
+          <li><strong>封装场景动作</strong> — 把"带顾客到货架""取号排队""巡检缺货"等动作做成可复用任务包。</li>
+          <li><strong>接入门店系统</strong> — 连接 POS、会员、库存、工单、客服和排班系统。</li>
+        </ol>
+
+        <h3>短期可落地的门店任务场景</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>任务</th><th>适合机器人做的部分</th><th>仍需人工兜底</th></tr></thead>
+            <tbody>
+              <tr><td>导购咨询</td><td>标准问答、商品定位、促销解释</td><td>成交判断、复杂异议、情绪安抚</td></tr>
+              <tr><td>售后接待</td><td>收集问题、拍照留证、创建工单</td><td>责任判定、赔付沟通、纠纷处理</td></tr>
+              <tr><td>巡店盘点</td><td>按路线拍摄货架、识别缺货错价</td><td>临时堆头判断、供应链协调</td></tr>
+              <tr><td>配送和带路</td><td>固定路线送小件、带顾客到指定区域</td><td>拥堵绕行、易碎贵重物交付</td></tr>
+              <tr><td>清洁和安全</td><td>夜间或低峰清洁、异常拍照</td><td>危险物处理、安全事故处置</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>实施边界与风险管理</h3>
+        <ul>
+          <li><strong>平台适配</strong> — 避免把业务逻辑深度绑死在单一厂商接口上。</li>
+          <li><strong>网络与云端</strong> — 门店 Wi-Fi、5G 信号、边缘缓存和离线兜底都要设计。</li>
+          <li><strong>部署评估</strong> — 通道宽度、临时堆头、玻璃反光、地面坡度等都会影响运行。</li>
+          <li><strong>充电和续航</strong> — 充电桩位置、自动回充成功率、高峰运行时长都要写入 SOP。</li>
+          <li><strong>异常接管</strong> — 儿童围观、顾客挡路、语音误识别、抓取失败等都需要人工接管机制。</li>
+          <li><strong>售后周期</strong> — 售后时长建议按 6-12 个月规划。</li>
+        </ul>
+
+        <h3>机器人部署的长期价值分析</h3>
+        <ol>
+          <li><strong>客流吸引</strong> — 机器人能成为入口视觉焦点，引流价值要单独计入营销收益。</li>
+          <li><strong>持续迭代</strong> — 只要数据闭环设计正确，机器人不是一次性交付，而是长期改进的工具。</li>
+          <li><strong>云端加持</strong> — 机器人本体不变，交互能力和任务编排仍能持续提升。</li>
+          <li><strong>服务一致</strong> — 固定话术和固定路线能降低员工流动带来的波动。</li>
+          <li><strong>数据资产</strong> — 每次问答、带路、巡检、清洁和接管都能沉淀为运营数据。</li>
+          <li><strong>员工协同</strong> — 机器人承担重复的前置工作，员工处理成交、投诉和高价值服务。</li>
+        </ol>
+
+        <h3>部署与售后运维时间规划</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>阶段</th><th>时间</th><th>核心任务</th></tr></thead>
+            <tbody>
+              <tr><td>部署验收</td><td>0-1 个月</td><td>完成地图、路线、充电桩、网络、权限、员工培训和安全边界验收</td></tr>
+              <tr><td>试点调优</td><td>1-3 个月</td><td>记录人工接管、停机、问答失败、网络延迟和门店员工使用率</td></tr>
+              <tr><td>业务复盘</td><td>3-6 个月</td><td>对照门店 KPI：节省工时、客流转化、投诉变化、巡检准确率</td></tr>
+              <tr><td>扩大部署</td><td>6-12 个月</td><td>观察硬件损耗、备件响应、软件升级、模型稳定性</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>投资回报率的分项核算框架</h3>
+        <p><strong>需计入</strong>：设备、二开、云端模型、部署改造、网络、充电、培训、售后、备件和停机成本。<br>
+        <strong>需验证</strong>：日均任务数、成功率、接管次数、员工采纳率、顾客转化、故障响应和复购续费意愿。<br>
+        <strong>需分账</strong>：吸引客流是营销收益；替代重复工作是运营收益；沉淀数据是战略收益。</p>
+      </section>
+
+      <!-- ===== References ===== -->
+      <section class="chapter" id="references">
+        <h2>附录：参考文献 / 来源索引</h2>
+        <p>以下为本合集引用的所有公开来源，按章节分组。新闻、融资和股东信息会随时间变化，使用前建议重新核验最新公告。</p>
+
+        <h3>第三章：端到端模型</h3>
+        <ul>
+          <li><a href="https://agibot-world.com/" target="_blank">AgiBot World 数据集</a> — 智元具身数据路线</li>
+          <li><a href="https://www.stcn.com/article/detail/3758127.html" target="_blank">证券时报：觅蜂科技融资报道</a></li>
+          <li><a href="https://www.worldrobotconference.com/expo/company/434.html" target="_blank">世界机器人大会：银河通用</a></li>
+          <li><a href="https://huggingface.co/collections/unitreerobotics/unifolm-wbt-dataset" target="_blank">Unitree UnifoLM-WBT Dataset</a></li>
+          <li><a href="https://deepmind.google/discover/blog/gemini-robotics-brings-ai-into-the-physical-world/" target="_blank">Google DeepMind Gemini Robotics</a></li>
+          <li><a href="https://www.figure.ai/news/helix" target="_blank">Figure Helix</a></li>
+          <li><a href="https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks" target="_blank">NVIDIA Isaac GR00T N1</a></li>
+          <li><a href="https://arxiv.org/abs/2604.15483" target="_blank">Physical Intelligence pi0.7 (arXiv)</a></li>
+        </ul>
+
+        <h3>第四章：泛化模型（GEN-1 与 π0.7）</h3>
+        <ul>
+          <li><a href="https://generalistai.com/blog/apr-02-2026-GEN-1" target="_blank">Generalist AI: GEN-1 发布博客</a></li>
+          <li><a href="https://generalistai.com/blog/nov-04-2025-GEN-0" target="_blank">Generalist AI: GEN-0 发布博客</a></li>
+          <li><a href="https://www.physicalintelligence.company/blog/pi07" target="_blank">Physical Intelligence: π0.7 发布博客</a></li>
+          <li><a href="https://arxiv.org/pdf/2604.15483" target="_blank">π0.7 论文 (arXiv)</a></li>
+        </ul>
+
+        <h3>第五章：Top20 公司来源索引</h3>
+        <ul>
+          <li><a href="https://www.stcn.com/article/detail/3764192.html" target="_blank">证券时报：智元机器人 APC2026</a></li>
+          <li><a href="https://m.dtm.com.cn/news/202605/258901.html" target="_blank">大众证券报：宇树科技 IPO 动态</a></li>
+          <li><a href="https://www.stdaily.com/web/gdxw/2026-03/06/content_481072.html" target="_blank">科技日报：优必选 Walker S2</a></li>
+          <li><a href="https://cn.technode.com/post/2026-03-02/galbot-raises-rmb-2-5b-funding/" target="_blank">TechNode：银河通用融资</a></li>
+          <li><a href="https://www.nbd.com.cn/rss/sohu/articles/4247896.html" target="_blank">每日经济新闻：傅利叶 CES 进展</a></li>
+          <li><a href="https://www.taibo.cn/company/2643" target="_blank">泰伯网：逐际动力 B 轮融资</a></li>
+          <li><a href="https://www.cs.com.cn/ssgs/01/2026/05/20/detail_2026052010013120.html" target="_blank">中国证券报：乐聚机器人进展</a></li>
+          <li><a href="https://finance.sina.com.cn/stock/relnews/cn/2026-04-13/doc-inhuipie2506113.shtml" target="_blank">新浪财经：众擎机器人融资</a></li>
+          <li><a href="https://www.sznews.com/news/content/2026-05/22/content_32060387.htm" target="_blank">深圳新闻网：星尘智能 S1</a></li>
+          <li><a href="https://www.prnasia.com/story/528454-1.shtml" target="_blank">PR Newswire：开普勒融资</a></li>
+          <li><a href="https://finance.sina.com.cn/stock/t/2026-05-26/doc-inhzfwqa2657891.shtml" target="_blank">新浪财经：普渡机器人融资</a></li>
+          <li><a href="https://k.sina.com.cn/article_7857201856_1d45362c001902hfl2.html" target="_blank">新浪新闻：擎朗 XMAN-R1</a></li>
+          <li><a href="https://finance.sina.com.cn/tech/roll/2026-04-24/doc-inhvqfhn3231577.shtml" target="_blank">新浪科技：云深处场景进展</a></li>
+          <li><a href="https://news.sina.cn/bignews/2026-04-25/detail-inhvskfe3919513.d.html" target="_blank">新浪新闻：小鹏 IRON</a></li>
+          <li><a href="https://www.sznews.com/news/content/2026-02/04/content_31934792.htm" target="_blank">深圳新闻网：越疆 ATOM</a></li>
+          <li><a href="https://finance.sina.com.cn/wm/2026-04-04/doc-inhthssm8303572.shtml" target="_blank">新浪财经：优艾智合 IPO</a></li>
+          <li><a href="https://www.mech-mind.com/news/mech-mind-at-aw-2026.html" target="_blank">梅卡曼德官网：AW 2026</a></li>
+          <li><a href="https://www.stdaily.com/web/gdxw/2025-03/19/content_311833.html" target="_blank">科技日报：帕西尼触觉机器人</a></li>
+          <li><a href="https://finance.sina.com.cn/wm/2026-03-21/doc-inhruetm6990091.shtml" target="_blank">新浪财经：非夕 FLEXIVERSE</a></li>
+          <li><a href="https://finance.sina.com.cn/wm/2026-05-13/doc-inhxteis9480018.shtml" target="_blank">新浪财经：斯坦德机器人客户案例</a></li>
+        </ul>
+      </section>
+      <section class="chapter" id="glossary">
+        <h2>附录：术语表</h2>
+
+        <div class="glossary-grid">
+          <div class="gloss-item"><span class="term">AMR</span><span class="def">自主移动机器人，可自主导航避障的移动平台</span></div>
+          <div class="gloss-item"><span class="term">BMS</span><span class="def">电池管理系统，监控电池状态和安全保护</span></div>
+          <div class="gloss-item"><span class="term">CAN</span><span class="def">控制器局域网络，工业/汽车常用实时通信总线</span></div>
+          <div class="gloss-item"><span class="term">DoF</span><span class="def">自由度，衡量机器人关节/运动轴数量</span></div>
+          <div class="gloss-item"><span class="term">EtherCAT</span><span class="def">高性能工业以太网协议，常用于运动控制</span></div>
+          <div class="gloss-item"><span class="term">IMU</span><span class="def">惯性测量单元，含加速度计和陀螺仪</span></div>
+          <div class="gloss-item"><span class="term">IPO</span><span class="def">首次公开募股，公司上市</span></div>
+          <div class="gloss-item"><span class="term">L0-L3</span><span class="def">商用成熟度：概念→试点→小批量→规模商用</span></div>
+          <div class="gloss-item"><span class="term">MCU</span><span class="def">微控制器，用于实时控制的嵌入式芯片</span></div>
+          <div class="gloss-item"><span class="term">MPC</span><span class="def">模型预测控制，通过预测模型优化控制信号</span></div>
+          <div class="gloss-item"><span class="term">NPU</span><span class="def">神经网络处理器，专为 AI 推理优化的芯片</span></div>
+          <div class="gloss-item"><span class="term">P0-P3</span><span class="def">优先级：P0 最高优先，P3 最低优先</span></div>
+          <div class="gloss-item"><span class="term">POS</span><span class="def">销售终端系统，门店收银和管理系统</span></div>
+          <div class="gloss-item"><span class="term">ROI</span><span class="def">投资回报率</span></div>
+          <div class="gloss-item"><span class="term">SDK</span><span class="def">软件开发工具包</span></div>
+          <div class="gloss-item"><span class="term">SLA</span><span class="def">服务等级协议</span></div>
+          <div class="gloss-item"><span class="term">SoC</span><span class="def">片上系统，集成多功能的单一芯片</span></div>
+          <div class="gloss-item"><span class="term">SOP</span><span class="def">标准操作流程</span></div>
+          <div class="gloss-item"><span class="term">sim-to-real</span><span class="def">仿真到现实的迁移，处理仿真与实物的差距</span></div>
+          <div class="gloss-item"><span class="term">VLA</span><span class="def">视觉-语言-动作模型，将视觉和语言映射为动作</span></div>
+          <div class="gloss-item"><span class="term">VLM</span><span class="def">视觉-语言模型，理解图像和文本的多模态模型</span></div>
+          <div class="gloss-item"><span class="term">WBC</span><span class="def">全身控制，协调所有关节完成复杂动作</span></div>
+        </div>
+      </section>
+
+      <!-- ===== Footer ===== -->
+      <footer class="footer">
+        <p>本文档由 6 个科普页面合并生成，仅供内部学习参考。正式决策前应重新核验各来源的最新公开信息。</p>
+        <p>不构成投资建议、供应商尽调结论或采购建议。</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ===== Mobile TOC Toggle ===== -->
+  <button class="toc-toggle" id="tocToggle" aria-label="打开目录" title="目录导航">☰</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    (function() {
+      // TOC mobile toggle
+      const toggle = document.getElementById('tocToggle');
+      const sidebar = document.getElementById('sidebar');
+      if (toggle && sidebar) {
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          sidebar.classList.toggle('open');
+          toggle.textContent = sidebar.classList.contains('open') ? '✕' : '☰';
+        });
+        document.addEventListener('click', function(e) {
+          if (sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== toggle) {
+            sidebar.classList.remove('open');
+            toggle.textContent = '☰';
+          }
+        });
+      }
+
+      // TOC highlight on scroll
+      const tocLinks = document.querySelectorAll('[data-toc]');
+      const chapters = document.querySelectorAll('.chapter');
+      const glossary = document.getElementById('glossary');
+      const refs = document.getElementById('references');
+
+      function updateActive() {
+        let current = '';
+        const scrollY = window.scrollY + 100;
+
+        chapters.forEach(function(ch) {
+          if (ch.offsetTop <= scrollY) {
+            current = ch.id;
+          }
+        });
+        if (refs && refs.offsetTop <= scrollY) {
+          current = 'references';
+        }
+        if (glossary && glossary.offsetTop <= scrollY) {
+          current = 'glossary';
+        }
+
+        tocLinks.forEach(function(link) {
+          link.classList.toggle('active', link.getAttribute('data-toc') === current);
+        });
+      }
+
+      window.addEventListener('scroll', updateActive);
+      window.addEventListener('resize', updateActive);
+      updateActive();
+    })();
+  </script>
+
+</body>
+</html>

@@ -560,22 +560,22 @@
 
   <section class="quick-read" aria-label="快速结论">
     <article><strong>端到端不是全自动</strong><span>短期主流形态仍是模型、任务规划、安全控制和人工接管的混合系统。</span></article>
-    <article><strong>数据决定上限</strong><span>最稀缺的是带失败原因和人工接管过程的真实机器人任务数据。</span></article>
-    <article><strong>中国重在采集闭环</strong><span>智元、觅蜂、银河、宇树等路线分别押注真机、轻量采集、场景 VLA 和开发者生态。</span></article>
+    <article><strong>数据决定上限</strong><span>最稀缺的是带异常原因和人工接管过程的真实机器人任务数据。</span></article>
+    <article><strong>中国重在采集闭环</strong><span>智元、觅蜂、银河、宇树等路线分别聚焦真机、轻量采集、场景 VLA 和开发者生态。</span></article>
     <article><strong>海外重在模型平台</strong><span>Google DeepMind、Figure、NVIDIA、Physical Intelligence 正在把具身模型做成平台能力。</span></article>
   </section>
 
   <section class="section-block" id="what">
     <div class="section-heading">
       <h2>一张流程图读懂端到端模型</h2>
-      <p>传统机器人靠工程师写规则。端到端路线希望模型从视觉、语言、动作和失败样本中学习策略，但上线时仍要叠加安全、运维和场景 SOP。</p>
+      <p>传统机器人靠工程师写规则。端到端路线希望模型从视觉、语言、动作和异常样本中学习策略，上线时还需要叠加安全、运维和场景 SOP。</p>
     </div>
     <div class="pipeline" aria-label="端到端模型流程">
       <article class="pipe-node"><b>1</b><h3>采集示范</h3><p>真机遥操作、穿戴设备、手柄、VR、移动端和视频数据提供动作样本。</p></article>
-      <article class="pipe-node"><b>2</b><h3>清洗标注</h3><p>把图像、语言、关节、力控、触觉、接管和失败原因整理成可训练数据。</p></article>
+      <article class="pipe-node"><b>2</b><h3>清洗标注</h3><p>把图像、语言、关节、力控、触觉、接管和异常原因整理成可训练数据。</p></article>
       <article class="pipe-node"><b>3</b><h3>训练模型</h3><p>VLA、世界模型、扩散策略、模仿学习、强化学习和后训练共同提升泛化。</p></article>
       <article class="pipe-node"><b>4</b><h3>安全上线</h3><p>任务规划器、低层控制器、碰撞约束和人工接管让模型输出可控。</p></article>
-      <article class="pipe-node"><b>5</b><h3>回流迭代</h3><p>真实部署产生新失败样本，进入下一轮训练，形成数据飞轮。</p></article>
+      <article class="pipe-node"><b>5</b><h3>回流迭代</h3><p>真实部署产生新的异常样本，进入下一轮训练，形成数据飞轮。</p></article>
     </div>
   </section>
 
@@ -591,7 +591,7 @@
         <p>智元公开的 AgiBot World 数据集和 Genie Operator-1，把真机数据、多任务和具身模型放到同一个叙事里。它的价值在于更接近真实机器人动作分布。</p>
         <ul>
           <li>强项：数据质量和本体闭环。</li>
-          <li>风险：真机采集成本高，任务覆盖和客户侧指标仍需持续验证。</li>
+          <li>关注点：真机采集成本高，任务覆盖和客户侧指标仍需持续验证。</li>
         </ul>
       </article>
       <article class="route-card">
@@ -600,7 +600,7 @@
         <p>公开报道中的觅蜂科技强调低成本动作数据采集和与智元数据平台协同。它代表一种“先扩大数据供给，再服务模型训练”的数据基础设施路线。</p>
         <ul>
           <li>强项：降低采集门槛，适合补充长尾动作。</li>
-          <li>风险：数据标准、动作精度、传感器一致性和隐私合规是关键。</li>
+          <li>关注点：数据标准、动作精度、传感器一致性和隐私合规是关键。</li>
         </ul>
       </article>
       <article class="route-card">
@@ -609,7 +609,7 @@
         <p>银河通用更偏场景模型路线，围绕抓取、货架、门店和轮式双臂机器人，把 VLA 放进更具体的商业任务中验证。</p>
         <ul>
           <li>强项：半结构化场景更容易形成可衡量 ROI。</li>
-          <li>风险：从演示到多门店、多 SKU、长时间运营仍有距离。</li>
+          <li>关注点：从演示到多门店、多 SKU、长时间运营仍有距离。</li>
         </ul>
       </article>
       <article class="route-card">
@@ -618,7 +618,7 @@
         <p>宇树路线的启发在于低成本硬件和开发者生态可以扩大数据和算法实验规模。开源数据集有利于科研扩散，但商业闭环要看真实客户任务。</p>
         <ul>
           <li>强项：硬件可获得性和社区扩散。</li>
-          <li>风险：科研数据、消费级销售和工业级交付不能直接等同。</li>
+          <li>关注点：科研数据、消费级销售和工业级交付需要区分口径。</li>
         </ul>
       </article>
     </div>
@@ -628,19 +628,19 @@
   <section class="section-block" id="training">
     <div class="section-heading">
       <h2>模型训练路线：不是一个模型打天下</h2>
-      <p>端到端模型会持续增强，但短期最现实的是分层端到端：高层模型负责理解和计划，中层模型输出动作策略，底层控制器和安全系统兜底。</p>
+      <p>端到端模型会持续增强，但短期最现实的是分层端到端：高层模型负责理解和计划，中层模型输出动作策略，底层控制器和安全系统提供约束。</p>
     </div>
     <div class="training-steps">
       <aside class="training-rail">
         <h3>从演示模型到产品模型，差别在闭环</h3>
-        <p>漂亮视频只能证明“某次成功”。产品模型要证明“连续成功、失败可恢复、升级有效、成本可控”。</p>
+        <p>演示视频只能说明单次可行性。产品模型需要证明“连续成功、异常可恢复、升级有效、成本可控”。</p>
       </aside>
       <div class="step-list">
         <article class="step-item"><span>01</span><div><h3>模仿学习</h3><p>从人类示范和遥操作轨迹学习动作，是当前最直接的数据路线。</p></div></article>
         <article class="step-item"><span>02</span><div><h3>VLA/ViLLA</h3><p>把视觉、语言和动作连起来，让机器人理解开放指令并输出可执行动作。</p></div></article>
         <article class="step-item"><span>03</span><div><h3>仿真与合成数据</h3><p>用数字孪生和合成场景扩大数据覆盖，再用真机校验补齐现实偏差。</p></div></article>
-        <article class="step-item"><span>04</span><div><h3>后训练与评测</h3><p>通过失败样本、偏好反馈、任务成功率曲线和接管记录，让模型持续改进。</p></div></article>
-        <article class="step-item"><span>05</span><div><h3>安全控制层</h3><p>端到端输出不能裸奔，必须由碰撞检测、速度限制、异常停机和人工接管兜底。</p></div></article>
+        <article class="step-item"><span>04</span><div><h3>后训练与评测</h3><p>通过异常样本、偏好反馈、任务成功率曲线和接管记录，让模型持续改进。</p></div></article>
+        <article class="step-item"><span>05</span><div><h3>安全控制层</h3><p>端到端输出需要经过碰撞检测、速度限制、异常停机和人工接管等安全控制层约束。</p></div></article>
       </div>
     </div>
   </section>
@@ -686,7 +686,7 @@
           <tr><td>数据来源</td><td>真机遥操作、训练场、产业场景、开发者硬件</td><td>多机器人数据、研究实验室、仿真和客户试验</td><td>高质量真实任务数据会成为共同瓶颈</td></tr>
           <tr><td>模型表达</td><td>VLA、场景模型、具身大脑和任务模型并行</td><td>机器人基础模型、VLA、大模型具身推理</td><td>从演示模型转向可评测、可部署模型</td></tr>
           <tr><td>商业优势</td><td>成本、供应链、场景密度和迭代速度</td><td>基础模型、计算平台、工业客户试点和工具链</td><td>硬件利润下降，软件和数据服务占比提升</td></tr>
-          <tr><td>主要风险</td><td>演示多、客户侧指标少，数据质量参差</td><td>模型强但本体和部署成本高，泛化仍未商业验证</td><td>都需要证明长期稳定、低接管和正 ROI</td></tr>
+          <tr><td>主要关注点</td><td>演示多、客户侧指标少，数据质量参差</td><td>模型强但本体和部署成本高，泛化仍未商业验证</td><td>都需要证明长期稳定、低接管和正 ROI</td></tr>
         </tbody>
       </table>
     </div>
@@ -715,13 +715,13 @@
   <section class="section-block" id="questions">
     <div class="section-heading">
       <h2>管理层尽调问题</h2>
-      <p>判断端到端模型进展，不要只看视频。以下问题能快速区分技术演示、试点产品和可采购方案。</p>
+      <p>判断端到端模型进展，建议同时关注演示视频之外的运营指标。以下问题能快速区分技术演示、试点产品和可采购方案。</p>
     </div>
     <div class="question-grid">
       <article class="question-card"><h3>数据从哪里来</h3><p>真实客户现场、实验室遥操作、仿真、公开视频分别占多少。</p></article>
       <article class="question-card"><h3>自主比例是多少</h3><p>哪些动作自主完成，哪些动作需要人工接管，每台机器人需要多少远程人员。</p></article>
-      <article class="question-card"><h3>失败如何回流</h3><p>是否记录失败原因、接管动作和二次训练后的改善曲线。</p></article>
-      <article class="question-card"><h3>安全如何兜底</h3><p>端到端输出外是否有碰撞检测、速度限制、异常停机和人工确认。</p></article>
+      <article class="question-card"><h3>异常如何回流</h3><p>是否记录异常原因、接管动作和二次训练后的改善曲线。</p></article>
+      <article class="question-card"><h3>安全如何约束</h3><p>端到端输出外是否有碰撞检测、速度限制、异常停机和人工确认。</p></article>
     </div>
   </section>
 

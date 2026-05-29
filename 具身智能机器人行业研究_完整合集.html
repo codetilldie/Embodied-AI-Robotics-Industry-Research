@@ -839,6 +839,96 @@
       gap: 10px;
     }
 
+    .data-capture-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .data-capture-step {
+      position: relative;
+      min-width: 0;
+      padding: 13px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.78);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .data-capture-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -11px;
+      width: 12px;
+      height: 2px;
+      background: #aebfd0;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .data-capture-step strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--nav);
+      font-size: 14px;
+    }
+
+    .data-source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .data-source-card {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--blue);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(21,27,39,0.05);
+    }
+
+    .data-source-card:nth-child(2) {
+      border-top-color: var(--teal);
+    }
+
+    .data-source-card h4 {
+      margin: 0 0 8px;
+      color: var(--nav);
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .data-source-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .data-source-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .data-source-card:nth-child(2) .data-source-link {
+      background: var(--soft-teal);
+      color: var(--teal);
+    }
+
     .transfer-node,
     .transfer-hub {
       min-width: 0;
@@ -917,40 +1007,53 @@
     }
 
     .embodiment-node {
-      min-height: 118px;
-      padding: 12px;
+      min-height: 188px;
+      padding: 14px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: #fff;
+      background:
+        linear-gradient(180deg, rgba(31,99,214,0.04), transparent 52%),
+        #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.85);
     }
 
-    .emb-icon {
-      position: relative;
+    .emb-svg {
       display: block;
-      height: 44px;
-      margin-bottom: 8px;
+      width: 100%;
+      height: 112px;
+      margin-bottom: 10px;
+      color: var(--blue);
+      overflow: visible;
     }
 
-    .emb-icon::before,
-    .emb-icon::after {
-      content: "";
-      position: absolute;
-      border: 2px solid currentColor;
-      background: rgba(31,99,214,0.06);
+    .embodiment-node:nth-child(2) .emb-svg { color: var(--teal); }
+    .embodiment-node:nth-child(3) .emb-svg { color: var(--amber); }
+    .embodiment-node:nth-child(4) .emb-svg { color: var(--green); }
+
+    .emb-svg .line {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .emb-icon.arm { color: var(--blue); }
-    .emb-icon.arm::before { left: 18px; top: 16px; width: 56px; height: 12px; border-radius: 99px; transform: rotate(-24deg); }
-    .emb-icon.arm::after { left: 66px; top: 24px; width: 22px; height: 18px; border-radius: 8px; }
-    .emb-icon.dual { color: var(--teal); }
-    .emb-icon.dual::before { left: 18px; top: 12px; width: 66px; height: 26px; border-radius: 18px; }
-    .emb-icon.dual::after { left: 36px; bottom: 0; width: 34px; height: 12px; border-radius: 99px; }
-    .emb-icon.humanoid { color: var(--amber); }
-    .emb-icon.humanoid::before { left: 48%; top: 4px; width: 28px; height: 28px; border-radius: 50%; transform: translateX(-50%); }
-    .emb-icon.humanoid::after { left: 38%; bottom: 0; width: 42px; height: 22px; border-radius: 18px 18px 8px 8px; }
-    .emb-icon.mobile { color: var(--green); }
-    .emb-icon.mobile::before { left: 20px; top: 14px; width: 64px; height: 26px; border-radius: 16px; }
-    .emb-icon.mobile::after { left: 34px; bottom: 0; width: 36px; height: 10px; border-radius: 99px; }
+    .emb-svg .soft {
+      fill: currentColor;
+      opacity: 0.09;
+    }
+
+    .emb-svg .joint {
+      fill: #fff;
+      stroke: currentColor;
+      stroke-width: 3.2;
+    }
+
+    .emb-svg .floor {
+      stroke: #d7e0ea;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
 
     .embodiment-node strong {
       display: block;
@@ -965,6 +1068,26 @@
       color: var(--muted);
       font-size: 12px;
       line-height: 1.45;
+    }
+
+    .emb-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .emb-chip-row b {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: #f5f8fb;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 760;
     }
 
     .store-map-visual {
@@ -2284,6 +2407,8 @@
       .model-roadmap,
       .transfer-visual,
       .embodiment-grid,
+      .data-capture-flow,
+      .data-source-grid,
       .store-map-visual,
       .roi-account-map,
       .roadmap-line,
@@ -2307,6 +2432,7 @@
       .loop-node::before,
       .loop-node::after,
       .chain-layer::after,
+      .data-capture-step::after,
       .roadmap-stage::before { display: none !important; }
 
       .ch-summary { grid-template-columns: 1fr; }
@@ -2356,6 +2482,7 @@
           <a href="#ch02-synergy" class="toc-sub" data-toc="ch02-synergy">协同机制</a>
         </li>
         <li><a href="#ch03" data-toc="ch03">03 端到端模型</a>
+          <a href="#ch03-data" class="toc-sub" data-toc="ch03-data">数据采集</a>
           <a href="#ch03-cn" class="toc-sub" data-toc="ch03-cn">中国进展</a>
           <a href="#ch03-global" class="toc-sub" data-toc="ch03-global">海外进展</a>
           <a href="#ch03-tl" class="toc-sub" data-toc="ch03-tl">十年时间线</a>
@@ -2853,6 +2980,34 @@
           <li><strong>回流迭代</strong> — 真实部署产生新失败样本，进入下一轮训练，形成数据飞轮。</li>
         </ol>
 
+        <h3 id="ch03-data">数据采集入口：从真实动作到可训练资产</h3>
+        <p>端到端模型的上限取决于真实物理交互数据。现阶段应重点关注两类入口：一类是降低采集门槛的专用工具和采集公司，另一类是把采集任务、数据标准和供需匹配平台化的数据交易平台。</p>
+
+        <div class="illustration-panel" role="img" aria-label="端到端模型数据采集模块：任务定义、遥操作采集、清洗标注、训练回流，并列展示觅蜂科技和京东具身智能数据交易平台">
+          <div class="illustration-title">
+            <strong>数据采集模块</strong>
+            <span>真实任务数据决定模型可迁移能力和长期迭代效率</span>
+          </div>
+          <div class="data-capture-flow">
+            <div class="data-capture-step"><strong>任务定义</strong>明确动作目标、成功标准、失败边界和业务场景。</div>
+            <div class="data-capture-step"><strong>采集执行</strong>通过真机遥操作、穿戴设备、视频和传感器记录动作过程。</div>
+            <div class="data-capture-step"><strong>清洗标注</strong>沉淀图像、语言、关节、触觉、接管和失败原因。</div>
+            <div class="data-capture-step"><strong>训练回流</strong>将高质量样本进入 VLA / 世界模型训练与后续复训。</div>
+          </div>
+          <div class="data-source-grid">
+            <div class="data-source-card">
+              <h4>觅蜂科技（Maniformer）</h4>
+              <p>关注轻量化机器人数据采集和动作数据入口，适合作为端到端模型训练前的数据采集、示教和长尾动作补充环节来观察。</p>
+              <a class="data-source-link" href="https://maniformer.ai/home" target="_blank" rel="noopener">访问觅蜂科技官网</a>
+            </div>
+            <div class="data-source-card">
+              <h4>京东具身智能数据交易平台</h4>
+              <p>提供具身智能数据采集与交易入口，更偏平台化供需匹配和数据资产流通，适合观察数据标准、采集任务和行业数据供给的形成。</p>
+              <a class="data-source-link" href="https://robotdata.jdcloud.com/data-collection" target="_blank" rel="noopener">访问京东具身智能数据交易平台</a>
+            </div>
+          </div>
+        </div>
+
         <h3 id="ch03-cn">中国产业进展：数据入口争夺与模型闭环构建</h3>
         <div class="table-wrap">
           <table>
@@ -2954,24 +3109,84 @@
             </div>
             <div class="embodiment-grid">
               <div class="embodiment-node">
-                <i class="emb-icon arm"></i>
+                <svg class="emb-svg" viewBox="0 0 220 112" aria-hidden="true">
+                  <path class="floor" d="M22 96h176"/>
+                  <rect class="soft" x="28" y="76" width="74" height="18" rx="5"/>
+                  <rect class="line" x="28" y="76" width="74" height="18" rx="5"/>
+                  <path class="line" d="M65 76V58"/>
+                  <circle class="joint" cx="65" cy="58" r="10"/>
+                  <path class="line" d="M72 51l38-24"/>
+                  <circle class="joint" cx="112" cy="26" r="10"/>
+                  <path class="line" d="M121 30l32 25"/>
+                  <circle class="joint" cx="155" cy="57" r="9"/>
+                  <path class="line" d="M163 58h24M187 48v20M194 50l-7 8 7 8"/>
+                  <rect class="soft" x="132" y="78" width="38" height="18" rx="4"/>
+                  <rect class="line" x="132" y="78" width="38" height="18" rx="4"/>
+                </svg>
                 <strong>机械臂</strong>
                 <span>标准工位、抓取、分拣、操作工具</span>
+                <div class="emb-chip-row"><b>工位操作</b><b>抓取分拣</b></div>
               </div>
               <div class="embodiment-node">
-                <i class="emb-icon dual"></i>
+                <svg class="emb-svg" viewBox="0 0 220 112" aria-hidden="true">
+                  <path class="floor" d="M22 96h176"/>
+                  <rect class="soft" x="62" y="76" width="96" height="18" rx="9"/>
+                  <rect class="line" x="62" y="76" width="96" height="18" rx="9"/>
+                  <circle class="joint" cx="82" cy="96" r="7"/>
+                  <circle class="joint" cx="138" cy="96" r="7"/>
+                  <path class="line" d="M110 76V45"/>
+                  <rect class="soft" x="91" y="36" width="38" height="42" rx="12"/>
+                  <rect class="line" x="91" y="36" width="38" height="42" rx="12"/>
+                  <circle class="joint" cx="89" cy="49" r="7"/>
+                  <circle class="joint" cx="131" cy="49" r="7"/>
+                  <path class="line" d="M84 53l-24 16M136 53l24 16"/>
+                  <path class="line" d="M59 69l-12 2M161 69l12 2"/>
+                  <path class="line" d="M28 22h40v56H28zM36 38h24M36 54h24"/>
+                  <path class="line" d="M170 26h24v52h-24"/>
+                </svg>
                 <strong>轮式双臂</strong>
                 <span>移动到货架、柜台和周转箱前执行任务</span>
+                <div class="emb-chip-row"><b>移动操作</b><b>货架任务</b></div>
               </div>
               <div class="embodiment-node">
-                <i class="emb-icon humanoid"></i>
+                <svg class="emb-svg" viewBox="0 0 220 112" aria-hidden="true">
+                  <path class="floor" d="M38 96h144"/>
+                  <circle class="joint" cx="110" cy="22" r="13"/>
+                  <rect class="soft" x="88" y="38" width="44" height="34" rx="13"/>
+                  <rect class="line" x="88" y="38" width="44" height="34" rx="13"/>
+                  <circle class="joint" cx="88" cy="48" r="6"/>
+                  <circle class="joint" cx="132" cy="48" r="6"/>
+                  <path class="line" d="M83 52L62 70M137 52l22 18"/>
+                  <circle class="joint" cx="61" cy="71" r="5"/>
+                  <circle class="joint" cx="160" cy="71" r="5"/>
+                  <path class="line" d="M100 72L86 94M121 72l16 22"/>
+                  <path class="line" d="M78 94h18M128 94h20"/>
+                  <path class="line" d="M101 28h18M103 22h3M114 22h3"/>
+                  <path class="line" d="M48 40c-10 14-10 32 0 46M172 40c10 14 10 32 0 46"/>
+                </svg>
                 <strong>人形本体</strong>
                 <span>兼容人类空间，但稳定和成本门槛更高</span>
+                <div class="emb-chip-row"><b>人类空间</b><b>多自由度</b></div>
               </div>
               <div class="embodiment-node">
-                <i class="emb-icon mobile"></i>
+                <svg class="emb-svg" viewBox="0 0 220 112" aria-hidden="true">
+                  <path class="floor" d="M24 96h172"/>
+                  <path class="line" stroke-dasharray="7 8" d="M42 78c28-42 72-48 128-28"/>
+                  <rect class="soft" x="66" y="62" width="88" height="28" rx="15"/>
+                  <rect class="line" x="66" y="62" width="88" height="28" rx="15"/>
+                  <circle class="joint" cx="88" cy="91" r="7"/>
+                  <circle class="joint" cx="133" cy="91" r="7"/>
+                  <path class="line" d="M110 62V38"/>
+                  <circle class="joint" cx="110" cy="34" r="8"/>
+                  <path class="line" d="M98 50h24M78 74h64"/>
+                  <rect class="line" x="166" y="66" width="24" height="24" rx="4"/>
+                  <path class="line" d="M36 68l13 13M49 68L36 81"/>
+                  <circle class="soft" cx="172" cy="50" r="9"/>
+                  <circle class="line" cx="172" cy="50" r="9"/>
+                </svg>
                 <strong>移动底盘</strong>
                 <span>巡检、配送、带路和低风险交互任务</span>
+                <div class="emb-chip-row"><b>导航巡检</b><b>低风险交互</b></div>
               </div>
             </div>
           </div>
@@ -2980,8 +3195,8 @@
 
         <h3>核心发现</h3>
         <ul>
-          <li><strong>GEN-1</strong> — 2026-04-02 发布，主打高可靠、高速度和少量机器人数据适配。</li>
-          <li><strong>π0.7</strong> — 2026-04-16 发布，主打可提示、可组合、跨本体迁移。</li>
+          <li><strong><a href="https://generalistai.com/blog/apr-02-2026-GEN-1" target="_blank" rel="noopener">GEN-1</a></strong> — 2026-04-02 发布，主打高可靠、高速度和少量机器人数据适配。</li>
+          <li><strong><a href="https://www.pi.website/blog/pi07" target="_blank" rel="noopener">π0.7</a></strong> — 2026-04-16 发布，主打可提示、可组合、跨本体迁移。</li>
           <li><strong>50 万小时+</strong> — GEN-1 公开披露的高保真物理交互数据规模。</li>
           <li><strong>两种 scaling</strong> — Generalist 给出更接近"幂律"的曲线；PI 更强调多样数据和元数据。</li>
         </ul>
